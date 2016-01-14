@@ -1,1 +1,4 @@
-LBDR is one of the most important projects in the history of Deep Blue Development.
+# LBDR
+--
+
+Luxury Branding Design and Retail
