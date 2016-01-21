@@ -3,8 +3,9 @@
 .text-center
   = "Brand Image"
   h1 = @brand.name
+  h4 = "Sector Name"
   .description = @brand.description
-  = link_to 'View More', @brand.url
+  = link_to 'View More', @brand.url, :class=> 'btn btn-default'
   br
   = link_to 'Edit', edit_brand_path(@brand)
   '|
