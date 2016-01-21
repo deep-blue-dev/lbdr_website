@@ -8,8 +8,8 @@
 
   .field
     = f.label :name
-    = f.text_field :name
+    = f.text_field :name, :class => 'form-control'
   .field
     = f.label :description
-    = f.text_area :description
-  .actions = f.submit
+    = f.text_area :description, :class => 'form-control'
+  .actions = f.submit "Create Sector", :class => 'btn btn-default'

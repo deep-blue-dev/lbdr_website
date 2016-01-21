@@ -1,25 +1,12 @@
-h1 Listing brands
-
-table
-  thead
-    tr
-      th Name
-      th Url
-      th Description
-      th
-      th
-      th
-
-  tbody
-    - @brands.each do |brand|
-      tr
-        td = brand.name
-        td = brand.url
-        td = brand.description
-        td = link_to 'Show', brand
-        td = link_to 'Edit', edit_brand_path(brand)
-        td = link_to 'Destroy', brand, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
+.container
+  h1 Listing brands
+  - @brands.each do |brand|
+    = brand.name
+    = brand.url
+    = brand.description
+    = link_to 'Show', brand
+    = link_to 'Edit', edit_brand_path(brand)
+    = link_to 'Destroy', brand, data: {:confirm => 'Are you sure?'}, :method => :delete
+    br
 
 = link_to 'New Brand', new_brand_path
