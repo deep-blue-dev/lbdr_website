@@ -1,3 +1,3 @@
 class Brand < ApplicationRecord
-  belongs_to :sector
+  # belongs_to :sector
 end
