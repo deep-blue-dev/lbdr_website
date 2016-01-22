@@ -7,4 +7,7 @@ class PagesController < ApplicationController
 
   def investor
   end
+
+  def welcome
+  end
 end

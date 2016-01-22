@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :brands
   resources :sectors
+
+  root 'pages#welcome'
+  
   get 'pages/group'
 
   get 'pages/contact'
