@@ -1,1 +1,14 @@
-p This is the header
+nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation"
+  = link_to 'Brand', root_path
+  ul class="nav navmenu-nav"
+    li = link_to 'Group', root_path
+    li = link_to 'Sectors', root_path
+    li = link_to 'Brands', root_path
+    li = link_to 'News', root_path
+    li = link_to 'Contact', root_path
+
+.navbar.navbar-default.navbar-fixed-top
+  button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body"
+    span class="icon-bar"
+    span class="icon-bar"
+    span class="icon-bar"
