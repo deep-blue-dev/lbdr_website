@@ -1,25 +1,12 @@
-h1 Listing posts
-
-table
-  thead
-    tr
-      th Title
-      th Author
-      th Content
-      th
-      th
-      th
-
-  tbody
-    - @posts.each do |post|
-      tr
-        td = post.title
-        td = post.author
-        td = post.content
-        td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
-
+h1.text-center.text-uppercase LBDR News & Updates
+.container.col.md.8
+  - @posts.each do |post|
+    h1 = post.title
+    small Authored By:
+    = post.author
+    p = post.created_at.strftime('%B %e, %Y')
+    p = post.content
+    = link_to 'Read More', post , class: 'btn btn-default'
 br
 
 = link_to 'New Post', new_post_path
