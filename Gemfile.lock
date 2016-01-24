@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/plataformatec/devise.git
+  revision: b97b3e6e3b570324467ac84d807111837943ec20
+  specs:
+    devise (4.0.0.pre.dev)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
+
+GIT
   remote: https://github.com/refile/refile.git
   revision: b1007ddf5fd27841b23d10b0acb73b9be7293060
   specs:
@@ -107,13 +118,6 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
-    devise (3.5.5)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      responders
-      thread_safe (~> 0.1)
-      warden (~> 1.2.3)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
     em-hiredis (0.3.0)
@@ -277,7 +281,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   coffee-rails
-  devise
+  devise!
   jbuilder (~> 2.0)
   jquery-rails
   pg
