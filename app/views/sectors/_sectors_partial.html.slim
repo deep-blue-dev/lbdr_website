@@ -1,0 +1,7 @@
+.sectors.col-md-8.col-md-offset-2
+  - @sectors.each do |sector|
+    .col-md-3.col-xs-6
+      h2 = sector.name
+      = link_to 'Show', sector
+      = link_to 'Edit', edit_sector_path(sector)
+      = link_to 'Destroy', sector, data: {:confirm => 'Are you sure?'}, :method => :delete
