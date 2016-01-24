@@ -1,6 +1,7 @@
 .container
   p#notice = notice
   .text-center
+    = image_tag attachment_url(@sector, :sector_image, :fill, 300, 300, format: "jpg")
     h1 = @sector.name
     .description = @sector.description
     .brands
