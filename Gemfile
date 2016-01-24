@@ -7,7 +7,6 @@ ruby '2.3.0'
 gem 'rails', '>= 5.0.0.beta1', '< 5.1'
 gem "refile", :git =>'https://github.com/refile/refile.git', require: "refile/rails"
 gem "refile-mini_magick"
-gem 'sqlite3'
 gem "sinatra", :git => 'https://github.com/sinatra/sinatra.git'
 gem 'puma' # Use Puma as the app server
 
@@ -22,6 +21,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'turbolinks'
 
 group :development do
+  gem 'sqlite3'
   gem 'better_errors' # Debuggers
   gem 'binding_of_caller'
   gem 'awesome_print'
