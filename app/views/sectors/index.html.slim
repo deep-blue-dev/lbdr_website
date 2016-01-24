@@ -1,11 +1,6 @@
 
 .container
-  h1 We have companies in 8 different sectors
-  - @sectors.each do |sector|
-    .col-md-2.col-md-offset-2.col-xs-6
-      h2 = sector.name
-      = link_to 'Show', sector
-      = link_to 'Edit', edit_sector_path(sector)
-      = link_to 'Destroy', sector, data: {:confirm => 'Are you sure?'}, :method => :delete
-      <br>
-= link_to 'New Sector', new_sector_path
+  h1.text-center We have companies in 8 different sectors
+  = render 'sectors_partial'
+        <br>
+  = link_to 'New Sector', new_sector_path

@@ -28,6 +28,23 @@ body {
   background-color: $black;
 }
 
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+
+
 .footer {
   color: $white;
+}
+
+.background {
+  background: url('jumbotron.jpg') no-repeat center center;
+  background-size: cover;
+  max-width: 100%;
+  height: 700px;
 }

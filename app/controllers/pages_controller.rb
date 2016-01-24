@@ -9,5 +9,6 @@ class PagesController < ApplicationController
   end
 
   def welcome
+    @sectors = Sector.all
   end
 end
