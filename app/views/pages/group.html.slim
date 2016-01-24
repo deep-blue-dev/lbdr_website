@@ -1,10 +1,25 @@
 div.group-image
-  p image goes here
+  h1 image goes here
 
 h1.text-center.text-uppercase LBDR Group
 
 // USE JS TO SHOW INFORMATION.
-ul.nav.nav-pills.about-lbdr
-  li role="presentation" = link_to 'About'
-  li role="presentation" = link_to 'Model'
-  li role="presentation" = link_to 'Spirit'
+.container.about-lbdr
+  ul.nav.nav-pills
+    li role="presentation" = link_to 'About'
+    li role="presentation" = link_to 'Model'
+    li role="presentation" = link_to 'Spirit'
+
+.map.hidden-xs.hidden-sm
+  h1 map goes here. Hides for tab & phone
+.image.visible-xs.visible-sm
+  h1 image here. only shows on phone & tab?
+  
+// USE JS TO SHOW INFORMATION.
+.container.governance
+  h1.text-center.text-uppercase Governance
+  .container
+    p.col-md-8.col-md-offset-2 Mauris at augue faucibus orci condimentum condimentum. Suspendisse feugiat aliquet turpis at ornare. Proin quis tincidunt metus. Vestibulum aliquam vulputate quam, at vulputate massa accumsan et. Donec ut justo eu magna condimentum luctus. Phasellus suscipit magna orci, eget vehicula ex auctor vel. Sed iaculis in lectus eu placerat. Cras cursus mattis magna vulputate aliquam. Suspendisse non dui semper, posuere metus in, luctus neque. Duis faucibus nibh ante, nec pulvinar risus congue eu. Nunc lobortis ex et tempus lobortis.
+  ul.nav.nav-pills
+    li role="presentation" = link_to 'Board of Directors'
+    li role="presentation" = link_to 'Executive Committee'
