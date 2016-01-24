@@ -1,6 +1,7 @@
 class SectorsController < ApplicationController
   before_action :set_sector, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except:[:show, :index]
+  
   # GET /sectors
   # GET /sectors.json
   def index
