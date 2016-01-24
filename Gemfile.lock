@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/plataformatec/devise.git
+  revision: b97b3e6e3b570324467ac84d807111837943ec20
+  specs:
+    devise (4.0.0.pre.dev)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
+
+GIT
   remote: https://github.com/refile/refile.git
   revision: b1007ddf5fd27841b23d10b0acb73b9be7293060
   specs:
@@ -68,6 +79,7 @@ GEM
       execjs
       json
     awesome_print (1.6.1)
+    bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -146,6 +158,7 @@ GEM
     netrc (0.11.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -202,6 +215,8 @@ GEM
     refile-mini_magick (0.2.0)
       mini_magick (~> 4.0)
       refile (~> 0.5)
+    responders (2.1.1)
+      railties (>= 4.2.0, < 5.1)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
@@ -251,6 +266,8 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
+    warden (1.2.4)
+      rack (>= 1.0)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -264,6 +281,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   coffee-rails
+  devise!
   jbuilder (~> 2.0)
   jquery-rails
   pg
