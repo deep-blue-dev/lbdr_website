@@ -6,7 +6,7 @@
         - @brand.errors.full_messages.each do |message|
           li = message
 
-  
+
   .field
     = f.label :name
     = f.text_field :name, :class => 'form-control'
@@ -16,4 +16,7 @@
   .field
     = f.label :description
     = f.text_area :description, :class => 'form-control'
+  .field
+    = f.label :brand_image
+    = f.attachment_field :brand_image
   .actions = f.submit 'Create Brand', :class => 'btn btn-default'

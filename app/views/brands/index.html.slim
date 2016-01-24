@@ -1,6 +1,7 @@
 .container
   h1 Listing brands
   - @brands.each do |brand|
+    = image_tag attachment_url(brand, :brand_image, :fill, 300, 300, format: "jpg")
     = brand.name
     = brand.url
     = brand.description
