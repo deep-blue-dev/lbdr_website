@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :brands
   resources :sectors
 
