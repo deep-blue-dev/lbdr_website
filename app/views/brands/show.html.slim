@@ -1,9 +1,10 @@
 .container
   p#notice = notice
 .text-center
-  = "Brand Image"
+  = image_tag attachment_url(@brand, :brand_image, :fill, 300, 300, format: "jpg")
   h1 = @brand.name
   h4 = "Sector Name"
+  = image_tag attachment_url(@brand, :brand_logo, :fill, 300, 300, format: "jpg")
   .description = @brand.description
   = link_to 'View More', @brand.url, :class=> 'btn btn-default'
   br

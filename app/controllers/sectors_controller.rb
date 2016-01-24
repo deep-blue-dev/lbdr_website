@@ -69,6 +69,6 @@ class SectorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sector_params
-      params.require(:sector).permit(:name, :description, :brand)
+      params.require(:sector).permit(:name, :description, :sector_image, :brand)
     end
 end
