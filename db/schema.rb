@@ -11,16 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160126021921) do
+ActiveRecord::Schema.define(version: 20160126024407) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
     t.text     "description"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "brand_image_id"
     t.string   "brand_logo_id"
+    t.string   "brand_photo_file_name"
+    t.string   "brand_photo_content_type"
+    t.integer  "brand_photo_file_size"
+    t.datetime "brand_photo_updated_at"
+    t.string   "logo_for_brand_file_name"
+    t.string   "logo_for_brand_content_type"
+    t.integer  "logo_for_brand_file_size"
+    t.datetime "logo_for_brand_updated_at"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -36,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160126021921) do
     t.text     "description"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.string   "sector_photo_id"
+    t.string   "sector_image_id"
     t.string   "sector_photo_file_name"
     t.string   "sector_photo_content_type"
     t.integer  "sector_photo_file_size"

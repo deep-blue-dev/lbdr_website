@@ -70,6 +70,6 @@ class BrandsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def brand_params
-      params.require(:brand).permit(:name, :url, :description, :brand_image, :brand_logo)
+      params.require(:brand).permit(:name, :url, :description, :brand_photo, :logo_for_brand)
     end
 end

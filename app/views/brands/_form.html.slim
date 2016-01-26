@@ -17,9 +17,9 @@
     = f.label :description
     = f.text_area :description, :class => 'form-control'
   .field
-    = f.label :brand_image
-    = f.attachment_field :brand_image
+    = f.label :brand_photo
+    = f.file_field :brand_photo
   .field
-    = f.label :brand_logo
-    = f.file_field :brand_logo
+    = f.label :logo_for_brand
+    = f.file_field :logo_for_brand
   .actions = f.submit 'Create Brand', :class => 'btn btn-default'
