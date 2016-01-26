@@ -8,7 +8,7 @@ gem "paperclip", "~> 4.3"
 gem 'puma' # Use Puma as the app server
 gem 'rails', '>= 5.0.0.beta1', '< 5.1'
 gem "sinatra", :git => 'https://github.com/sinatra/sinatra.git'
-
+gem 'aws-sdk', '>= 2.0.0'
 ### Assets
 
 gem 'bootstrap-sass' # Pull yourself up by your
