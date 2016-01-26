@@ -24,3 +24,5 @@
 .byebug_history
 
 .DS_Store
+/public/system/brands
+/public/system/sectors
