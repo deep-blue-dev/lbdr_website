@@ -13,7 +13,7 @@
     = f.label :description
     = f.text_area :description, :class => 'form-control'
   .field
-    = f.label :sector_image
-    = f.attachment_field :sector_image
+    = f.label :sector_photo
+    = f.file_field :sector_photo
 
   .actions = f.submit "Create Sector", :class => 'btn btn-default'

@@ -1,4 +1,5 @@
 class Sector < ApplicationRecord
   # has_many :brands
-  attachment :sector_image
+  has_attached_file :sector_photo, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :sector_photo, content_type: /\Aimage\/.*\Z/
 end
