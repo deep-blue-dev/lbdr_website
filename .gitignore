@@ -26,4 +26,4 @@
 .DS_Store
 /public/system/brands
 /public/system/sectors
-/config/secrets.yml
+/config/application.yml
