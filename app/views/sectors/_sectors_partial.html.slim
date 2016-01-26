@@ -2,7 +2,7 @@
   - @sectors.each do |sector|
     .col-md-3.col-xs-6
       h2 = sector.name
-      = image_tag attachment_url(sector, :sector_image, :fill, 300, 300, format: "jpg")
+      = image_tag sector.sector_image.url(:medium)
       = link_to 'Show', sector
       = link_to 'Edit', edit_sector_path(sector)
       = link_to 'Destroy', sector, data: {:confirm => 'Are you sure?'}, :method => :delete
