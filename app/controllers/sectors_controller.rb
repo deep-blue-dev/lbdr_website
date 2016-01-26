@@ -1,7 +1,7 @@
 class SectorsController < ApplicationController
   before_action :set_sector, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except:[:show, :index]
-  
+
   # GET /sectors
   # GET /sectors.json
   def index
@@ -70,6 +70,6 @@ class SectorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sector_params
-      params.require(:sector).permit(:name, :description, :sector_photo, :brand)
+      params.require(:sector).permit(:name, :description, :sector_photo)
     end
 end
