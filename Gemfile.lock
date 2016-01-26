@@ -270,7 +270,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  aws-sdk (>= 2.0.0)
+  aws-sdk
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -278,7 +278,7 @@ DEPENDENCIES
   devise!
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 4.3)
+  paperclip
   pg
   pry-byebug
   pry-rails
