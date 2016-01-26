@@ -1,9 +1,9 @@
 .container
   h1 Listing brands
   - @brands.each do |brand|
-    = image_tag attachment_url(brand, :brand_image, :fill, 300, 300, format: "jpg")
+    = image_tag attachment_url(brand, :brand_photo, :fill, 300, 300, format: "jpg")
     = brand.name
-    = image_tag attachment_url(brand, :brand_logo, :fill, 300, 300, format: "jpg")
+    = image_tag attachment_url(brand, :logo_for_brand, :fill, 300, 300, format: "jpg")
     = brand.url
     = brand.description
     = link_to 'Show', brand
