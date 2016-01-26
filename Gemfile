@@ -6,9 +6,6 @@ ruby '2.3.0'
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem 'puma' # Use Puma as the app server
 gem 'rails', '>= 5.0.0.beta1', '< 5.1'
-gem "refile", :git =>'https://github.com/refile/refile.git', require: "refile/rails"
-gem "refile-mini_magick"
-gem "refile-s3"
 gem "sinatra", :git => 'https://github.com/sinatra/sinatra.git'
 
 ### Assets
