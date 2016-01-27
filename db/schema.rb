@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160126024407) do
+ActiveRecord::Schema.define(version: 20160127085710) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20160126024407) do
     t.string   "logo_for_brand_content_type"
     t.integer  "logo_for_brand_file_size"
     t.datetime "logo_for_brand_updated_at"
+    t.integer  "sector_id"
+    t.index ["sector_id"], name: "index_brands_on_sector_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -44,11 +46,13 @@ ActiveRecord::Schema.define(version: 20160126024407) do
     t.text     "description"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.string   "sector_image_id"
+    t.string   "sector_photo_id"
     t.string   "sector_photo_file_name"
     t.string   "sector_photo_content_type"
     t.integer  "sector_photo_file_size"
     t.datetime "sector_photo_updated_at"
+    t.integer  "brand_id"
+    t.index ["brand_id"], name: "index_sectors_on_brand_id"
   end
 
   create_table "users", force: :cascade do |t|

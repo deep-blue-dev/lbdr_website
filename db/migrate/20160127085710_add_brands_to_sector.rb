@@ -1,0 +1,5 @@
+class AddBrandsToSector < ActiveRecord::Migration[5.0]
+  def change
+    add_reference :sectors, :brand, index: true, foreign_key: true
+  end
+end
