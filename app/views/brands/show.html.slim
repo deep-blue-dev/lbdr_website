@@ -1,13 +1,17 @@
+= image_tag @brand.brand_photo.url(:big), :class=> 'brand-photo-big'
 .container
   p#notice = notice
 .text-center
-  = image_tag @brand.brand_photo.url(:medium)
+  = image_tag @brand.logo_for_brand.url(:thumb), :class=> 'brand-logo-thumb'
   h1 = @brand.name
   h4 = "Sector Name"
-  = image_tag @brand.logo_for_brand.url(:medium)
-  .description = @brand.description
-  = link_to 'View More', @brand.url, :class=> 'btn btn-default'
-  br
-  = link_to 'Edit', edit_brand_path(@brand)
-  '|
-  = link_to 'Back', brands_path
+  .description.container.col-md-8.col-md-offset-2.text-justify = @brand.description
+
+  .container
+  = link_to 'View More', @brand.url, :target => "_blank", :class=> 'btn btn-default'
+  - if current_user.try(:admin?)
+    = link_to 'Edit', edit_brand_path(@brand)
+    '|
+    = link_to 'Back', brands_path
+
+= p current_user.admin?

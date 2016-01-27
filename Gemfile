@@ -15,7 +15,7 @@ gem "sinatra", :git => 'https://github.com/sinatra/sinatra.git'
 
 gem 'bootstrap-sass' # Pull yourself up by your
 gem 'slim-rails' # Lose some weight
-gem 'sass-rails' # Use SCSS for stylesheets
+# gem 'sass-rails' # Use SCSS for stylesheets
 gem 'coffee-rails' # CoffeeScript
 gem 'jquery-rails' # jQuery
 gem 'jbuilder', '~> 2.0'
