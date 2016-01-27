@@ -1,14 +1,9 @@
 .container
   h1 Listing brands
   - @brands.each do |brand|
-    = image_tag brand.brand_photo.url(:medium)
-    = brand.name
-    = image_tag brand.logo_for_brand.url(:medium)
-    = brand.url
-    = brand.description
-    = link_to 'Show', brand
-    = link_to 'Edit', edit_brand_path(brand)
-    = link_to 'Destroy', brand, data: {:confirm => 'Are you sure?'}, :method => :delete
-    br
-
-= link_to 'New Brand', new_brand_path
+    = link_to brand do
+      = image_tag(brand.logo_for_brand.url(:thumb))
+<br>
+.container
+  - if current_user.try(:admin?)
+    = link_to 'New Brand', new_brand_path

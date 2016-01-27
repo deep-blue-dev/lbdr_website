@@ -8,7 +8,7 @@
   .description.container.col-md-8.col-md-offset-2.text-justify = @brand.description
 
   .container
-  = link_to 'View More', @brand.url, :target => "_blank", :class=> 'btn btn-default'
+  = button_to 'Learn More', @brand.url, :target => "_blank", :class=> 'btn btn-default'
 
   .container
   - if current_user.try(:admin?)
