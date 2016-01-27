@@ -1,0 +1,12 @@
+---
+:Brand:
+  :brand_photo:
+  - :big
+  - :thumb
+  :logo_for_brand:
+  - :big
+  - :thumb
+:Sector:
+  :sector_photo:
+  - :big
+  - :thumb
