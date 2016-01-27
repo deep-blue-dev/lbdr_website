@@ -22,7 +22,24 @@
 
 body {
   padding-top: 50px;
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.btn-default {
+  background-color: #212121;
+  color: #fafafa;
+  padding: 10px 20px;
+  margin: 20px auto;
+}
+
+
+// Navigation
 
 .nav {
   background-color: $black;
@@ -36,6 +53,19 @@ body {
     text-align: center;
     margin: auto;
 }
+
+// End Navigation
+
+// Brands Show Page
+
+img.brand-photo-big {
+  width: 100%;
+}
+
+img.brand-logo-thumb {
+  border: 1px solid #212121;
+}
+// // End Brands Show Page
 
 
 .footer {

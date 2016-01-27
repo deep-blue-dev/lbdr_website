@@ -1,25 +1,26 @@
-= form_for @brand do |f|
-  - if @brand.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@brand.errors.count, "error")} prohibited this brand from being saved:"
-      ul
-        - @brand.errors.full_messages.each do |message|
-          li = message
+.container
+  = form_for @brand do |f|
+    - if @brand.errors.any?
+      #error_explanation
+        h2 = "#{pluralize(@brand.errors.count, "error")} prohibited this brand from being saved:"
+        ul
+          - @brand.errors.full_messages.each do |message|
+            li = message
 
 
-  .field
-    = f.label :name
-    = f.text_field :name, :class => 'form-control'
-  .field
-    = f.label :url
-    = f.text_field :url, :class => 'form-control'
-  .field
-    = f.label :description
-    = f.text_area :description, :class => 'form-control'
-  .field
-    = f.label :brand_photo
-    = f.file_field :brand_photo
-  .field
-    = f.label :logo_for_brand
-    = f.file_field :logo_for_brand
-  .actions = f.submit 'Create Brand', :class => 'btn btn-default'
+    .field
+      = f.label :name
+      = f.text_field :name, :class => 'form-control'
+    .field
+      = f.label :url
+      = f.text_field :url, :class => 'form-control'
+    .field
+      = f.label :description
+      = f.text_area :description, :class => 'form-control'
+    .field
+      = f.label :brand_photo
+      = f.file_field :brand_photo
+    .field
+      = f.label :logo_for_brand
+      = f.file_field :logo_for_brand
+    .actions = f.submit 'Create Brand', :class => 'btn btn-default'
