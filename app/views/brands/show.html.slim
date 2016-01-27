@@ -9,9 +9,9 @@
 
   .container
   = link_to 'View More', @brand.url, :target => "_blank", :class=> 'btn btn-default'
+
+  .container
   - if current_user.try(:admin?)
     = link_to 'Edit', edit_brand_path(@brand)
     '|
     = link_to 'Back', brands_path
-
-= p current_user.admin?

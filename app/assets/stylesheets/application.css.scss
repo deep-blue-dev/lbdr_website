@@ -31,6 +31,16 @@ h1 {
   font-weight: 300;
 }
 
+.btn-default {
+  background-color: #212121;
+  color: #fafafa;
+  padding: 10px 20px;
+  margin: 20px auto;
+}
+
+
+// Navigation
+
 .nav {
   background-color: $black;
 }
@@ -44,7 +54,9 @@ h1 {
     margin: auto;
 }
 
-// // Brands Show Page
+// End Navigation
+
+// Brands Show Page
 
 img.brand-photo-big {
   width: 100%;
