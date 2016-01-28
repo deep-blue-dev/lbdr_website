@@ -1,16 +1,16 @@
 = image_tag @brand.brand_photo.url(:big), :class=> 'brand-photo-big'
-.container
+.container-fluid
   p#notice = notice
 .text-center
   = image_tag @brand.logo_for_brand.url(:thumb), :class=> 'brand-logo-thumb'
   h1 = @brand.name
   h4 = "Sector Name"
-  .description.container.col-md-8.col-md-offset-2.text-justify = @brand.description
+  .description.container-fluid.col-md-8.col-md-offset-2.text-justify = @brand.description
 
-  .container
+  .container-fluid
   = button_to 'Learn More', @brand.url, :target => "_blank", :class=> 'btn btn-default'
 
-  .container
+  .container-fluid
   - if current_user.try(:admin?)
     = link_to 'Edit', edit_brand_path(@brand)
     '|

@@ -1,9 +1,9 @@
-.container
+.container-fluid
   h1 Listing brands
   - @brands.each do |brand|
     = link_to brand do
       = image_tag(brand.logo_for_brand.url(:thumb))
 <br>
-.container
+.container-fluid
   - if current_user.try(:admin?)
     = link_to 'New Brand', new_brand_path
