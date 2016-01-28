@@ -4,7 +4,7 @@
 .text-center
   = image_tag @brand.logo_for_brand.url(:thumb), :class=> 'brand-logo-thumb'
   h1 = @brand.name
-  h4 = "Sector Name"
+  h4 = @brand.sector.name
   .description.container-fluid.col-md-8.col-md-offset-2.text-justify = @brand.description
 
   .container-fluid

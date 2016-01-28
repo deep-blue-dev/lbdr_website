@@ -44,12 +44,16 @@ h1 {
 
 // Navigation
 .navbar, .navmenu {
-    background-color: $black;
-    color: $white;
+  background-color: $black;
+  color: $white;
   }
 
+button.navbar-toggle{
+  border: none;
+}
+
 .navbar-default {
-    border: none;
+  border: none;
   }
 
 #myNavmenu {
