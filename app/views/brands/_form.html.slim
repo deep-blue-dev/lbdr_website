@@ -18,6 +18,9 @@
       = f.label :description
       = f.text_area :description, :class => 'form-control'
     .field
+      = f.label :sector_id
+      = f.select :sector, Sector.all { |s| s.name }
+    .field
       = f.label :brand_photo
       = f.file_field :brand_photo
     .field
