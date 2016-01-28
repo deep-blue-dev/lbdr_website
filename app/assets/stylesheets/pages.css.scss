@@ -3,11 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //  Welcome Page
-.background {
+.background-welcome {
   background-image: image-url('jumbotron.jpg');
   background-size: cover;
   max-width: 100%;
-  height: 700px;
+  height: 650px;
+}
+
+// Group Page
+.background-group {
+  background-image: image-url('jumbotron.jpg');
+  background-size: cover;
+  max-width: 100%;
+  height: 450px;
 }
 
 // Investors Page
