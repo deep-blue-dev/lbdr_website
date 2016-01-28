@@ -8,7 +8,7 @@ gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem "figaro"
 gem "paperclip"
 gem 'puma' # Use Puma as the app server
-gem 'rails', '>= 5.0.0.beta1', '< 5.1'
+gem 'rails', :git => 'https://github.com/rails/rails'
 gem "sinatra", :git => 'https://github.com/sinatra/sinatra.git'
 
 ### Assets
