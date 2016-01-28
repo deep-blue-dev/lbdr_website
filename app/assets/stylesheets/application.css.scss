@@ -43,10 +43,15 @@ h1 {
 
 
 // Navigation
-.nav, .navmenu {
-  background-color: $black;
-  color: $white;
-}
+.navbar, .navmenu {
+    background-color: $black;
+    color: $white;
+  }
+
+.navbar-default {
+    border: none;
+  }
+
 
 #myNavmenu {
   font-size: 2em;

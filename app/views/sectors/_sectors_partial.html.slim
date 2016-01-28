@@ -1,4 +1,5 @@
-.sectors.col-md-8.col-md-offset-2
+.container
+  .sectors.col-md-8.col-md-offset-2
   - @sectors.each do |sector|
     = link_to sector do
       = image_tag(sector.sector_photo.url(:thumb))
