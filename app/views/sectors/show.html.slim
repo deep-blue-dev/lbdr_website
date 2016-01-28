@@ -1,11 +1,12 @@
-= image_tag @sector.sector_photo.url(:big), class:'big-sector-photo'
+= image_tag @sector.sector_photo.url(:big), class:'big-sector-photob'
+
 .container
   p#notice = notice
-  .text-center
-    h1 = @sector.name
-    .description.text-justify = @sector.description
-
-
-    = link_to 'Edit', edit_sector_path(@sector)
-    '|
-    = link_to 'Back', sectors_path
+.text-center
+  h1 = @sector.name
+  .description.container.col-md-8.col-md-offset-2.text-justify = @sector.description
+.container
+- if current_user.try(:admin?)
+  = link_to 'Edit', edit_sector_path(@sector)
+  '|
+  = link_to 'Back', sectors_path
