@@ -14,10 +14,13 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
-
+ @import "brands.css.scss";
+ @import "pages.css.scss";
+ @import "posts.css.scss";
+ @import "sectors.css.scss";
 
  $black: #212121;
- $gray: #222222;
+ $gray: #757575;
  $white: #fafafa;
 
 body {
@@ -54,33 +57,13 @@ h1 {
     margin: auto;
 }
 
-// End Navigation
-
-// Brands Show Page
-
-img.brand-photo-big {
-  width: 100%;
-}
-
-img.brand-logo-thumb {
-  border: 1px solid #212121;
-}
-// End Brands Show Page
-
-
-// Sector's show Page
-img.big-sector-photo{
-  width: 100%;
-}
-
-// End Sector show page
 
 .footer {
-  color: $white;
+  color: #fafafa;
 }
 
 .background {
-  background: url('jumbotron.jpg') no-repeat center center;
+  background-image: image-url('jumbotron.jpg');
   background-size: cover;
   max-width: 100%;
   height: 700px;
