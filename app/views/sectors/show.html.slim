@@ -1,13 +1,10 @@
+= image_tag @sector.sector_photo.url(:big), class:'big-sector-photo'
 .container
   p#notice = notice
   .text-center
-    = image_tag @sector.sector_photo.url(:big)
     h1 = @sector.name
-    .description = @sector.description
-    .brands
-      - @brands.each do |brand|
-        = image_tag @brand.logo_for_brand.url(:medium)
-        = link_to 'Show', @brand
+    .description.text-justify = @sector.description
+
 
     = link_to 'Edit', edit_sector_path(@sector)
     '|
