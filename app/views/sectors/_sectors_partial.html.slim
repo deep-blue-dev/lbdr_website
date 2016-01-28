@@ -1,8 +1,5 @@
 .sectors.col-md-8.col-md-offset-2
   - @sectors.each do |sector|
-    .col-md-3.col-xs-6
+    = link_to sector do
+      = image_tag(sector.sector_photo.url(:thumb))
       h2 = sector.name
-      = image_tag sector.sector_photo.url(:medium)
-      = link_to 'Show', sector
-      = link_to 'Edit', edit_sector_path(sector)
-      = link_to 'Destroy', sector, data: {:confirm => 'Are you sure?'}, :method => :delete
