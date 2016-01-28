@@ -1,19 +1,20 @@
-= form_for @sector do |f|
-  - if @sector.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@sector.errors.count, "error")} prohibited this sector from being saved:"
-      ul
-        - @sector.errors.full_messages.each do |message|
-          li = message
+.container
+  = form_for @sector do |f|
+    - if @sector.errors.any?
+      #error_explanation
+        h2 = "#{pluralize(@sector.errors.count, "error")} prohibited this sector from being saved:"
+        ul
+          - @sector.errors.full_messages.each do |message|
+            li = message
 
-  .field
-    = f.label :name
-    = f.text_field :name, :class => 'form-control'
-  .field
-    = f.label :description
-    = f.text_area :description, :class => 'form-control'
-  .field
-    = f.label :sector_photo
-    = f.file_field :sector_photo
+    .field
+      = f.label :name
+      = f.text_field :name, :class => 'form-control'
+    .field
+      = f.label :description
+      = f.text_area :description, :class => 'form-control'
+    .field
+      = f.label :sector_photo
+      = f.file_field :sector_photo
 
-  .actions = f.submit "Create Sector", :class => 'btn btn-default'
+    .actions = f.submit "Create Sector", :class => 'btn btn-default'

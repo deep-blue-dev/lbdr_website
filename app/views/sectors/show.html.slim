@@ -4,10 +4,10 @@
   p#notice = notice
 .text-center
   h1 = @sector.name
-.container.description.col-md-8.col-md-offset-2 = @sector.description
+.container.description.col-md-8.col-md-offset-2
+  = @sector.description
 
 .container
-  - if current_user.try(:admin?)
-    = link_to 'Edit', edit_sector_path(@sector), class: 'btn btn-danger'
-    '|
-    = link_to 'Back', sectors_path
+- if current_user.try(:admin?)
+  = link_to 'Edit', edit_sector_path(@sector), class: 'btn btn-danger'
+  = link_to 'Back', sectors_path, class: 'btn btn-default'
