@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160127085710) do
+ActiveRecord::Schema.define(version: 20160127085054) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "name"
@@ -51,8 +51,6 @@ ActiveRecord::Schema.define(version: 20160127085710) do
     t.string   "sector_photo_content_type"
     t.integer  "sector_photo_file_size"
     t.datetime "sector_photo_updated_at"
-    t.integer  "brand_id"
-    t.index ["brand_id"], name: "index_sectors_on_brand_id"
   end
 
   create_table "users", force: :cascade do |t|

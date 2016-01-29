@@ -18,7 +18,7 @@
       = f.text_area :description, :class => 'form-control'
     .field
       = f.label :sector_id
-      = f.select(:sector_id, Sector.all.collect {|s| [ s.name] }, {include_blank: true})
+      = f.select(:sector_id, Sector.all.collect {|s| [ s.name, s.id] }, {include_blank: true})
     .field
       = f.label :brand_photo
       = f.file_field :brand_photo
