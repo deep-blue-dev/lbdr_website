@@ -1,6 +1,7 @@
 .container-fluid
-  .sectors.col-md-8.col-md-offset-2
-  - @sectors.each do |sector|
-    = link_to sector do
-      = image_tag(sector.sector_photo.url(:thumb))
-      h2 = sector.name
+  .sectors.col-md-10.col-md-offset-1
+    - @sectors.each do |sector|
+      .col-md-3
+        = link_to sector do
+          = image_tag(sector.sector_photo.url(:thumb))
+          h3.text-center = sector.name
