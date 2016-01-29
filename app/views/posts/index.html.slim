@@ -1,7 +1,7 @@
 h1.text-center.text-uppercase LBDR News & Updates
 .container-fluid.col.md.8
   - @posts.each do |post|
-    h1 = post.title
+    h2 = post.title
     small Authored By:
     = post.author
     p = post.created_at.strftime('%B %e, %Y')
