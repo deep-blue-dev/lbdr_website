@@ -1,6 +1,5 @@
 class Brand < ApplicationRecord
   belongs_to :sector
-
 # Brand Photo File Uploads
   has_attached_file :brand_photo,
     styles: { big: "1920x450#", thumb: "200x150>" },
@@ -14,6 +13,4 @@ class Brand < ApplicationRecord
     default_url: "/images/:style/missing.png"
   validates_attachment_content_type :logo_for_brand,
     content_type: /\Aimage\/.*\Z/
-
-  
 end
