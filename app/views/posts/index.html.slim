@@ -1,12 +1,12 @@
 h1.text-center.text-uppercase LBDR News & Updates
-.container-fluid.col.md.8
+
+.container
   - @posts.each do |post|
     h2 = post.title
-    small Authored By:
     = post.author
     p = post.created_at.strftime('%B %e, %Y')
     p = post.content
     = link_to 'Read More', post , class: 'btn btn-default'
-br
+  br
 
 = link_to 'New Post', new_post_path
