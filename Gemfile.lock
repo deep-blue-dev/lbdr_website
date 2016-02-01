@@ -145,9 +145,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mail_form (1.5.1)
-      actionmailer (>= 3.2, < 5)
-      activemodel (>= 3.2, < 5)
     method_source (0.8.2)
     mime-types (2.99)
     mimemagic (0.3.0)
@@ -259,7 +256,6 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
-  mail_form
   paperclip
   pg
   pry-byebug
