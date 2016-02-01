@@ -6,7 +6,7 @@ ruby '2.3.0'
 gem 'aws-sdk', '< 2.0'
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem "figaro"
-gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'mail_form'
 gem "paperclip"
 gem 'puma' # Use Puma as the app server
 gem 'rails', :git => 'https://github.com/rails/rails'

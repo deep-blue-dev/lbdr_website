@@ -259,7 +259,7 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
-  mail_form (~> 1.5, >= 1.5.1)
+  mail_form
   paperclip
   pg
   pry-byebug
