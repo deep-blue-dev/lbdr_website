@@ -26,6 +26,12 @@
       display: inline;
       a {
         float: left;
+        background: none;
+        color: #212121;
+      }
+      a:hover {
+        background:none;
+        text-decoration: underline;
       }
     }
   }
