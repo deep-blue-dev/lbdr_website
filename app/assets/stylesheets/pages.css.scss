@@ -25,15 +25,15 @@
     display: inline-block;
     li {
       display: inline;
-      text-decoration: underline;
+      // text-decoration: underline;
       a {
         float: left;
-        background: none;
-        color: $white;
+        // background: none;
+        // color: $white;
       }
       a:hover {
-        background:none;
-        text-decoration: underline;
+        // background:none;
+        // text-decoration: underline;
       }
     }
   }
@@ -45,7 +45,7 @@
 
 .about-lbdr {
   padding-top: 100px;
-  background-color: $black;
+  // background-color: $black;
 }
 
 // Investors Page
