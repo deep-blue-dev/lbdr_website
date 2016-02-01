@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 //  Welcome Page
 .background-welcome {
   background-image: image-url('jumbotron.jpg');
@@ -24,10 +25,11 @@
     display: inline-block;
     li {
       display: inline;
+      text-decoration: underline;
       a {
         float: left;
         background: none;
-        color: #212121;
+        color: $white;
       }
       a:hover {
         background:none;
@@ -35,6 +37,15 @@
       }
     }
   }
+}
+
+.section {
+  height: 400px;
+}
+
+.about-lbdr {
+  padding-top: 100px;
+  background-color: $black;
 }
 
 // Investors Page
