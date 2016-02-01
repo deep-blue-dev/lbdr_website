@@ -6,6 +6,7 @@ class BrandsController < ApplicationController
   # GET /brands.json
   def index
     @brands = Brand.all
+    @sectors = Sector.all
   end
 
   # GET /brands/1
