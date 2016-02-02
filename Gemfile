@@ -4,6 +4,7 @@ ruby '2.3.0'
 
 ### Libraries
 gem 'aws-sdk', '< 2.0'
+gem 'contact_us'
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem "figaro"
 gem "paperclip"
