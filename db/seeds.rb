@@ -6,6 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+sectors = [
+  name: 'name of sector',
+  description: 'description of sector',
+  sector_photo_file_name: ''
+]
+
+created_sectors = Sector.create(sectors)
+
+
+
 brands = [
   name: 'name of brand',
   url: 'www.url.com',
