@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Brand:
+  = @social_medium.brand
+p
+  strong Type:
+  = @social_medium.type
+p
+  strong Link:
+  = @social_medium.link
+
+= link_to 'Edit', edit_social_medium_path(@social_medium)
+'|
+= link_to 'Back', social_media_path
