@@ -1,32 +1,24 @@
 .footer
   .container-fluid
-    ul class="col-md-2 list-unstyled"
+    ul.list-unstyled.list-inline.footer-links
       li = link_to 'Group', pages_group_path
       li = link_to 'Sectors', sectors_path
       li = link_to 'Brands', brands_path
       li = link_to 'News', root_path
       li = link_to 'Contact', pages_contact_path
-    ul class="col-md-2 list-unstyled"
-      li = link_to 'Group', pages_group_path
-      li = link_to 'Sectors', sectors_path
-      li = link_to 'Brands', brands_path
-      li = link_to 'News', root_path
-      li = link_to 'Contact', pages_contact_path
-    ul class="col-md-2 list-unstyled"
-      li = link_to 'Group', pages_group_path
-      li = link_to 'Sectors', sectors_path
-      li = link_to 'Brands', brands_path
-      li = link_to 'News', root_path
-      li = link_to 'Contact', pages_contact_path
-    ul class="col-md-3 list-unstyled"
-      li = link_to 'Group', pages_group_path
-      li = link_to 'Sectors', sectors_path
-      li = link_to 'Brands', brands_path
-      li = link_to 'News', root_path
-      li = link_to 'Contact', pages_contact_path
-    ul class="col-md-3 list-unstyled list-inline"
-      li = link_to 'SM', pages_group_path
-      li = link_to 'SM', sectors_path
-      li = link_to 'SM', brands_path
-      li = link_to 'SM', root_path
-      li = link_to 'SM', pages_contact_path
+
+    ul.list-unstyled.list-inline.footer-social-links
+      li = link_to "https://www.facebook.com/VanDutchGroup"
+        i.fa.fa-facebook
+      li = link_to "https://plus.google.com/+VandutchStyle"
+        i.fa.fa-google-plus
+      li = link_to "https://www.youtube.com/user/vandutchstyle"
+        i.fa.fa-youtube
+      li = link_to "https://twitter.com/VanDutchStyle"
+        i.fa.fa-twitter
+      li = link_to "https://www.pinterest.com/VanDutchStyle/pins/"
+        i.fa.fa-pinterest
+
+    p.pull-right
+      | &copy;
+      = Date.today.year

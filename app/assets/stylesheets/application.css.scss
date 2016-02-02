@@ -86,4 +86,13 @@ button.navbar-toggle{
   color: $white;
   background-color: $black;
   margin: 0;
+  a {
+    color: $white;
+  }
+  ul {
+    text-align: center
+  }
+  .footer-links {
+    padding: 20px;
+  }
 }
