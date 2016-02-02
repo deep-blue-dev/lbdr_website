@@ -61,18 +61,16 @@ button.navbar-toggle{
   font-size: 2em;
 }
 
-.sidebar-logo {
-  position: relative;
-  margin: 0 auto;
-}
-
-.navbar-brand {
+.navbar-brand, .sidebar-logo {
   position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  text-align: center;
-  margin: auto;
+  left: 50%;
+  margin-left: -66px !important;  /* 50% of your logo width */
+  display: block;
+  padding-top: 5px;
+
+  img {
+    max-height: 40px;
+  }
 }
 
 @media (min-width: 0) {
