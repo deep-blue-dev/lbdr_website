@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+brands = [
+  name: 'name of brand',
+  url: 'www.url.com',
+  description: 'the description'
+  brand_photo_file_name: '',
+  logo_for_brand_file_name: ''
+]
+
+created_brands = Brand.create(brands)
+
+created_brands.each do |brand|
+  sector = Sector.find_by(name: brand.sector_id)
+  brand.sector = sector
+  brand.save
+end
