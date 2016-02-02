@@ -1,0 +1,18 @@
+= form_for @social_medium do |f|
+  - if @social_medium.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@social_medium.errors.count, "error")} prohibited this social_medium from being saved:"
+      ul
+        - @social_medium.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :brand
+    = f.text_field :brand
+  .field
+    = f.label :type
+    = f.text_field :type
+  .field
+    = f.label :link
+    = f.text_field :link
+  .actions = f.submit

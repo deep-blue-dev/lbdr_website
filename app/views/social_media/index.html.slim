@@ -1,0 +1,25 @@
+h1 Listing social_media
+
+table
+  thead
+    tr
+      th Brand
+      th Type
+      th Link
+      th
+      th
+      th
+
+  tbody
+    - @social_media.each do |social_medium|
+      tr
+        td = social_medium.brand
+        td = social_medium.type
+        td = social_medium.link
+        td = link_to 'Show', social_medium
+        td = link_to 'Edit', edit_social_medium_path(social_medium)
+        td = link_to 'Destroy', social_medium, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Social medium', new_social_medium_path
