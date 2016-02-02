@@ -1,13 +1,13 @@
 nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation"
   = link_to image_tag('lbdr-logo-white.svg'), root_path, :class=>"sidebar-logo"
-  
+
   ul.nav.navmenu-nav
     li = link_to 'Group', pages_group_path
     li = link_to 'Sectors', sectors_path
     li = link_to 'Brands', brands_path
     /li = link_to 'Investors', pages_investor_path
     li = link_to 'News', posts_path
-    li = link_to 'Contact', pages_contact_path
+    li = link_to 'Contact', contact_us_path
 
 .navbar.navbar-default.navbar-fixed-top
   = link_to image_tag('lbdr-logo-white.svg'), root_path, :class=>"navbar-brand logo-header"
