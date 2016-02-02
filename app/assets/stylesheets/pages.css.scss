@@ -21,10 +21,12 @@
 
 .pills-center {
   text-align: center;
+  font-size: 1.75em;
   ul.nav {
     display: inline-block;
     li {
       display: inline;
+
       // text-decoration: underline;
       a {
         float: left;
@@ -44,15 +46,31 @@
 }
 
 .about-lbdr {
-  padding-top: 100px;
+  padding-top: 80px;
   // background-color: $black;
 }
 
-.governance-section {
-  padding-top: 100px;
+.map-section {
+  background: $black;
+  color: $white;
+  h1 {
+    padding-top: 100px;
+  }
 }
 
-// Investors Page
+.investor-section {
+  padding: 100px 0;
+}
+
+.governance-section {
+  padding: 100px 0;
+  font-size: .75em;
+}
+
+.governance-description {
+  padding-bottom: 50px;
+}
+
 
 
 // Contact Page
