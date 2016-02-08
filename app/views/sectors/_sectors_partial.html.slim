@@ -4,4 +4,4 @@
       .sector-image.col-md-3.col-sm-12.col-xs-12.text-center
         = link_to sector do
           = image_tag(sector.sector_photo.url(:thumb), class: "sector-image-thumb")
-          span = sector.name
+          h3 = sector.name
