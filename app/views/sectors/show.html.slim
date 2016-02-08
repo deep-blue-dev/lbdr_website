@@ -7,11 +7,10 @@
 .container-fluid.description.col-md-8.col-md-offset-2
   = @sector.description
 
-.container
+.container.col-md-8-offset-2
   - Brand.all.where(sector_id: [params[:id]]).each do |var|
-    = link_to brand_path(var) do 
-       = image_tag var.logo_for_brand.url(:thumb), :class=> 'brand-logo-thumb'
-
+    .col-md-4
+    = link_to image_tag(var.logo_for_brand.url(:thumb)), brand_path(var)
 .container-fluid
 - if current_user.try(:admin?)
   = link_to 'Edit', edit_sector_path(@sector), class: 'btn btn-danger'
