@@ -1,6 +1,6 @@
 class Brand < ApplicationRecord
   belongs_to :sector
-  
+
 # Brand Photo File Uploads
   has_attached_file :brand_photo,
     styles: { big: "1920x450#", thumb: "200x150>" },
