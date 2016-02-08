@@ -1,63 +1,63 @@
 .container-fluid
   h1 Brands by Sector
-
-  ul.nav.nav-pills.list-unstyled
+hr
+  ul.nav.nav-pills.list-unstyled.brand-tabs.container
     li.active
-      a data-toggle="pill" href="#marine"  Marine
+      h4
+        a data-toggle="pill" href="#marine"  Marine
     li
-      a data-toggle="pill" href="#automotive"  Automotive
+      h4
+        a data-toggle="pill" href="#automotive"  Automotive
     li
-      a data-toggle="pill" href="#aviation"  Aviation
+      h4
+        a data-toggle="pill" href="#aviation"  Aviation
     li
-      a data-toggle="pill" href="#media"  Media
+      h4
+        a data-toggle="pill" href="#media"  Media
     li
-      a data-toggle="pill" href="#fashion"  Fashion & Accessories
+      h4
+        a data-toggle="pill" href="#fashion"  Fashion & Accessories
     li
-      a data-toggle="pill" href="#technology"  Technology
+      h4
+        a data-toggle="pill" href="#technology"  Technology
     li
-      a data-toggle="pill" href="#realestate"  Real Estate
+      h4
+        a data-toggle="pill" href="#realestate"  Real Estate
     li
-      a data-toggle="pill" href="#entertainment"  Entertainment & Leisure
-
+      h4
+        a data-toggle="pill" href="#entertainment"  Entertainment & Leisure
+hr
   .tab-content
     #marine.tab-pane.active
       .container
-        h1 Marine
         - Brand.all.where(sector_id: 3).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
     #automotive.tab-pane
       .container
-        h1 Automotive
         - Brand.all.where(sector_id: 5).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
     #aviation.tab-pane
       .container
-        h1 Aviation
         - Brand.all.where(sector_id: 6).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
     #media.tab-pane
       .container
-        h1 Media
         - Brand.all.where(sector_id: 9).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
     #fashion.tab-pane
       .container
-        h1 Fashion & Accessories
         - Brand.all.where(sector_id: 8).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
     #technology.tab-pane
       .container
-        h1 Technology
         - Brand.all.where(sector_id: 10).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
     #realestate.tab-pane
       .container
-        h1 Real Estate
         - Brand.all.where(sector_id: 4).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
     #entertainment.tab-pane
       .container
-        h1 Entertainment & Leisure
         - Brand.all.where(sector_id: 7).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
 
