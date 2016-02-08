@@ -1,7 +1,7 @@
 .container-fluid
   .sectors.col-md-10.col-md-offset-1.col-xs-12.col-sm-12
     - @sectors.each do |sector|
-      .sector-image.col-md-3.col-sm-12.col-xs-12
+      .sector-image.col-md-3.col-sm-12.col-xs-12.text-center
         = link_to sector do
           = image_tag(sector.sector_photo.url(:thumb), class: "sector-image-thumb")
-          span.text-center = sector.name
+          span = sector.name
