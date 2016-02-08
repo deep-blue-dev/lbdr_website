@@ -14,4 +14,17 @@ img.sector-photo-big {
 .list-brands-by-sector {
   padding-top: 100px;
 }
+
+li a {
+  color: $black;
+}
+
+li a:hover , a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+li.active {
+  border-bottom: 2px solid $black;
+}
 // Sector Index Partial
