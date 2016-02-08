@@ -1,13 +1,7 @@
 .container-fluid
   h1 Brands by Sector
 
-  -@sectors.each do |sector|
-    li.list-unstyled
-      = sector.name
-hr
-  - @brands.each do |brand|
-    = link_to brand do
-      = image_tag(brand.logo_for_brand.url(:thumb))
+
 
 br
 .container-fluid

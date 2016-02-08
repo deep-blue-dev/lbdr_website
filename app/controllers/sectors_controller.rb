@@ -11,6 +11,7 @@ class SectorsController < ApplicationController
   # GET /sectors/1
   # GET /sectors/1.json
   def show
+    @brands = Brand.all
   end
 
   # GET /sectors/new

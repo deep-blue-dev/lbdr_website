@@ -6,7 +6,7 @@ class BrandsController < ApplicationController
   # GET /brands.json
   def index
     @brands = Brand.all
-    @sectors = Sector.all
+    @brands_by_sector = @brands.group_by &:sector
   end
 
   # GET /brands/1
