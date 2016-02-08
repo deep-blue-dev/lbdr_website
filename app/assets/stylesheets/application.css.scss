@@ -44,6 +44,10 @@ h1 {
 
 
 // Navigation
+.navbar {
+  height: 60px;
+}
+
 .navbar, .navmenu {
   background-color: $black;
   color: $white;
@@ -51,6 +55,7 @@ h1 {
 
 button.navbar-toggle{
   border: none;
+  padding-top: 10px;
 }
 
 ul.nav.navmenu-nav {
@@ -73,7 +78,7 @@ ul.nav.navmenu-nav {
   padding-top: 5px;
 
   img {
-    max-height: 40px;
+    max-height: 50px;
   }
 }
 
