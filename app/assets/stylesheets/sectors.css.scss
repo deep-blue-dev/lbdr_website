@@ -24,7 +24,7 @@ li a:hover , a:focus {
   text-decoration: none;
 }
 
-li.active {
+li.active a {
   border-bottom: 2px solid $black;
 }
 // Sector Index Partial

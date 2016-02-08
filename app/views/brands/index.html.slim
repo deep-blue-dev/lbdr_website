@@ -1,65 +1,66 @@
 .container-fluid
   h1 Brands by Sector
 hr
-  ul.nav.nav-pills.list-unstyled.brand-tabs.container
-    li.active
-      h4
-        a data-toggle="pill" href="#marine"  Marine
-    li
-      h4
-        a data-toggle="pill" href="#automotive"  Automotive
-    li
-      h4
-        a data-toggle="pill" href="#aviation"  Aviation
-    li
-      h4
-        a data-toggle="pill" href="#media"  Media
-    li
-      h4
-        a data-toggle="pill" href="#fashion"  Fashion & Accessories
-    li
-      h4
-        a data-toggle="pill" href="#technology"  Technology
-    li
-      h4
-        a data-toggle="pill" href="#realestate"  Real Estate
-    li
-      h4
-        a data-toggle="pill" href="#entertainment"  Entertainment & Leisure
-hr
-  .tab-content
-    #marine.tab-pane.active
-      .container.col-md-8.col-md-offset-2
-        - Brand.all.where(sector_id: 3).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #automotive.tab-pane
-      .container.col-md-8.col-md-offset-2
-        - Brand.all.where(sector_id: 5).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #aviation.tab-pane
-      .container.col-md-8.col-md-offset-2
-        - Brand.all.where(sector_id: 6).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #media.tab-pane
-      .container.col-md-8.col-md-offset-2
-        - Brand.all.where(sector_id: 9).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #fashion.tab-pane
-      .container.col-md-8.col-md-offset-2
-        - Brand.all.where(sector_id: 8).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #technology.tab-pane
-      .container.col-md-8.col-md-offset-2
-        - Brand.all.where(sector_id: 10).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #realestate.tab-pane
-      .container.col-md-8.col-md-offset-2
-        - Brand.all.where(sector_id: 4).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #entertainment.tab-pane
-      .container.col-md-8.col-md-offset-2
-        - Brand.all.where(sector_id: 7).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+  .container
+    ul.list-unstyled.brand-tabs.col-md-3
+      li.active
+        h4
+          a data-toggle="pill" href="#marine"  Marine
+      li
+        h4
+          a data-toggle="pill" href="#automotive"  Automotive
+      li
+        h4
+          a data-toggle="pill" href="#aviation"  Aviation
+      li
+        h4
+          a data-toggle="pill" href="#media"  Media
+      li
+        h4
+          a data-toggle="pill" href="#fashion"  Fashion & Accessories
+      li
+        h4
+          a data-toggle="pill" href="#technology"  Technology
+      li
+        h4
+          a data-toggle="pill" href="#realestate"  Real Estate
+      li
+        h4
+          a data-toggle="pill" href="#entertainment"  Entertainment & Leisure
+          
+    .tab-content.col-md-9
+      #marine.tab-pane.active
+        .container.col-md-8.col-md-offset-2
+          - Brand.all.where(sector_id: 3).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+      #automotive.tab-pane
+        .container.col-md-8.col-md-offset-2
+          - Brand.all.where(sector_id: 5).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+      #aviation.tab-pane
+        .container.col-md-8.col-md-offset-2
+          - Brand.all.where(sector_id: 6).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+      #media.tab-pane
+        .container.col-md-8.col-md-offset-2
+          - Brand.all.where(sector_id: 9).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+      #fashion.tab-pane
+        .container.col-md-8.col-md-offset-2
+          - Brand.all.where(sector_id: 8).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+      #technology.tab-pane
+        .container.col-md-8.col-md-offset-2
+          - Brand.all.where(sector_id: 10).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+      #realestate.tab-pane
+        .container.col-md-8.col-md-offset-2
+          - Brand.all.where(sector_id: 4).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+      #entertainment.tab-pane
+        .container.col-md-8.col-md-offset-2
+          - Brand.all.where(sector_id: 7).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
 
 br
 .container-fluid
