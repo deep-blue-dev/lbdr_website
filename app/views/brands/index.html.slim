@@ -30,39 +30,32 @@ hr
 
     .tab-content.col-md-9
       #marine.tab-pane.active
-        .container
-          - Brand.all.where(sector_id: 3).each do |var|
-            .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+        - Brand.all.where(sector_id: 3).each do |var|
+          .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #automotive.tab-pane
-        .container
           - Brand.all.where(sector_id: 5).each do |var|
             .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #aviation.tab-pane
-        .container
           - Brand.all.where(sector_id: 6).each do |var|
             .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #media.tab-pane
-        .container
           - Brand.all.where(sector_id: 9).each do |var|
             .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #fashion.tab-pane
-        .container
           - Brand.all.where(sector_id: 8).each do |var|
             .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #technology.tab-pane
-        .container
           - Brand.all.where(sector_id: 10).each do |var|
             .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #realestate.tab-pane
-        .container
           - Brand.all.where(sector_id: 4).each do |var|
             .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #entertainment.tab-pane
-        .container
           - Brand.all.where(sector_id: 7).each do |var|
             .col-md-3 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
 
 br
+
 .container-fluid
   - if current_user.try(:admin?)
     = link_to 'New Brand', new_brand_path
