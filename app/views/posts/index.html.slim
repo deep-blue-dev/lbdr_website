@@ -1,12 +1,10 @@
 h1.text-center.text-uppercase LBDR News & Updates
 
 .container
-  - @posts.each do |post|
-    h2 = post.title
-    = post.author
-    p = post.created_at.strftime('%B %e, %Y')
-    p = post.content
-    = link_to 'Read More', post , class: 'btn btn-default'
-  br
-
-= link_to 'New Post', new_post_path
+  .col-md-6
+    - @posts.each do |post|
+      h1.text-left= post.title
+      h4 = post.created_at.strftime('%B %e, %Y')
+      h4 = post.author
+      p = truncate(post.content, length: 350, separator: ' ')
+      = link_to 'Read More', post , class: 'btn btn-default'
