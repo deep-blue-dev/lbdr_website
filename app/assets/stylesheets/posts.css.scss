@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 h2 {
   margin: 0;
 }
@@ -15,4 +16,8 @@ h2 {
   font-weight: 300;
   line-height: 200%;
   margin-top: 60px;
+}
+
+.blog-header {
+  padding: 50px 0;
 }

@@ -1,10 +1,11 @@
-h1.text-center.text-uppercase LBDR News & Updates
-
 .container
-  .col-md-6
-    - @posts.each do |post|
-      h1.text-left= post.title
-      h4 = post.created_at.strftime('%B %e, %Y')
-      h4 = post.author
-      p = truncate(post.content, length: 350, separator: ' ')
-      = link_to 'Read More', post , class: 'btn btn-default'
+  h1.blog-header LBDR News & Updates
+
+  .container
+    .post-wrapper.col-md-6
+      - @posts.each do |post|
+        h1.text-left= post.title
+        h4 = post.created_at.strftime('%B %e, %Y')
+        h4 = post.author
+        p = truncate(post.content, length: 350, separator: ' ')
+        = link_to 'Read More', post , class: 'btn btn-default'
