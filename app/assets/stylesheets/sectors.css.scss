@@ -39,6 +39,14 @@ li.active a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid $black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: $black;
+  opacity: .5;
+  color: $white;
   height: 120px;
+  // border: 1px solid $white;
+  // border-width: 15px;
+  // border-style:double;
 }
