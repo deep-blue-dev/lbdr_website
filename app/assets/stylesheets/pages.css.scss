@@ -47,18 +47,16 @@
         text-decoration: none;
       }
     }
-
     li.active a {
       border-bottom: 2px solid $black;
     }
   }
 }
 
-li a {
-  color: $black;
+.tab-content {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 300;
 }
-
-
 
 li.active a {
   border-bottom: 2px solid $black;
