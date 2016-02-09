@@ -2,7 +2,7 @@
   <div class="sectors col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
      <% @sectors.each do |sector| %>
       <%= link_to sector do %>
-      <div class="sector-image col-md-3 col-sm-3 col-xs-6 text-center">
+      <div class="sector-image col-md-3 col-sm-3 col-xs-8 col-xs-offset-2 text-center">
         <div class="styled-div" style= "background: url(<%= sector.sector_photo.url(:thumb) %>) no-repeat">
           <h3 class="sector-name"> <%= sector.name %></h3>
         </div>
