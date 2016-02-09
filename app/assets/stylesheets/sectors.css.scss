@@ -46,7 +46,13 @@ li.active a {
   opacity: .8;
   color: $white;
   height: 120px;
-  // border: 1px solid $white;
-  // border-width: 15px;
-  // border-style:double;
+}
+
+.sector-name:hover {
+  opacity: .4;
+}
+
+a:hover, a:focus {
+  color: $white;
+  text-decoration: none;
 }
