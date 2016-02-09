@@ -1,11 +1,10 @@
 p#notice = notice
 .container-fluid
-  h2.text-center = @post.title
-  h4.text-center = @post.author
-  h4.text-center = @post.created_at.strftime('%B %e, %Y')
-
-  .container-fluid.col-md-8.col-md-offset-2
-    = @post.content
+  .post-wrapper.col-md-8.col-md-offset-2
+    h1= @post.title
+    h4.text-center = @post.created_at.strftime('%B %e, %Y')
+    h4.text-center = @post.author
+    p.post-content = @post.content
 
 = link_to 'Edit', edit_post_path(@post)
 '|
