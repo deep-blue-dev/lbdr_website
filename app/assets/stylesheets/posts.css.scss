@@ -8,11 +8,19 @@ h2 {
 }
 
 .post-wrapper {
-  padding: 100px 20px;
+  padding: 50px 20px;
+  background: #eee;
+  margin: 50px auto;
+}
+
+.post-show-wrapper {
+  background: #eee;
+  margin-top: 50px;
+  padding: 0 40px;
 }
 
 .post-content {
-  font-family: 'Alegreya Sans';
+  font-family: 'Alegreya Sans', sans-serif;
   font-weight: 300;
   line-height: 200%;
   margin-top: 60px;
