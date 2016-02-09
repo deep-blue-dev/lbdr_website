@@ -1,6 +1,0 @@
-.container-fluid
-  .sectors.col-md-10.col-md-offset-1.col-xs-12.col-sm-12
-    - @sectors.each do |sector|
-      .styled-div {:style= %(background: url('#{sector.sector_photo.url(:thumb)}'))}
-      .sector-image.col-md-3.col-sm-12.col-xs-12.text-center
-        h3.sector-name = sector.name
