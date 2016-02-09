@@ -29,3 +29,16 @@ li.active a {
   border-bottom: 2px solid $black;
 }
 // Sector Index Partial
+
+.sectors {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.sector-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $black;
+  height: 120px;
+}
