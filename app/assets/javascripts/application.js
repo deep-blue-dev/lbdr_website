@@ -16,3 +16,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+jQuery(document).ready(function($){
+  $('.sector-image-thumb').hover(
+    function () {
+      $(this).animate({opacity:'.5'});
+      },
+        function () {
+            $(this).animate({opacity:'.8'});
+        }
+    );
+});
