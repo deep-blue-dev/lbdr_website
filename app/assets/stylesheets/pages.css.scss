@@ -71,14 +71,6 @@ li.active a {
   // background-color: $black;
 }
 
-.map-section {
-  background: $black;
-  color: $white;
-  h1 {
-    padding-top: 100px;
-  }
-}
-
 .investor-section {
   padding: 100px 0;
 }
@@ -86,6 +78,10 @@ li.active a {
 .governance-section {
   padding: 100px 0;
   font-size: .75em;
+}
+
+#executive-committee{
+  width: 175px;
 }
 
 .governance-description {
