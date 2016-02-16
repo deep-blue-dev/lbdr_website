@@ -1,8 +1,8 @@
 .container
   h1.blog-header LBDR News & Updates
 
-  .container
-    .post-wrapper.col-md-6
+  .container.col-md-8.col-md-offset-2
+    .post-wrapper
       - @posts.each do |post|
         h1.text-left= post.title
         h4 = post.created_at.strftime('%B %e, %Y')
