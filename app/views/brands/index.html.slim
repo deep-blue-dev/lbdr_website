@@ -30,8 +30,9 @@ hr
 
     .tab-content.col-md-9
       #marine.tab-pane.active
-        - Brand.all.where(sector_id: 3).each do |var|
-          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+        .row
+          - Brand.all.where(sector_id: 3).each do |var|
+            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #automotive.tab-pane
         - Brand.all.where(sector_id: 5).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
