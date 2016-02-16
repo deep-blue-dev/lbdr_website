@@ -3,7 +3,8 @@
 .container-fluid
   p#notice = notice
   .text-center
-    = image_tag @brand.logo_for_brand.url(:thumb), :class=> 'brand-logo-thumb'
+    = link_to @brand.url do
+      = image_tag @brand.logo_for_brand.url(:thumb), :target => "_blank", :class=> 'brand-logo-thumb'
     h4 = @brand.sector.name
 
   .description.container-fluid.col-md-8.col-md-offset-2.text-justify = @brand.description
