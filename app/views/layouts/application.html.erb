@@ -13,7 +13,11 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <% if current_page?('/') %>
+      <%# render 'layouts/transparent_header' %>
+    <% else %>
+      <%= render 'layouts/header' %>
+    <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
     <!-- Latest compiled and minified JavaScript -->
