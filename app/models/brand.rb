@@ -3,7 +3,7 @@ class Brand < ApplicationRecord
 
 # Brand Photo File Uploads
   has_attached_file :brand_photo,
-    styles: { big: "1920x550#", thumb: "200x150>" },
+    styles: { big: "1920x550#", medium: "300x250>", thumb: "200x150>" },
     default_url: "/images/:style/missing.png"
   validates_attachment_content_type :brand_photo,
     content_type: /\Aimage\/.*\Z/

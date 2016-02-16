@@ -3,9 +3,8 @@
 .container-fluid
   p#notice = notice
   .text-center
-    h1 = @brand.name
+    = image_tag @brand.logo_for_brand.url(:medium), :class=> 'brand-logo-thumb'
     h4 = @brand.sector.name
-    = image_tag @brand.logo_for_brand.url(:thumb), :class=> 'brand-logo-thumb'
 
   .description.container-fluid.col-md-8.col-md-offset-2.text-justify = @brand.description
 
