@@ -28,7 +28,6 @@
 
 // Global Styles
 body {
-  padding-top: 50px;
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 
@@ -51,8 +50,8 @@ h1 {
 }
 
 .navbar, .navmenu {
-  background-color: $black;
-  color: $white;
+  background: none;
+  color: $black;
   }
 
 button.navbar-toggle{
@@ -85,8 +84,8 @@ ul.nav.navmenu-nav {
 }
 
 @media (min-width: 0) {
-  .navbar-toggle {
-    display: block; /* force showing the toggle */
+.navbar-toggle {
+    display: block;/* force showing the toggle */
   }
 }
 
