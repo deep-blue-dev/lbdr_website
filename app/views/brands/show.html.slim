@@ -9,7 +9,7 @@
   .description.container-fluid.col-md-8.col-md-offset-2.text-justify = @brand.description
 
   .container-fluid
-  = button_to 'Learn More', @brand.url, :target => "_blank", :class=> 'btn btn-default'
+  = button_to 'Learn More', @brand.url, :target => "_blank", :class=> 'btn btn-default btn-lg brand-show'
 
   .container-fluid
   - if current_user.try(:admin?)
