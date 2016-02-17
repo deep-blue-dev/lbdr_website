@@ -33,6 +33,10 @@ body {
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+.body-padding {
+  padding-top: 60px;
+}
+
 h1 {
   text-align: center;
   text-transform: uppercase;
@@ -99,6 +103,16 @@ ul.nav.navmenu-nav {
 .navbar-toggle {
     display: block;/* force showing the toggle */
   }
+}
+
+// contact
+
+.contact-form {
+  padding: 150px 0 100px 0;
+}
+
+.contact-countries {
+  padding-bottom: 100px;
 }
 
 // Footer
