@@ -21,13 +21,10 @@ $(function() {
   $(".navbar-brand").hide();
   $(window).scroll(function() {
     var x = $(window).scrollTop();
-
-    if (x <= 42) {
-      $(".navbar-brand").hide();
-    } else {
-      $(".navbar-brand").show();
-    }
-
+      if (x <= 42) {
+        $(".navbar-brand").hide();
+      } else {
+        $(".navbar-brand").show();
+      }
   });
-
 });
