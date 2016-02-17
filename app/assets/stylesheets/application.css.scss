@@ -51,7 +51,7 @@ h1 {
 
 // Navigation
 .navbar {
-  height: 60px;
+  height: 80px;
 }
 
 .navbar, .navmenu {
@@ -61,7 +61,7 @@ h1 {
 
 button.navbar-toggle{
   border: none;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 ul.nav.navmenu-nav {
@@ -79,12 +79,11 @@ ul.nav.navmenu-nav {
 .navbar-brand, .sidebar-logo {
   position: absolute;
   left: 50%;
-  margin-left: -66px !important;  /* 50% of your logo width */
+  margin-left: -50px !important;  /* 50% of your logo width */
   display: block;
   padding-top: 5px;
-
   img {
-    max-height: 50px;
+    max-height: 70px;
   }
 }
 
