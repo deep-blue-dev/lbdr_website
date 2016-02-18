@@ -23,8 +23,10 @@ $(function() {
     var x = $(window).scrollTop();
       if (x <= 42) {
         $(".navbar-brand").hide();
+        $(".lbdr-logo-overlay").fadeIn();
       } else {
         $(".navbar-brand").show();
+        $(".lbdr-logo-overlay").fadeOut();
       }
   });
 });
