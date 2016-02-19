@@ -1,13 +1,15 @@
-<div class="container-fluid">
-  <div class="sectors col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
-     <% @sectors.each do |sector| %>
-      <%= link_to sector do %>
-      <div class="sector-image col-xs-8 col-sm-3 col-md-3 text-center">
-        <div class="styled-div" style= "background: url(<%= sector.sector_photo.url(:thumb) %>) no-repeat">
-          <h3 class="sector-name"> <%= sector.name %></h3>
-        </div>
-        <% end %>
+<div class="container">
+<div class="col-xs-8 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+   <% @sectors.each do |sector| %>
+   <div class="col-md-3 col-sm-6 col-xs-12">
+    <%= link_to sector do %>
+    <div class="sector-image">
+      <div class="styled-div" style= "background: url(<%= sector.sector_photo.url(:thumb) %>) no-repeat">
+        <h3 class="sector-name"><%= sector.name %></h3>
       </div>
       <% end %>
-  </div>
+    </div>
+    </div>
+    <% end %>
+</div>
 </div>
