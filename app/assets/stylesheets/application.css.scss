@@ -68,6 +68,10 @@ button.navbar-toggle{
   padding-top: 20px;
 }
 
+button.navbar-toggle:hover {
+  background: none;
+}
+
 ul.nav.navmenu-nav {
   padding-top: 50px;
 }
