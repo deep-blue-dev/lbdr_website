@@ -5,7 +5,19 @@
 
 // Brands Show Page
 img.brand-photo-big {
+  position:relative;
+  z-index: -1;
   width: 100%;
+}
+
+.brand-name-overlay {
+  color: $white;
+  background: rgba(33, 33, 33, 0.8);
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  display: flex;
+  align-self: center;
 }
 
 img.brand-logo-thumb {
