@@ -9,4 +9,4 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w( lbdr-logo-white.png map.svg home-slider-1.jpg home-slider-2.jpg home-slider-3.jpg home-slider-4.jpg )
+Rails.application.config.assets.precompile += %w( lbdr-logo-white.png map.svg)

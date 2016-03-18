@@ -1,7 +1,7 @@
 = image_tag @brand.brand_photo.url(:big), :class=> 'brand-photo-big'
 h1.brand-name-overlay = @brand.name
 
-.container-fluid
+.container-fluid.brand-content
   p#notice = notice
   .text-center
     = link_to @brand.url do

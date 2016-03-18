@@ -71,6 +71,10 @@ button.navbar-toggle:hover {
   background: none;
 }
 
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background: none;
+}
+
 ul.nav.navmenu-nav {
   padding-top: 50px;
 }

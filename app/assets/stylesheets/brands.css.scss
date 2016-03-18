@@ -5,25 +5,29 @@
 
 // Brands Show Page
 img.brand-photo-big {
-  position:relative;
-  z-index: -1;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   width: 100%;
 }
 
 .brand-name-overlay {
   color: $white;
-  background: rgba(33, 33, 33, 0.8);
+  font-size: 70px;
   position: absolute;
   z-index: 1;
-  top: 100px;
+  top: 50%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
 }
 
+
 img.brand-logo-thumb {
-  border: 1px solid $black;
+  // border: 1px solid $black;
   padding: 10px;
   margin: 30px 5px;
 }
