@@ -11,23 +11,32 @@
 //   height: 650px;
 // }
 
-.welcome-slider {
-  position:relative;
-  z-index: -1;
+// .welcome-slider {
+//   position: absolute;
+//   margin-left: auto;
+//   margin-right: auto;
+//   left: 0;
+//   right: 0;
+//   height:100%;
+//   z-index: -1;
+// }
+
+img.fotorama__img {
+  top:0 !important;
 }
 
 .lbdr-logo-overlay {
-  position:absolute;
-  left: 29%;
-  top: 50px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   z-index: 1;
+  height: 100px;
   // margin: 100px auto;
-  text-align: center;
 }
 
-img .fotorama__img {
-  top: 0;
-}
+
 
 .lbdr-logo-overlay img {
   max-width: 100%;
