@@ -135,9 +135,25 @@ ul.nav.navmenu-nav {
     color: $white;
   }
   ul {
-    text-align: center
+    text-align: center;
   }
   .footer-links {
     padding: 20px;
   }
+}
+
+@media (max-width: 480px) {
+  .fotorama {
+      min-height: 100%;
+  }
+
+  .lbdr-logo-overlay img {
+    max-width: 25%;
+  }
+}
+
+@media(min-width:768px) {
+    .fotorama {
+        min-height: 100%;
+    }
 }

@@ -21,6 +21,12 @@
 //   z-index: -1;
 // }
 
+.fotorama {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
 img.fotorama__img {
   top:0 !important;
 }
