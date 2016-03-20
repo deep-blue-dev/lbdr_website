@@ -31,6 +31,7 @@ $(function() {
   });
 });
 
+// Navbar Menu Toggle, grow on hover
 $(function() {
   $( ".navbar-toggle" )
     .mouseenter(function() {
