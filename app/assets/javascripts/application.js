@@ -31,18 +31,23 @@ $(function() {
   });
 });
 
+$(function() {
+  $( ".navbar-toggle" )
+    .mouseenter(function() {
+      $(".icon-bar").animate({
+        height: '4px',
+        width: '25px'
+      });
+    })
+    .mouseleave(function() {
+      $(".icon-bar").animate({
+        height: '2px',
+        width: '22px'
+      });
+    });
+});
+
 // Make all the content fade in on scroll.
-
-// $(function() {
-//   $(".all-the-content").hide();
-//   $(window).scroll(function() {
-//     var x = $(window).scrollTop();
-//       if (x <= 50) {
-//     $(".all-the-content").fadeIn();
-//   }
-//   });
-// });
-
 $(function() {
   $(window).scroll( function(){
     $('.fadeInBlock').each( function(i){
