@@ -22,16 +22,19 @@ img.brand-photo-big {
 }
 
 .brand-name-overlay {
-  color: $white;
-  font-size: 70px;
+  color: $black;
+  font-size: 5em;
   width: 50%;
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 100px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  background-color: rgba(0, 0, 0, .3);
+  border: 1px solid $black;
+  padding: 85px 35px;
 }
 
 
