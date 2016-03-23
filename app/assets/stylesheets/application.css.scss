@@ -61,7 +61,7 @@ h1 {
 
 // Navigation
 .navbar {
-  height: 80px;
+  height: 60px;
 }
 
 .navbar, .navmenu {
@@ -71,7 +71,7 @@ h1 {
 
 button.navbar-toggle{
   border: none;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 button.navbar-toggle:hover {
@@ -99,9 +99,9 @@ ul.nav.navmenu-nav {
   left: 50%;
   margin-left: -50px !important;  /* 50% of your logo width */
   display: block;
-  padding-top: 5px;
+  padding-top: 2px;
   img {
-    max-height: 70px;
+    max-height: 55px;
   }
 }
 
@@ -161,6 +161,6 @@ ul.nav.navmenu-nav {
   .brand-name-overlay {
     font-size: 2em;
     padding: 30px 15px;
-    top: 15%;
+    top: 50px;
   }
 }
