@@ -5,7 +5,6 @@ ruby '2.3.0'
 ### Libraries
 gem 'aws-sdk', '< 2.0'
 gem 'contact_us'
-gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem "figaro"
 gem "paperclip"
 gem 'puma' # Use Puma as the app server
@@ -22,6 +21,19 @@ gem 'jquery-rails' # jQuery
 gem 'jbuilder', '~> 2.0'
 gem 'turbolinks'
 
+####
+#Active admin for rails5
+####
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise',      '> 4.x'
+gem 'rspec-rails', '>= 3.5.0.beta1'
+gem 'ransack',    github: 'activerecord-hackery/ransack'
+gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
+gem 'formtastic', github: 'justinfrench/formtastic'
+gem 'draper',     github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
+# To fix a Draper deprecation error
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+####
 group :development do
   gem 'sqlite3'
   gem 'better_errors' # Debuggers

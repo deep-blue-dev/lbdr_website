@@ -1,13 +1,70 @@
 GIT
-  remote: https://github.com/plataformatec/devise.git
-  revision: d1d8c2f03de76b8d394c2335df336d082628de01
+  remote: git://github.com/activeadmin/activeadmin.git
+  revision: e72c62b01397b17123e1b71ef706c5d8e4ffbb2f
   specs:
-    devise (4.0.0.pre.dev)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.1)
-      responders
-      warden (~> 1.2.3)
+    activeadmin (1.0.0.pre2)
+      arbre (~> 1.0, >= 1.0.2)
+      bourbon
+      coffee-rails
+      formtastic (~> 3.1)
+      formtastic_i18n
+      inherited_resources (~> 1.6)
+      jquery-rails
+      jquery-ui-rails
+      kaminari (~> 0.15)
+      rails (>= 3.2, < 5.0)
+      ransack (~> 1.3)
+      sass-rails
+      sprockets (< 4)
+
+GIT
+  remote: git://github.com/activerecord-hackery/ransack.git
+  revision: d31bb89d3f2b3986f81f979bed743127f9a6d0e9
+  specs:
+    ransack (1.7.0)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.3)
+
+GIT
+  remote: git://github.com/amatsuda/kaminari.git
+  revision: ac3ff9594a378b6d811e726f952603d800925289
+  branch: 0-17-stable
+  specs:
+    kaminari (0.17.0.alpha)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+
+GIT
+  remote: git://github.com/audionerd/draper.git
+  revision: e816e0e5876b76c648c0928f1c3f2aa2c7a3d1f2
+  ref: e816e0e587
+  branch: rails5
+  specs:
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
+
+GIT
+  remote: git://github.com/justinfrench/formtastic.git
+  revision: 9b0bf2442f0610172cdd605810df104256cb4b5f
+  specs:
+    formtastic (3.2.0.pre)
+      actionpack (>= 4.1.0)
+
+GIT
+  remote: git://github.com/rails/activemodel-serializers-xml.git
+  revision: 570ee7ed33d60e44ca1f3ccbec3d1fbf61d52cbf
+  specs:
+    activemodel-serializers-xml (1.0.1)
+      activemodel (> 5.x)
+      activerecord (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
 
 GIT
   remote: https://github.com/rails/rails
@@ -85,6 +142,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    arbre (1.0.3)
+      activesupport (>= 3.0.0)
     arel (7.0.0)
     autoprefixer-rails (6.3.1)
       execjs
@@ -95,7 +154,7 @@ GEM
     aws-sdk-v1 (1.66.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
-    bcrypt (3.1.10)
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -105,6 +164,9 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bourbon (4.2.7)
+      sass (~> 3.4)
+      thor (~> 0.19)
     builder (3.2.2)
     byebug (8.2.1)
     climate_control (0.0.3)
@@ -123,6 +185,13 @@ GEM
     contact_us (1.1.0)
       rails (>= 4.2.0)
     debug_inspector (0.0.2)
+    devise (4.1.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.9.1)
     execjs (2.6.0)
@@ -131,9 +200,18 @@ GEM
       websocket-driver (>= 0.5.1)
     figaro (1.1.1)
       thor (~> 0.14)
+    formtastic_i18n (0.6.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    has_scope (0.6.0)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     i18n (0.7.0)
+    inherited_resources (1.6.0)
+      actionpack (>= 3.2, < 5)
+      has_scope (~> 0.6.0.rc)
+      railties (>= 3.2, < 5)
+      responders
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -141,6 +219,8 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.5)
+      railties (>= 3.2.16)
     json (1.8.3)
     libv8 (3.16.14.13)
     loofah (2.0.3)
@@ -163,6 +243,8 @@ GEM
       mime-types
       mimemagic (= 0.3.0)
     pg (0.18.4)
+    polyamorous (1.3.0)
+      activerecord (>= 3.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -196,8 +278,26 @@ GEM
     rails_stdout_logging (0.0.4)
     rake (10.5.0)
     ref (2.0.0)
-    responders (2.1.1)
+    request_store (1.3.1)
+    responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
+    rspec-core (3.5.0.beta3)
+      rspec-support (= 3.5.0.beta3)
+    rspec-expectations (3.5.0.beta3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.5.0.beta3)
+    rspec-mocks (3.5.0.beta3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.5.0.beta3)
+    rspec-rails (3.5.0.beta3)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.5.0.beta3)
+      rspec-expectations (= 3.5.0.beta3)
+      rspec-mocks (= 3.5.0.beta3)
+      rspec-support (= 3.5.0.beta3)
+    rspec-support (3.5.0.beta3)
     sass (3.4.21)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -238,7 +338,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    warden (1.2.4)
+    warden (1.2.6)
       rack (>= 1.0)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
@@ -248,6 +348,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activeadmin!
+  activemodel-serializers-xml!
   awesome_print
   aws-sdk (< 2.0)
   better_errors
@@ -255,10 +357,13 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails
   contact_us
-  devise!
+  devise (> 4.x)
+  draper!
   figaro
+  formtastic!
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari!
   paperclip
   pg
   pry-byebug
@@ -267,6 +372,8 @@ DEPENDENCIES
   quiet_assets
   rails!
   rails_12factor
+  ransack!
+  rspec-rails (>= 3.5.0.beta1)
   sass-rails
   sinatra!
   slim-rails
@@ -277,5 +384,8 @@ DEPENDENCIES
   tzinfo-data
   uglifier
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.3

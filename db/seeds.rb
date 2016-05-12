@@ -31,3 +31,4 @@ created_brands.each do |brand|
   brand.sector = sector
   brand.save
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
