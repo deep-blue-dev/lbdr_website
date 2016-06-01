@@ -17,7 +17,12 @@
 //= require turbolinks
 //= require_tree .
 
+
+
 $(function() {
+
+  $('.banner-body').slick();
+
   $(".navbar-brand").hide();
   $(window).scroll(function() {
     var x = $(window).scrollTop();

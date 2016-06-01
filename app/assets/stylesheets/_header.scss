@@ -1,0 +1,233 @@
+// Navigation
+.navbar {
+  height: 60px;
+}
+
+.navbar, .navmenu {
+  background: transparentize($black, $amount);;
+  color: $black;
+  }
+
+button.navbar-toggle{
+  border: none;
+  padding-top: 15px;
+  float:left;
+}
+
+button.navbar-toggle:hover {
+  background: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background: none;
+}
+
+ul.nav.navmenu-nav {
+  padding-top: 50px;
+}
+
+.navbar-default {
+  border: none;
+  }
+
+#myNavmenu {
+  font-size: 2em;
+}
+
+.navbar-brand, .sidebar-logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -145px !important;  /* 50% of your logo width */
+  display: block;
+  padding-top: 2px;
+  img {
+    max-height: 55px;
+  }
+}
+
+.navbar-default .navbar-toggle .icon-bar  {
+  background-color: $white;
+}
+
+.navmenu{
+  background: $black;
+}
+
+@media (min-width: 0) {
+.navbar-toggle {
+    display: block;/* force showing the toggle */
+  }
+}
+
+.fadeInBlock {
+    opacity:0;
+}
+
+
+//banner
+
+.banner{
+  
+  position:relative;
+  width: 100%;
+  overflow:hidden;
+
+  .banner-body{
+    width: 100%;
+    overflow:hidden;
+
+    .banner-content{
+      width: 100%;  
+      background:#181015 url( /assets/templates/bg_header.jpg) no-repeat; 
+      background-size: cover; 
+      min-height:520px; 
+      text-align: center;  
+      color:white; 
+      font-family:"Open sans", Helvetica, Arial; 
+      font-weight:300;
+    }
+
+    .btn{
+      margin-bottom:10px;
+
+      &.btn-lg{
+        padding: 15px 65px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 0;
+      }
+
+      &.btn-default{
+        text-shadow: none; 
+        background:transparent; 
+        color:rgba(255,255,255,.5); 
+        -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); 
+        -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); 
+        box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); 
+        background: transparent;
+
+        &:hover, &:focus{
+          color:rgba(255,255,255,.8); 
+          -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); 
+          -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); 
+          box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); 
+          background: transparent;
+        }
+
+        &:active, &.active{
+          color:#fff; -webkit-box-shadow:inset 0px 0px 0px 3px #fff; 
+          -moz-box-shadow:inset 0px 0px 0px 3px #fff; 
+          box-shadow:inset 0px 0px 0px 3px #fff; 
+          background: transparent;
+        }
+      }
+    }
+
+    .slider_leftpart{
+      background-color:rgba(0,0,0,0.5);
+      padding-top:80px; 
+      padding-bottom:80px;
+      color: #E1DFDF;
+    }
+
+    .logo_lbdr{ 
+      font-size:140px;
+      font-weight:800;
+      line-height:140px;
+      color:#E1DFDF;
+      margin-left: -12px;
+    }
+
+    .follow-me-icons{
+      font-size: 26px;
+
+      &.header_social{
+        a, i{
+          color:#FFFFFF!important;
+        }
+
+        i{
+          float:left; 
+          margin:0 15px 0 0;
+        }
+      } 
+    }
+  }
+
+  #menu-wrapper {
+    position:absolute;
+    right: 30px;
+    top: 40px;
+    color: #FFF;
+
+    .cell{
+      background: transparent ;
+      border: 2px solid #fff;
+      border-radius: 24px;
+      clear: both;
+      float: right;
+      margin: 5px 0;
+      padding: 6px 8px;
+
+      span {
+        float: left;
+        max-width: 0px;
+        overflow: hidden;
+        transition: 1s linear;
+        text-transform: uppercase;
+        margin-top: 4px;
+      }
+
+      &:hover{
+        span{
+          max-width: 120px;
+          padding: 0px 20px;
+        }
+      }
+
+      i{
+        font-size: 24px;
+      }
+    }
+  }
+  
+}
+
+.no-padding{padding: 0px!important;}
+
+.carousel-caption.mylink{
+
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  left: 0!important;
+  right: 0!important;
+  bottom: 0!important;
+  top:0!important;
+  padding: 30%;
+  
+ }
+  .carousel-caption.mylink.twoline{
+    padding: 26%;
+  }
+
+ .carousel-caption.mylink h3,
+  .carousel-caption.mylink h3 a{
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FFF;
+  margin:0px;
+ }
+
+.gallery_menu a:hover .carousel-caption.mylink {
+    background: rgba(0,0,0,0);
+
+}
+ .section_area.with_padding{
+  padding-top:80px;
+  padding-bottom: 100px; 
+ }
+ .boldtext {
+    font-weight: bold;
+}

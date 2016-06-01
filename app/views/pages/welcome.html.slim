@@ -1,7 +1,189 @@
-.lbdr-logo-overlay = image_tag ('LBDR_Emblem_White.svg')
-.fotorama.welcome-slider data-width="100%" data-ratio="800/600"
-  = image_tag("http://placehold.it/1900x1267")
-  = image_tag("http://placehold.it/1900x1267")
-.sectors
-  h1.text-center.text-uppercase Sectors
-  = render 'sectors/sectors_partial'
+.banner
+  
+  .banner-body
+
+    .banner-content
+
+      .row
+        .col-md-8.slider_leftpart
+
+          .col-md-3.text-left
+
+          .col-md-9.text-left
+            
+            .follow-me-icons.header_social
+              
+              = link_to '<i class="fa fa-twitter fa-2"></i>'.html_safe, '#'
+              = link_to '<i class="fa fa-google-plus fa-2"></i>'.html_safe, '#'
+              = link_to '<i class="fa fa-linkedin-square fa-2"></i>'.html_safe, '#'
+              = link_to '<i class="fa fa-facebook fa-2"></i>'.html_safe, '#'
+              
+            br
+            br
+            br
+            br
+
+            .logo_lbdr LBD&reg;
+
+            h2 We invest, develop, produce,
+            h4 manage, marketeer & retail the very best.
+            p.tagline
+              LBDR is a collection of 33 superior global brands<br/>
+              in diversified 8 industry sectors,<br/> 
+              business modelled on long-term vision,<br/>
+              creativity and and excellence.
+            p
+              = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
+        
+        .col-md-4.text-left
+    
+    .banner-content
+
+      .row
+        .col-md-8.slider_leftpart
+
+          .col-md-3.text-left
+
+          .col-md-9.text-left
+            
+            .follow-me-icons.header_social
+              
+              = link_to '<i class="fa fa-twitter fa-2"></i>'.html_safe, '#'
+              = link_to '<i class="fa fa-google-plus fa-2"></i>'.html_safe, '#'
+              = link_to '<i class="fa fa-linkedin-square fa-2"></i>'.html_safe, '#'
+              = link_to '<i class="fa fa-facebook fa-2"></i>'.html_safe, '#'
+              
+            br
+            br
+            br
+            br
+
+            .logo_lbdr LBD&reg;
+
+            h2 We invest, develop, produce,
+            h4 manage, marketeer & retail the very best.
+            p.tagline
+              LBDR is a collection of 33 superior global brands<br/>
+              in diversified 8 industry sectors,<br/> 
+              business modelled on long-term vision,<br/>
+              creativity and and excellence.
+            p
+              = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
+        
+        .col-md-4.text-left
+
+  #menu-wrapper
+    ul.nav
+      li.cell
+        i.fa.fa-home.fa-2 
+        span Home
+
+      li.cell
+        i.fa.fa-user.fa-2 
+        span About
+
+      li.cell
+        i.fa.fa-bullseye.fa-2 
+        span Services
+      
+      li.cell
+        i.fa.fa-book.fa-2 
+        span Services
+
+      li.cell
+        i.fa.fa-phone-square.fa-2 
+        span Services
+
+
+section.section_area.with_padding
+  
+  
+    .container.text-center
+      h3.boldtext LBDR Group Business Model
+      p.text-muted
+        is and will be anchored in a long-term vision<br/>
+        that builds on the Heritage of our Brands<br/>
+        and stimulates Creativity, Sustainability,<br/>
+        Innovations and Excellence.
+
+.gallery_menu
+  
+  .col-md-3.col-sm-6.no-padding
+
+    = link_to '#' do
+      = image_tag "templates/ship.jpg", :class => "img-responsive", :alt => "test"
+      .carousel-caption.mylink
+        h3 Marine
+    end
+
+  .col-md-3.col-sm-6.no-padding
+
+    = link_to '#' do
+      = image_tag "templates/airoplain.jpg", :class => "img-responsive", :alt => "test"
+      .carousel-caption.mylink
+        h3 Aviation
+    end
+
+  .col-md-3.col-sm-6.no-padding
+
+    = link_to '#' do
+      = image_tag "templates/travel-and-leisure.jpg", :class => "img-responsive", :alt => "test"
+      .carousel-caption.mylink
+        h3 Entertaintment and Leisure
+    end
+
+  .col-md-3.col-sm-6.no-padding
+
+    = link_to '#' do
+      = image_tag "templates/car.jpg", :class => "img-responsive", :alt => "test"
+      .carousel-caption.mylink
+        h3 Automotive
+    end
+
+  .col-md-3.col-sm-6.no-padding
+
+    = link_to '#' do
+      = image_tag "templates/real-estate.jpg", :class => "img-responsive", :alt => "test"
+      .carousel-caption.mylink
+        h3 Rear Estate
+    end
+
+  .col-md-3.col-sm-6.no-padding
+
+    = link_to '#' do
+      = image_tag "templates/fasion.jpg", :class => "img-responsive", :alt => "test"
+      .carousel-caption.mylink
+        h3 Fasion And Accesories
+    end
+
+  .col-md-3.col-sm-6.no-padding
+
+    = link_to '#' do
+      = image_tag "templates/news.jpg", :class => "img-responsive", :alt => "test"
+      .carousel-caption.mylink
+        h3 Media
+    end
+
+  .col-md-3.col-sm-6.no-padding
+
+    = link_to '#' do
+      = image_tag "templates/technology.jpg", :class => "img-responsive", :alt => "test"
+      .carousel-caption.mylink
+        h3 Technology
+    end
+
+section.section_area.with_padding
+    
+    
+    .container.text-center
+      h3.boldtext We invest, develop, produce,
+      h5.boldtext manage, marketeer & retail the very best.
+      p.text-muted
+        LBDR is a collection of 33 superior global brands<br/>
+        in diversified 8 industry sectors,<br/>
+        business modelled on long-term vision,<br/>
+        creativity and and excellence.    
+
+= render 'sectors/sectors_partial'
+
+
