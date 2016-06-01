@@ -21,7 +21,9 @@
 
 $(function() {
 
-  $('.banner-body').slick();
+  $( document ).on('ready page:load', function() {
+    $('.banner-body').slick();  
+  });
 
   $(".navbar-brand").hide();
   $(window).scroll(function() {
