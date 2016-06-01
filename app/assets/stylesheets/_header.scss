@@ -75,6 +75,7 @@ ul.nav.navmenu-nav {
 
   .banner-body{
     width: 100%;
+    min-height:620px;
     overflow:hidden;
 
     .banner-content{
@@ -86,6 +87,7 @@ ul.nav.navmenu-nav {
       font-family:"Open sans", Helvetica, Arial; 
       font-weight:300;
       height:100vh;
+      min-height:620px;
     }
 
     .btn{

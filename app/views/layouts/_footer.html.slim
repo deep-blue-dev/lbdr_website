@@ -1,93 +1,60 @@
-.footer.col-md-12
-  .container-fluid
-    ul.list-unstyled.list-inline.footer-links
-      li = link_to 'Group', pages_group_path
-      li = link_to 'Sectors', sectors_path
-      li = link_to 'Brands', brands_path
-      li = link_to 'News', posts_path
-      li = link_to 'Contact', contact_us_path
+footer#footer
+  
+  .footer1
+    .container
+      .row
+        .col-md-2 &nbsp;
+        .col-md-8
+          .col-md-4.col-sm-4.widget
+            h3.widget-title
+            .widget-body
+              ul.footer_menu
+                li = link_to 'GROUP', pages_group_path
+                li = link_to 'SECTORS', sectors_path
+                li = link_to 'BRANDS', brands_path
+                li = link_to 'NEWS', posts_path
+                li = link_to 'CONTACT US', contact_us_path
+                li = link_to 'LEGAL TERMS', "#"
 
-    ul.list-unstyled.list-inline.footer-social-links
-      li = link_to "https://www.facebook.com/VanDutchGroup"
-        i.fa.fa-facebook
-      li = link_to "https://plus.google.com/+VandutchStyle"
-        i.fa.fa-google-plus
-      li = link_to "https://www.youtube.com/user/vandutchstyle"
-        i.fa.fa-youtube
-      li = link_to "https://twitter.com/VanDutchStyle"
-        i.fa.fa-twitter
-      li = link_to "https://www.pinterest.com/VanDutchStyle/pins/"
-        i.fa.fa-pinterest
+          .col-md-4.col-sm-4.widget
+            h3.widget-title
+            .widget-body
+              .footer_address
+                strong USA
+                p 123 Main St. Miami, FL 33190
+                
+                strong Latin America
+                p 123 Main St. Miami, FL 33190
 
-    p.pull-right
-      | &copy;
-      = Date.today.year
+                strong Europe
+                p 123 Main St. Miami, FL 33190
 
-<footer id="footer">
+                strong Middle East
+                p 123 Main St. Miami, FL 33190
+          
 
-  <div class="footer1">
-    <div class="container">
-      <div class="row">
+          .col-md-3.col-sm-4.widget
+            h3.widget-title
+            .widget-body
+              .follow-me-icons.text-right
 
-      <div class="col-md-2">&nbsp;</div> 
+                = link_to "https://twitter.com/VanDutchStyle"
+                  i.fa.fa-twitter.fa-2
+                = link_to "https://plus.google.com/+VandutchStyle"
+                  i.fa.fa-google-plus.fa-2
+                = link_to "#"
+                  i.fa.fa-linkedin-square.fa-2
+                = link_to "https://www.facebook.com/VanDutchGroup"
+                  i.fa.fa-facebook.fa-2
+              
+              .flag_icon_area
+                = link_to "#" do
+                  = image_tag "templates/flag_icon.png", :class => "img-responsive"
+                end
+              
+              p.copyright.text-right &copy; LBDR Group 2016
+          
 
-      <div class="col-md-8">
-
-        <div class="col-md-4  col-sm-4  widget">
-          <h3 class="widget-title"></h3>
-          <div class="widget-body"> 
-            <ul class="footer_menu">
-              <li><a href="#">GROUP</a></li>
-              <li><a href="#">SECTORS</a></li>
-              <li><a href="#">BRANDS</a></li>
-              <li><a href="#">NEWS</a></li>
-              <li><a href="#">CONTACT US</a></li>
-              <li><a href="#">LEGAL TERMS</a></li>
-            </ul> 
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-4 widget">
-          <h3 class="widget-title"></h3>
-          <div class="widget-body">
-            <div class="footer_address"> 
-              <strong>USA</strong>
-              <p> 123 Main St. Miami, FL 33190</p>
-               
-              <strong>Latin America</strong>
-              <p> 123 Main St. Miami, FL 33190</p>
-               
-              <strong>Europe</strong>
-              <p> 123 Main St. Miami, FL 33190</p>
-               
-              <strong>Middle East</strong>
-              <p> 123 Main St. Miami, FL 33190</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-4 widget">
-          <h3 class="widget-title"></h3>
-          <div class="widget-body">
-            <div class="follow-me-icons text-right">
-              <a href="#"><i class="fa fa-twitter fa-2"></i></a>
-              <a href="#"><i class="fa fa-google-plus fa-2"></i></a>
-              <a href="#"><i class="fa fa-linkedin-square fa-2"></i></a>
-              <a href="#"><i class="fa fa-facebook fa-2"></i></a>
-            </div>  
-            <div class="flag_icon_area">
-            <a href="#" ><img src="/assets/templates/flag_icon.png" class="img-responsive"/></a>
-            </div>
-            <p class="copyright text-right">&copy; LBDR Group 2016</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-2">&nbsp;</div>
-
-
-      </div> <!-- /row of widgets -->
-    </div>
-  </div> 
-
-</footer>
+        .col-md-2 &nbsp;
+    
+  
