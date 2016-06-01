@@ -157,8 +157,18 @@ ul.nav.navmenu-nav {
   #menu-wrapper {
     position:absolute;
     right: 30px;
-    top: 40px;
+    top: 90px;
     color: #FFF;
+
+    a{
+      color:#FFF;
+      display:inline;
+      padding:0px;
+
+      &:hover{
+        background: none;
+      }
+    }
 
     .cell{
       background: transparent ;
@@ -168,6 +178,7 @@ ul.nav.navmenu-nav {
       float: right;
       margin: 5px 0;
       padding: 6px 8px;
+      cursor:pointer;
 
       span {
         float: left;
@@ -176,17 +187,21 @@ ul.nav.navmenu-nav {
         transition: 1s linear;
         text-transform: uppercase;
         margin-top: 4px;
+        height: 22px;
       }
 
       &:hover{
         span{
-          max-width: 120px;
+          max-width: 250px;
           padding: 0px 20px;
         }
       }
 
       i{
         font-size: 24px;
+        width: 28px;
+        height: 28px;
+        text-align: center;
       }
     }
   }
