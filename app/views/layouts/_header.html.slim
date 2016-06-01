@@ -9,7 +9,7 @@ nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" 
     li = link_to 'News', posts_path
     li = link_to 'Contact', contact_us_path
 
-div class=(current_page?("/") ? 'navbar navbar-default navbar-fixed-top absolute' : 'navbar navbar-default navbar-fixed-top')
+div class=(current_page?("/") ? 'navbar navbar-default navbar-fixed-top nav-absolute' : 'navbar navbar-default navbar-fixed-top')
   /= link_to image_tag('LBDR_Simple_White.svg'), root_path, :class=>"navbar-brand logo-header"
   button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body"
     span class="icon-bar"

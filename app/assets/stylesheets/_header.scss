@@ -4,9 +4,10 @@
 }
 
 .navbar, .navmenu {
-  background: transparent;
+  background: transparentize($black, $amount);
   color: $black;
-  }
+}
+
 
 button.navbar-toggle{
   border: none;
@@ -79,12 +80,12 @@ ul.nav.navmenu-nav {
     .banner-content{
       width: 100%;  
       background:#181015 url(/miami2.jpg) no-repeat; 
-      background-size: cover; 
-      min-height:520px; 
+      background-size: cover;
       text-align: center;  
       color:white; 
       font-family:"Open sans", Helvetica, Arial; 
       font-weight:300;
+      height:100vh;
     }
 
     .btn{
@@ -128,6 +129,7 @@ ul.nav.navmenu-nav {
       padding-top:80px; 
       padding-bottom:80px;
       color: #E1DFDF;
+      height: 100vh;
     }
 
     .logo_lbdr{ 
@@ -155,6 +157,13 @@ ul.nav.navmenu-nav {
   }
 
   #menu-wrapper {
+
+    display: none;
+
+    @media (min-width: $screen-md-min){
+      display: block;  
+    }
+
     position:absolute;
     right: 30px;
     top: 90px;
@@ -255,8 +264,9 @@ ul.nav.navmenu-nav {
   clear: both;
 }
 
-.absolute{
+.nav-absolute{
   position: absolute !important;
   top:20px;
   left: 20px;
+  background: transparent !important;
 }
