@@ -4,7 +4,7 @@
 }
 
 .navbar, .navmenu {
-  background: transparentize($black, $amount);;
+  background: transparent;
   color: $black;
   }
 
@@ -78,7 +78,7 @@ ul.nav.navmenu-nav {
 
     .banner-content{
       width: 100%;  
-      background:#181015 url( /bg_header.jpg) no-repeat; 
+      background:#181015 url(/miami2.jpg) no-repeat; 
       background-size: cover; 
       min-height:520px; 
       text-align: center;  
@@ -171,7 +171,7 @@ ul.nav.navmenu-nav {
     }
 
     .cell{
-      background: transparent ;
+      background-color: rgba(0, 0, 0, 0.5);
       border: 2px solid #fff;
       border-radius: 24px;
       clear: both;
@@ -179,6 +179,7 @@ ul.nav.navmenu-nav {
       margin: 5px 0;
       padding: 6px 8px;
       cursor:pointer;
+
 
       span {
         float: left;
@@ -202,6 +203,9 @@ ul.nav.navmenu-nav {
         width: 28px;
         height: 28px;
         text-align: center;
+        position:relative;
+        padding-top: 3px;
+        verticall-align: middle; 
       }
     }
   }
@@ -253,4 +257,6 @@ ul.nav.navmenu-nav {
 
 .absolute{
   position: absolute !important;
+  top:20px;
+  left: 20px;
 }
