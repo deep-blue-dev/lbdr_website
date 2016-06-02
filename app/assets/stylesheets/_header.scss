@@ -123,20 +123,7 @@ button.navbar-toggle:hover {
       margin-left: -12px;
     }
 
-    .follow-me-icons{
-      font-size: 26px;
-
-      &.header_social{
-        a, i{
-          color:#FFFFFF!important;
-        }
-
-        i{
-          float:left; 
-          margin:0 15px 0 0;
-        }
-      } 
-    }
+    
   }
 
   #menu-wrapper {
@@ -257,6 +244,37 @@ button.navbar-toggle:hover {
 #myNavmenu {
   font-size: 2em;
 
+  .nav{
+    li{
+      display: block;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid #272727;
+      position: relative;
+
+      a{
+        padding: 1.2em 0 1em 20px;
+
+        display: block;
+        padding: 1em 0 .8em 20px;
+        position: relative;
+        z-index: 5;
+        text-align: left;
+        color: #aaa;
+        text-decoration: none;
+        font-weight: 200!important;
+        font-family: din-light,sans-serif;
+        font-family: "Helvetica Neue",helvetica,sans-serif;
+        text-transform: uppercase;
+        font-size: 14px;
+
+        &:hover{
+          background: #333;
+        }
+      }
+    }
+  }
+
   .navmenu-nav{
     margin-top: 30px;
   }
@@ -264,12 +282,34 @@ button.navbar-toggle:hover {
   .sidebar-logo {
 
     img{
-      width: 70%;
-      margin: 14%;
+      width: 65%;
+      margin: 16% 16% 0 16%;
     }
 
     @media (min-width: $screen-md-min){
       
     }
+  }
+
+  .follow-me-icons{
+
+    padding: 19px 0 0 18px;
+    font-size: 22px;
+
+    .social-icons-content{
+
+      display: inline-block;
+
+      a, i{
+        color:#FFFFFF!important;
+      }
+
+      i{
+        float:left; 
+        margin:0 15px 0 0;
+      }
+    }
+    
+
   }
 }
