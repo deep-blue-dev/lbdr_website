@@ -1,5 +1,5 @@
 .banner
-  
+
   .banner-body
 
     .banner-content
@@ -10,14 +10,14 @@
           .col-md-3.text-left
 
           .col-md-9.text-left
-            
+
             .follow-me-icons.header_social
-              
+
               = link_to '<i class="fa fa-twitter fa-2"></i>'.html_safe, '#'
               = link_to '<i class="fa fa-google-plus fa-2"></i>'.html_safe, '#'
               = link_to '<i class="fa fa-linkedin-square fa-2"></i>'.html_safe, '#'
               = link_to '<i class="fa fa-facebook fa-2"></i>'.html_safe, '#'
-              
+
             br
             br
             br
@@ -29,14 +29,14 @@
             h4 manage, marketeer & retail the very best.
             p.tagline
               LBDR is a collection of 33 superior global brands<br/>
-              in diversified 8 industry sectors,<br/> 
+              in diversified 8 industry sectors,<br/>
               business modelled on long-term vision,<br/>
               creativity and and excellence.
             p
               = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
-        
+
         .col-md-4.text-left
-    
+
     .banner-content
 
       .row
@@ -45,14 +45,14 @@
           .col-md-3.text-left
 
           .col-md-9.text-left
-            
+
             .follow-me-icons.header_social
-              
+
               = link_to '<i class="fa fa-twitter fa-2"></i>'.html_safe, '#'
               = link_to '<i class="fa fa-google-plus fa-2"></i>'.html_safe, '#'
               = link_to '<i class="fa fa-linkedin-square fa-2"></i>'.html_safe, '#'
               = link_to '<i class="fa fa-facebook fa-2"></i>'.html_safe, '#'
-              
+
             br
             br
             br
@@ -64,54 +64,54 @@
             h4 manage, marketeer & retail the very best.
             p.tagline
               LBDR is a collection of 33 superior global brands<br/>
-              in diversified 8 industry sectors,<br/> 
+              in diversified 8 industry sectors,<br/>
               business modelled on long-term vision,<br/>
               creativity and and excellence.
             p
               = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
-        
+
         .col-md-4.text-left
 
   #menu-wrapper
     ul.nav
       li.cell
         = link_to '#' do
-          i.fa.fa-anchor.fa-2 
+          i.fa.fa-anchor.fa-2
           span Marine
         end
 
       li.cell
-        i.fa.fa-paper-plane.fa-2 
+        i.fa.fa-paper-plane.fa-2
         span Aviation
 
       li.cell
-        i.fa.fa-child.fa-2 
+        i.fa.fa-child.fa-2
         span Entertaintment and Leisure
-      
+
       li.cell
-        i.fa.fa-car.fa-2 
+        i.fa.fa-car.fa-2
         span Automotive
 
       li.cell
-        i.fa.fa-coffee.fa-2 
+        i.fa.fa-coffee.fa-2
         span Real Estate
 
       li.cell
-        i.fa.fa-star.fa-2 
+        i.fa.fa-star.fa-2
         span Fasion And Accesories
 
       li.cell
-        i.fa.fa-video-camera.fa-2 
+        i.fa.fa-video-camera.fa-2
         span Media
 
       li.cell
-        i.fa.fa-wifi.fa-2 
+        i.fa.fa-wifi.fa-2
         span Technology
 
 
 section.section_area.with_padding
-  
-  
+
+
     .container.text-center
       h3.boldtext LBDR Group Business Model
       p.text-muted
@@ -121,74 +121,19 @@ section.section_area.with_padding
         Innovations and Excellence.
 
 .gallery_menu
-  
+- @sectors.each do |sector|
   .col-md-3.col-sm-6.no-padding
 
-    = link_to '#' do
-      = image_tag "templates/ship.jpg", :class => "img-responsive", :alt => "test"
+    = link_to "#{sector_path(sector)}" do
+      = image_tag "#{sector.sector_photo.url(:original)}", :class => "img-responsive", :alt => "#{sector.name}"
       .carousel-caption.mylink
-        h3 Marine
+        h3 "#{sector.name}"
     end
 
-  .col-md-3.col-sm-6.no-padding
-
-    = link_to '#' do
-      = image_tag "templates/airoplain.jpg", :class => "img-responsive", :alt => "test"
-      .carousel-caption.mylink
-        h3 Aviation
-    end
-
-  .col-md-3.col-sm-6.no-padding
-
-    = link_to '#' do
-      = image_tag "templates/travel-and-leisure.jpg", :class => "img-responsive", :alt => "test"
-      .carousel-caption.mylink
-        h3 Entertaintment and Leisure
-    end
-
-  .col-md-3.col-sm-6.no-padding
-
-    = link_to '#' do
-      = image_tag "templates/car.jpg", :class => "img-responsive", :alt => "test"
-      .carousel-caption.mylink
-        h3 Automotive
-    end
-
-  .col-md-3.col-sm-6.no-padding
-
-    = link_to '#' do
-      = image_tag "templates/real-estate.jpg", :class => "img-responsive", :alt => "test"
-      .carousel-caption.mylink
-        h3 Real Estate
-    end
-
-  .col-md-3.col-sm-6.no-padding
-
-    = link_to '#' do
-      = image_tag "templates/fasion.jpg", :class => "img-responsive", :alt => "test"
-      .carousel-caption.mylink
-        h3 Fasion And Accesories
-    end
-
-  .col-md-3.col-sm-6.no-padding
-
-    = link_to '#' do
-      = image_tag "templates/news.jpg", :class => "img-responsive", :alt => "test"
-      .carousel-caption.mylink
-        h3 Media
-    end
-
-  .col-md-3.col-sm-6.no-padding
-
-    = link_to '#' do
-      = image_tag "templates/technology.jpg", :class => "img-responsive", :alt => "test"
-      .carousel-caption.mylink
-        h3 Technology
-    end
 
 section.section_area.with_padding
-    
-    
+
+
     .container.text-center
       h3.boldtext We invest, develop, produce,
       h5.boldtext manage, marketeer & retail the very best.
@@ -196,8 +141,4 @@ section.section_area.with_padding
         LBDR is a collection of 33 superior global brands<br/>
         in diversified 8 industry sectors,<br/>
         business modelled on long-term vision,<br/>
-        creativity and and excellence.    
-
-= render 'sectors/sectors_partial'
-
-
+        creativity and and excellence.
