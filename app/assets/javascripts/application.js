@@ -23,6 +23,10 @@ $(function() {
 
   $( document ).on('ready page:load', function() {
     $('.banner-body').slick();  
+
+    $('#nav-icon1').click(function(){
+      $(this).toggleClass('open');
+    });
   });
 
   $(".navbar-brand").hide();

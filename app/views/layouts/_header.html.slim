@@ -17,8 +17,8 @@ nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" 
       = link_to '<i class="fa fa-facebook fa-2"></i>'.html_safe, '#'
 
 div class=(current_page?("/") ? 'navbar navbar-default navbar-fixed-top nav-absolute' : 'navbar navbar-default navbar-fixed-top')
-  /= link_to image_tag('LBDR_Simple_White.svg'), root_path, :class=>"navbar-brand logo-header"
-  button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body"
-    span class="icon-bar"
-    span class="icon-bar"
-    span class="icon-bar"
+  
+  button id="nav-icon1" class=(current_page?("/") ? 'nav-home' : 'nav-in') type="button" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body"
+    span
+    span
+    span
