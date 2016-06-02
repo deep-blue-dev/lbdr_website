@@ -16,6 +16,8 @@
 
 /config/database.yml
 
+/config/*.yml
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
