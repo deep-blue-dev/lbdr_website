@@ -50,6 +50,15 @@ GIT
       request_store (~> 1.0)
 
 GIT
+  remote: git://github.com/ejholmes/active_admin_editor.git
+  revision: 86f964be3071cd938c3cd17ad00df94ece3a50c0
+  specs:
+    active_admin_editor (1.1.0)
+      activeadmin (>= 0.4.0)
+      ejs
+      rails (>= 3.0.0)
+
+GIT
   remote: git://github.com/justinfrench/formtastic.git
   revision: 9b0bf2442f0610172cdd605810df104256cb4b5f
   specs:
@@ -192,6 +201,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    ejs (1.1.1)
     erubis (2.7.0)
     eventmachine (1.0.9.1)
     execjs (2.6.0)
@@ -348,6 +358,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_admin_editor!
   activeadmin!
   activemodel-serializers-xml!
   awesome_print
@@ -388,4 +399,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.12.3
+   1.12.5

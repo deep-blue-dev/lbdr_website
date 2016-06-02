@@ -25,6 +25,7 @@ gem 'turbolinks'
 #Active admin for rails5
 ####
 gem 'activeadmin', github: 'activeadmin'
+gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 gem 'devise',      '> 4.x'
 gem 'rspec-rails', '>= 3.5.0.beta1'
 gem 'ransack',    github: 'activerecord-hackery/ransack'

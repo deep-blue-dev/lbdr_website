@@ -14,9 +14,12 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+/config/database.yml
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/vendor/*
 !/log/.keep
 !/tmp/.keep
 
@@ -27,3 +30,5 @@
 /public/system/brands
 /public/system/sectors
 /config/application.yml
+
+# Ignore application configuration
