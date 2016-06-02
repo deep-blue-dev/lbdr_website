@@ -2,15 +2,12 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 25
 
 development:
   <<: *default
   database: lbdr_development
-  username: 'angel'
-  password: 'fr33l@nC3'
-  host: 127.0.0.1
-  port: 5432
+  username: 'fouro'
+  password: 'metallica2006'
 
 test:
   <<: *default

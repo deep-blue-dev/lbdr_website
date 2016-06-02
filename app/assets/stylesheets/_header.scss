@@ -23,28 +23,9 @@ button.navbar-toggle:hover {
   background: none;
 }
 
-ul.nav.navmenu-nav {
-  padding-top: 50px;
-}
-
 .navbar-default {
   border: none;
   }
-
-#myNavmenu {
-  font-size: 2em;
-}
-
-.navbar-brand, .sidebar-logo {
-  position: absolute;
-  left: 50%;
-  margin-left: -145px !important;  /* 50% of your logo width */
-  display: block;
-  padding-top: 2px;
-  img {
-    max-height: 55px;
-  }
-}
 
 .navbar-default .navbar-toggle .icon-bar  {
   background-color: $white;
@@ -271,4 +252,24 @@ ul.nav.navmenu-nav {
   top:20px;
   left: 20px;
   background: transparent !important;
+}
+
+#myNavmenu {
+  font-size: 2em;
+
+  .navmenu-nav{
+    margin-top: 30px;
+  }
+
+  .sidebar-logo {
+
+    img{
+      width: 70%;
+      margin: 14%;
+    }
+
+    @media (min-width: $screen-md-min){
+      
+    }
+  }
 }
