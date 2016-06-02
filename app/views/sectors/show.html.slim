@@ -5,7 +5,7 @@
 .fadeInBlock.text-center
   h1 = @sector.name
 .fadeInBlock.container.description.col-md-8.col-md-offset-2
-  = @sector.description
+  = @sector.description.html_safe
 
 .fadeInBlock.container.col-md-8.col-md-offset-2.list-brands-by-sector
   - Brand.all.where(sector_id: [params[:id]]).each do |var|
