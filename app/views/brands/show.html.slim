@@ -9,7 +9,7 @@ h1.brand-name-overlay = @brand.name
       = image_tag @brand.logo_for_brand.url(:thumb), :target => "_blank", :class=> 'brand-logo-thumb'
     h4 = @brand.sector.name
 
-  .description.container-fluid.col-md-8.col-md-offset-2.text-justify = @brand.description
+  .description.container-fluid.col-md-8.col-md-offset-2.text-justify = @brand.description.html_safe
 
   .container-fluid
   = button_to 'Learn More', @brand.url, :target => "_blank", :class=> 'btn btn-default btn-lg brand-show'
