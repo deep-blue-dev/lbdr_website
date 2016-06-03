@@ -27,6 +27,16 @@ $(function() {
     $('#nav-icon1').click(function(){
       $(this).toggleClass('open');
     });
+
+    $("#menu-wrapper ul li").click(function(e){
+      e.preventDefault();
+      var slideIndex = $(this).index();
+
+      console.log(slideIndex);
+
+      $( '.banner-body' ).slickGoTo( parseInt(slideIndex) );
+    });
+
   });
 
   $(".navbar-brand").hide();

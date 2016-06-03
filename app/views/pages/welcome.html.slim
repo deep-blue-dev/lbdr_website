@@ -4,54 +4,35 @@
 
     .banner-content
 
-      .col-md-8.slider_leftpart
-
-        .col-md-3.text-left
-
-        .col-md-9.text-left
-
-          .logo_lbdr LBD&reg;
-
-          h2 We invest, develop, produce,
-          h4 manage, marketeer & retail the very best.
-          p.tagline
-            LBDR is a collection of 33 superior global brands<br/>
-            in diversified 8 industry sectors,<br/>
-            business modelled on long-term vision,<br/>
-            creativity and and excellence.
-          p
-            = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
-
-      .col-md-4.text-left
 
     .banner-content
-      .col-md-8.slider_leftpart
+    
+  .logo-information
+    .col-md-8.slider_leftpart
 
-        .col-md-3.text-left
+      .col-md-3.text-left
 
-        .col-md-9.text-left
+      .col-md-9.text-left
 
-          .logo_lbdr LBD&reg;
+        .logo_lbdr =image_tag('lbdr.svg')
 
-          h2 We invest, develop, produce,
-          h4 manage, marketeer & retail the very best.
-          p.tagline
-            LBDR is a collection of 33 superior global brands<br/>
-            in diversified 8 industry sectors,<br/>
-            business modelled on long-term vision,<br/>
-            creativity and and excellence.
-          p
-            = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
+        h2 We invest, develop, produce,
+        h4 manage, marketeer & retail the very best.
+        p.tagline
+          LBDR is a collection of 33 superior global brands<br/>
+          in diversified 8 industry sectors,<br/>
+          business modelled on long-term vision,<br/>
+          creativity and and excellence.
+        p
+          = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
 
-      .col-md-4.text-left
+    .col-md-4.text-left
 
   #menu-wrapper
     ul.nav
       li.cell
-        = link_to '#' do
-          i.fa.fa-anchor.fa-2
-          span Marine
-        end
+        i.fa.fa-anchor.fa-2
+        span Marine
 
       li.cell
         i.fa.fa-paper-plane.fa-2
