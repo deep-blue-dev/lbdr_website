@@ -24,15 +24,50 @@ $(function() {
   $( document ).on('ready page:load', function() {
     $('.banner-body').slick();  
 
-    $('#nav-icon1').click(function(){
+    var nav_bar = false;
+    $('#nav-icon1').click(function(e){
+
+      nav_bar = false;
+
       $(this).toggleClass('open');
+
+      setTimeout(function(){
+
+        if(nav_bar){
+          nav_bar = false;
+        }else{
+          nav_bar = true;
+        }
+
+        console.log(nav_bar);
+
+      }, 100);
+
+    });
+
+    $('nav').click(function(e){
+      nav_bar = false;
+
+      setTimeout(function(){
+
+        nav_bar = true;
+
+      }, 100);
+    });
+
+    $('body').click(function(e){
+      
+      if(nav_bar){
+        $('#nav-icon1').removeClass('open');
+        nav_bar = false;
+      }
+      console.log("clicked");
+
     });
 
     $("#menu-wrapper ul li").click(function(e){
       e.preventDefault();
       var slideIndex = $(this).index();
-
-      console.log(slideIndex);
 
       $( '.banner-body' ).slickGoTo( parseInt(slideIndex) );
     });
