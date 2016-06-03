@@ -98,7 +98,7 @@ section.section_area.with_padding
     .col-md-3.col-sm-6.no-padding
 
       = link_to "#{sector_path(sector)}" do
-        = image_tag "templates/real-estate.jpg", :class => "img-responsive", :alt => sector.name
+        = image_tag "#{sector.sector_photo.url(:original)}", :class => "img-responsive", :alt => sector.name
         .carousel-caption.mylink.twoline
           h3 =sector.name
       end
