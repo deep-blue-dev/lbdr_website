@@ -171,7 +171,7 @@ button.navbar-toggle:hover {
         overflow: hidden;
         transition: 1s linear;
         text-transform: uppercase;
-        margin-top: 4px;
+        margin-top: 7px;
         height: 22px;
       }
 
@@ -188,7 +188,7 @@ button.navbar-toggle:hover {
         height: 28px;
         text-align: center;
         position:relative;
-        padding-top: 3px;
+        padding-top: 6px;
         verticall-align: middle; 
       }
     }
@@ -223,9 +223,8 @@ button.navbar-toggle:hover {
   margin:0px;
  }
 
-.gallery_menu a:hover .carousel-caption.mylink {
-    background: rgba(0,0,0,0);
-
+.gallery_menu a:hover .carousel-caption.mylink{
+  background: rgba(0,0,0,0) !important;
 }
  .section_area.with_padding{
   padding-top:80px;
@@ -322,10 +321,10 @@ button.navbar-toggle:hover {
 //hamburger
 
 #nav-icon1 {
-  width: 30px;
+  width: 42px;
   height: 30px;
   position: relative;
-  margin: 20px auto;
+  margin: 20px 0 0 30px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -340,7 +339,7 @@ button.navbar-toggle:hover {
   outline:none;
 
   &.nav-in{
-    margin: 20px 0 0 10px;
+    margin: 20px 0 0 30px;
   }
 }
 

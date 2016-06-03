@@ -68,7 +68,7 @@ $(function() {
       /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
       bottom_of_window = bottom_of_window + 170;
       if( bottom_of_window > bottom_of_object ){
-          $(this).animate({'opacity':'1'},500);
+        $(this).animate({'opacity':'1'},500);
       }
     });
   });
