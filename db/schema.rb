@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512134125) do
+ActiveRecord::Schema.define(version: 20160604004022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,8 @@ ActiveRecord::Schema.define(version: 20160512134125) do
     t.integer  "logo_for_brand_file_size"
     t.datetime "logo_for_brand_updated_at"
     t.integer  "sector_id"
+    t.string   "brand_photo"
+    t.string   "logo_for_brand"
     t.index ["sector_id"], name: "index_brands_on_sector_id", using: :btree
   end
 
@@ -73,6 +75,19 @@ ActiveRecord::Schema.define(version: 20160512134125) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "rich_rich_files", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "rich_file_file_name"
+    t.string   "rich_file_content_type"
+    t.integer  "rich_file_file_size"
+    t.datetime "rich_file_updated_at"
+    t.string   "owner_type"
+    t.integer  "owner_id"
+    t.text     "uri_cache"
+    t.string   "simplified_type",        default: "file"
   end
 
   create_table "sectors", force: :cascade do |t|
@@ -85,6 +100,8 @@ ActiveRecord::Schema.define(version: 20160512134125) do
     t.string   "sector_photo_content_type"
     t.integer  "sector_photo_file_size"
     t.datetime "sector_photo_updated_at"
+    t.string   "sector_photo"
+    t.string   "icon_image"
   end
 
   create_table "social_media", force: :cascade do |t|

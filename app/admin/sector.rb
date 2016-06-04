@@ -1,5 +1,5 @@
 ActiveAdmin.register Sector do
-  permit_params :name, :description, :sector_photo, :_wysihtml5_mode
+  permit_params :name, :description, :icon_image,  :sector_photo, :_wysihtml5_mode
 
   filter :name
   filter :brands
@@ -8,6 +8,7 @@ ActiveAdmin.register Sector do
   form do |f|
     f.inputs 'Sector' do
       f.input :name
+      f.input :icon_image
       f.input :description, as: :html_editor
       f.input :sector_photo, :as => :file
     end

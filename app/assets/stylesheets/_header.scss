@@ -49,7 +49,7 @@ button.navbar-toggle:hover {
 //banner
 
 .banner{
-  
+
   position:relative;
   width: 100%;
   overflow:hidden;
@@ -60,19 +60,19 @@ button.navbar-toggle:hover {
     overflow:hidden;
 
     .banner-content{
-      width: 100%;  
-      background:#181015 url(/miami2.jpg) no-repeat; 
+      width: 100%;
+      /*background:#181015 url(/miami2.jpg) no-repeat; */
       background-size: cover;
-      text-align: center;  
-      color:white; 
-      font-family:"Open sans", Helvetica, Arial; 
+      text-align: center;
+      color:white;
+      font-family:"Open sans", Helvetica, Arial;
       font-weight:300;
       height:100vh;
       min-height:620px;
     }
 
-    
-    
+
+
   }
 
   .logo-information{
@@ -82,20 +82,20 @@ button.navbar-toggle:hover {
 
     .slider_leftpart{
       background-color:rgba(0,0,0,0.5);
-      padding-top:80px; 
+      padding-top:80px;
       padding-bottom:80px;
       color: #E1DFDF;
       height: 100vh;
     }
 
-    .logo_lbdr{ 
+    .logo_lbdr{
 
       margin-top: 40px;
 
       img{
         width: 270px;
       }
-      
+
       margin-bottom: 30px;
 
       @media (min-width: $screen-md-min){
@@ -117,26 +117,26 @@ button.navbar-toggle:hover {
       }
 
       &.btn-default{
-        text-shadow: none; 
-        background:transparent; 
-        color:rgba(255,255,255,.5); 
-        -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); 
-        -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); 
-        box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); 
+        text-shadow: none;
+        background:transparent;
+        color:rgba(255,255,255,.5);
+        -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5);
+        -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5);
+        box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5);
         background: transparent;
 
         &:hover, &:focus{
-          color:rgba(255,255,255,.8); 
-          -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); 
-          -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); 
-          box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); 
+          color:rgba(255,255,255,.8);
+          -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8);
+          -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8);
+          box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8);
           background: transparent;
         }
 
         &:active, &.active{
-          color:#fff; -webkit-box-shadow:inset 0px 0px 0px 3px #fff; 
-          -moz-box-shadow:inset 0px 0px 0px 3px #fff; 
-          box-shadow:inset 0px 0px 0px 3px #fff; 
+          color:#fff; -webkit-box-shadow:inset 0px 0px 0px 3px #fff;
+          -moz-box-shadow:inset 0px 0px 0px 3px #fff;
+          box-shadow:inset 0px 0px 0px 3px #fff;
           background: transparent;
         }
       }
@@ -148,7 +148,7 @@ button.navbar-toggle:hover {
     display: none;
 
     @media (min-width: $screen-md-min){
-      display: block;  
+      display: block;
     }
 
     position:absolute;
@@ -201,11 +201,11 @@ button.navbar-toggle:hover {
         text-align: center;
         position:relative;
         padding-top: 6px;
-        verticall-align: middle; 
+        verticall-align: middle;
       }
     }
   }
-  
+
 }
 
 .no-padding{padding: 0px!important;}
@@ -220,7 +220,7 @@ button.navbar-toggle:hover {
   bottom: 0!important;
   top:0!important;
   padding: 30%;
-  
+
  }
   .carousel-caption.mylink.twoline{
     padding: 26%;
@@ -240,7 +240,7 @@ button.navbar-toggle:hover {
 }
  .section_area.with_padding{
   padding-top:80px;
-  padding-bottom: 100px; 
+  padding-bottom: 100px;
  }
  .boldtext {
     font-weight: bold;
@@ -303,7 +303,7 @@ button.navbar-toggle:hover {
     }
 
     @media (min-width: $screen-md-min){
-      
+
     }
   }
 
@@ -321,11 +321,11 @@ button.navbar-toggle:hover {
       }
 
       i{
-        float:left; 
+        float:left;
         margin:0 15px 0 0;
       }
     }
-    
+
 
   }
 }

@@ -1,12 +1,11 @@
 .banner
 
   .banner-body
+    - @sectors.each do |sector|
+      .banner-content style='background: url("#{sector.sector_photo(:big)}") no-repeat;'
 
     .banner-content
 
-
-    .banner-content
-    
   .logo-information
     .col-md-8.slider_leftpart
 
@@ -31,8 +30,10 @@
   #menu-wrapper
     ul.nav
       li.cell
-        i.fa.fa-anchor.fa-2
-        span Marine
+        = link_to '#' do
+          i.fa.fa-anchor.fa-2
+          span Marine
+        end
 
       li.cell
         i.fa.fa-paper-plane.fa-2
@@ -61,7 +62,6 @@
       li.cell
         i.fa.fa-wifi.fa-2
         span Technology
-
 
 section.section_area.with_padding
 
