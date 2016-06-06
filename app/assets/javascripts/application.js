@@ -34,7 +34,7 @@ $(function() {
 
       var middle = ( li.width() / 2) - ( triangle.width() / 2) ;
 
-      triangle.animate({
+      triangle.stop( true, true ).animate({
         left: li.offset().left - ul.offset().left + middle 
       }, 500, function() {});
     }
