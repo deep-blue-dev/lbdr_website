@@ -2,7 +2,7 @@
 
   .banner-body
     - @sectors.each do |sector|
-      .banner-content style='background: url("/bg_header.jpg") no-repeat;'
+      .banner-content style='background: url("#{sector.sector_photo(:big)}") no-repeat;'
 
   .logo-information
     .col-md-8.slider_leftpart
