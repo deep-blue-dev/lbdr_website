@@ -24,6 +24,36 @@ $(function() {
   $( document ).on('ready page:load', function() {
     $('.banner-body').slick();  
 
+    $('.logo-information').mousedown(function(e) {
+
+      var coords = {
+          clientX: e.clientX,
+          clientY: e.clientY
+      };
+
+      $('.slick-list').simulate("mousedown", coords);
+
+    });
+
+    $('.logo-information').mouseup(function(e) {
+      var coords = {
+          clientX: e.clientX,
+          clientY: e.clientY
+      };
+      $('.slick-list').simulate("mouseup", coords);
+    });
+
+    $('.logo-information').mousemove(function(e){
+
+      var coords = {
+          clientX: e.clientX,
+          clientY: e.clientY
+      };
+
+      // this actually triggers the drag start event
+      $('.slick-list').simulate("mousemove", coords);
+    });
+
     $('#tabs').tab();
 
     function triangle_align(active){
@@ -34,9 +64,11 @@ $(function() {
 
       var middle = ( li.width() / 2) - ( triangle.width() / 2) ;
 
-      triangle.stop( true, true ).animate({
-        left: li.offset().left - ul.offset().left + middle 
-      }, 500, function() {});
+      try{
+        triangle.stop( true, true ).animate({
+          left: li.offset().left - ul.offset().left + middle 
+        }, 500, function() {});
+      }catch(e){}
     }
 
     $('.group-info li').click(function(){ 
