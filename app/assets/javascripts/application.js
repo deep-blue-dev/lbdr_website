@@ -26,6 +26,29 @@ $(function() {
 
     $('#tabs').tab();
 
+    function triangle_align(active){
+
+      var li = active;
+      var ul = $('.group-info');
+      var triangle = $(".triangle");
+
+      var middle = ( li.width() / 2) - ( triangle.width() / 2) ;
+
+      triangle.animate({
+        left: li.offset().left - ul.offset().left + middle 
+      }, 500, function() {});
+    }
+
+    $('.group-info li').click(function(){ 
+      triangle_align($(this));
+    });
+
+    $(window).resize(function(){
+      triangle_align($('.group-info li.active'));
+    });
+    
+    triangle_align($('.group-info li.active'));
+
     var nav_bar = false;
     $('#nav-icon1').click(function(e){
 
