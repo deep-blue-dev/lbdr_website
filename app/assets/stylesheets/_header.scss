@@ -1,6 +1,7 @@
 // Navigation
 .navbar {
   height: 60px;
+  width: 106px;
 }
 
 .navbar, .navmenu {
@@ -387,7 +388,7 @@ button.navbar-toggle:hover {
   }
 
   #nav-icon1.open span:nth-child(1) {
-    top: 18px;
+    top: 10px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
@@ -400,7 +401,7 @@ button.navbar-toggle:hover {
   }
 
   #nav-icon1.open span:nth-child(3) {
-    top: 18px;
+    top: 10px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);

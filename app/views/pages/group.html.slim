@@ -1,7 +1,67 @@
-.lbdr-logo-overlay = image_tag ('LBDR_Emblem_White.svg')
-.fotorama.welcome-slider data-width="100%" data-ratio="800/600"
-  = image_tag("http://placehold.it/1900x1267")
-  = image_tag("http://placehold.it/1900x1267")
+.banner
+
+  .banner-body
+    - @sectors.each do |sector|
+      .banner-content style='background: url("#{sector.sector_photo(:big)}") no-repeat;'
+
+    .banner-content
+
+  .logo-information
+    .col-md-8.slider_leftpart
+
+      .col-md-3.text-left
+
+      .col-md-9.text-left
+
+        .logo_lbdr =image_tag('lbdr.svg')
+
+        h2 We invest, develop, produce,
+        h4 manage, marketeer & retail the very best.
+        p.tagline
+          LBDR is a collection of 33 superior global brands<br/>
+          in diversified 8 industry sectors,<br/>
+          business modelled on long-term vision,<br/>
+          creativity and and excellence.
+        p
+          = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
+
+    .col-md-4.text-left
+
+  #menu-wrapper
+    ul.nav
+      li.cell
+        i.fa.fa-video-camera.fa-2
+        span Media
+
+      li.cell
+        i.fa.fa-star.fa-2
+        span Fasion And Accesories
+
+      li.cell
+        i.fa.fa-car.fa-2
+        span Automotive
+
+      li.cell
+        i.fa.fa-child.fa-2
+        span Entertaintment and Leisure
+
+      li.cell
+        i.fa.fa-coffee.fa-2
+        span Real Estate
+
+      li.cell
+        i.fa.fa-paper-plane.fa-2
+        span Aviation
+
+      li.cell
+        = link_to '#' do
+          i.fa.fa-anchor.fa-2
+          span Marine
+        end
+
+      li.cell
+        i.fa.fa-wifi.fa-2
+        span Technology
 
 .fadeInBlock.about-lbdr
   .container.section
@@ -70,7 +130,3 @@
             img src="http://placehold.it/150x150"
             h4 FirstName LastName
             p Position on Board
-
-
-script type="text/javascript"
-  jQuery(document).ready(function($){$('#tabs').tab();});

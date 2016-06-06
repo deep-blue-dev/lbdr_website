@@ -24,6 +24,8 @@ $(function() {
   $( document ).on('ready page:load', function() {
     $('.banner-body').slick();  
 
+    $('#tabs').tab();
+
     var nav_bar = false;
     $('#nav-icon1').click(function(e){
 

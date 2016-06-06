@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def group
+    @sectors = Sector.all
   end
 
   def contact
