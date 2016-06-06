@@ -22,7 +22,46 @@
 $(function() {
 
   $( document ).on('ready page:load', function() {
+    
+    var banner = document.getElementsByClassName("logo-information");
+
+    banner[0].addEventListener('touchstart', function(e){
+        var coords = {
+          clientX: e.changedTouches[0].pageX,
+          clientY: e.changedTouches[0].pageY
+        };
+
+        $('.slick-list').simulate("mousedown", coords);
+
+    }, false);
+
+    banner[0].addEventListener('touchmove', function(e){
+
+      var coords = {
+        clientX: e.changedTouches[0].pageX,
+        clientY: e.changedTouches[0].pageY
+      };
+
+      $('.slick-list').simulate("mousemove", coords);
+
+    }, false);
+
+    banner[0].addEventListener('touchend', function(e){
+      var coords = {
+        clientX: e.changedTouches[0].pageX,
+        clientY: e.changedTouches[0].pageY
+      };
+
+      $('.slick-list').simulate("mouseup", coords);
+    }, false)
+
+    $('.logo-information').mousemove(function(e){
+      console.log(e);
+    });
+
+
     $('.banner-body').slick();  
+
 
     $('.logo-information').mousedown(function(e) {
 
@@ -30,6 +69,8 @@ $(function() {
           clientX: e.clientX,
           clientY: e.clientY
       };
+
+      console.log(coords, "mousedown");
 
       $('.slick-list').simulate("mousedown", coords);
 
@@ -41,6 +82,8 @@ $(function() {
           clientY: e.clientY
       };
       $('.slick-list').simulate("mouseup", coords);
+
+      console.log(coords, "mouseup");
     });
 
     $('.logo-information').mousemove(function(e){
@@ -52,6 +95,8 @@ $(function() {
 
       // this actually triggers the drag start event
       $('.slick-list').simulate("mousemove", coords);
+
+      console.log(coords, "mousemove");
     });
 
     $('#tabs').tab();
