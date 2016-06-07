@@ -13,13 +13,9 @@
 
         .logo_lbdr =image_tag('lbdr.svg')
 
-        h2 We invest, develop, produce,
-        h4 manage, marketeer & retail the very best.
-        p.tagline
-          LBDR is a collection of 33 superior global brands<br/>
-          in diversified 8 industry sectors,<br/>
-          business modelled on long-term vision,<br/>
-          creativity and and excellence.
+        
+        =@homes[0].description.html_safe unless @homes[0].nil?
+
         p
           = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
 
@@ -65,12 +61,9 @@ section.section_area.with_padding
 
 
     .container.text-center
-      h3.boldtext LBDR Group Business Model
+      h3.boldtext =@homes[1].title.html_safe unless @homes[1].nil?
       p.text-muted
-        is and will be anchored in a long-term vision<br/>
-        that builds on the Heritage of our Brands<br/>
-        and stimulates Creativity, Sustainability,<br/>
-        Innovations and Excellence.
+        =@homes[1].description.html_safe unless @homes[1].nil?
 
 .gallery_menu
   - @sectors.each do |sector|
@@ -87,10 +80,5 @@ section.section_area.with_padding
 
 
     .container.text-center
-      h3.boldtext We invest, develop, produce,
-      h5.boldtext manage, marketeer & retail the very best.
-      p.text-muted
-        LBDR is a collection of 33 superior global brands<br/>
-        in diversified 8 industry sectors,<br/>
-        business modelled on long-term vision,<br/>
-        creativity and and excellence.
+      h3.boldtext =@homes[2].title.html_safe unless @homes[2].nil?
+      =@homes[2].description.html_safe unless @homes[2].nil?

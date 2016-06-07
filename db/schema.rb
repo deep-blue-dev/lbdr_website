@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160604004022) do
+ActiveRecord::Schema.define(version: 20160607023906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,13 @@ ActiveRecord::Schema.define(version: 20160604004022) do
     t.datetime "logo_for_brand_updated_at"
     t.integer  "sector_id"
     t.index ["sector_id"], name: "index_brands_on_sector_id", using: :btree
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "posts", force: :cascade do |t|

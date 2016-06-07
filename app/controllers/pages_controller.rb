@@ -11,5 +11,7 @@ class PagesController < ApplicationController
 
   def welcome
     @sectors = Sector.all
+
+    @homes = Home.all
   end
 end

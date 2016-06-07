@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :brands
   resources :sectors
+  resources :homes
 
   root 'pages#welcome'
 
