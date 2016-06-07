@@ -12,7 +12,9 @@ class PagesController < ApplicationController
   def welcome
     @sectors = Sector.all
 
-    @homes = Home.order("id" => "desc").all
+    #@homes = Home.order("id" => "desc").all
+
+    @banners = Banner.order("id" => "desc").all
 
     @content = Content.order("id" => "desc").all
   end

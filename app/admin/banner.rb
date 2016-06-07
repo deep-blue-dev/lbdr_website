@@ -9,8 +9,9 @@ ActiveAdmin.register Banner do
   index do
     selectable_column
     column :id
-    column :title
     column :sector
+    column :title
+    column :description
     actions
     # column '' do |post|
     #   link_to 'Edit', admin_post_path(post) if authorized? :update, post

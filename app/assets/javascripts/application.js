@@ -67,11 +67,15 @@ $(function() {
 
         console.log(page);
 
+        $(".banner-description").removeClass("show");
+        $(".banner-description").eq(currentSlide).addClass("show");
+
         $(".btn.btn-default.btn-lg").attr("href", ("/sectors/" + page) );
       }
     });  
 
     $(".btn.btn-default.btn-lg").attr("href", ("/sectors/1") );
+    $(".banner-description").eq(0).addClass("show");
 
     $('.logo-information').mousedown(function(e) {
 

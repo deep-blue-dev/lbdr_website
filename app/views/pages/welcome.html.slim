@@ -1,8 +1,8 @@
 .banner
 
   .banner-body
-    - @sectors.each do |sector|
-      .banner-content style='background-image: url("#{sector.sector_photo(:big)}");'
+    - @banners.each do |banner|
+      .banner-content style='background-image: url("#{banner.sector.sector_photo(:big)}");'
 
   .logo-information
     .col-md-10.slider_leftpart
@@ -13,8 +13,12 @@
 
         .logo_lbdr =image_tag('lbdr.svg')
 
-        
-        =@homes[0].description.html_safe unless @homes[0].nil?
+        - @banners.each do |banner|
+
+          .banner-description.hide
+            h2 =banner.title.html_safe unless banner.nil?
+            =banner.description.html_safe unless banner.nil?
+
 
         p
           = link_to 'MORE INFO', '/sectors/1', :class => "btn btn-default btn-lg"
