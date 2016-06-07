@@ -25,42 +25,53 @@ $(function() {
     
     var banner = document.getElementsByClassName("logo-information");
 
-    banner[0].addEventListener('touchstart', function(e){
-      var coords = {
-        clientX: e.changedTouches[0].pageX,
-        clientY: e.changedTouches[0].pageY
-      };
+    try{
+      banner[0].addEventListener('touchstart', function(e){
+        var coords = {
+          clientX: e.changedTouches[0].pageX,
+          clientY: e.changedTouches[0].pageY
+        };
 
-      $('.slick-list').simulate("mousedown", coords);
+        $('.slick-list').simulate("mousedown", coords);
 
-    }, false);
+      }, false);
 
-    banner[0].addEventListener('touchmove', function(e){
+      banner[0].addEventListener('touchmove', function(e){
 
-      var coords = {
-        clientX: e.changedTouches[0].pageX,
-        clientY: e.changedTouches[0].pageY
-      };
+        var coords = {
+          clientX: e.changedTouches[0].pageX,
+          clientY: e.changedTouches[0].pageY
+        };
 
-      $('.slick-list').simulate("mousemove", coords);
+        $('.slick-list').simulate("mousemove", coords);
 
-    }, false);
+      }, false);
 
-    banner[0].addEventListener('touchend', function(e){
-      var coords = {
-        clientX: e.changedTouches[0].pageX,
-        clientY: e.changedTouches[0].pageY
-      };
+      banner[0].addEventListener('touchend', function(e){
+        var coords = {
+          clientX: e.changedTouches[0].pageX,
+          clientY: e.changedTouches[0].pageY
+        };
 
-      $('.slick-list').simulate("mouseup", coords);
-    }, false)
+        $('.slick-list').simulate("mouseup", coords);
+      }, false);
 
+    }catch(e){}
 
     $('.banner-body').slick({
       autoplay: true,
-      autoplaySpeed: 5000
+      autoplaySpeed: 5000,
+      onAfterChange: function(event, currentSlide) {
+        
+        var page = currentSlide + 1;
+
+        console.log(page);
+
+        $(".btn.btn-default.btn-lg").attr("href", ("/sectors/" + page) );
+      }
     });  
 
+    $(".btn.btn-default.btn-lg").attr("href", ("/sectors/1") );
 
     $('.logo-information').mousedown(function(e) {
 

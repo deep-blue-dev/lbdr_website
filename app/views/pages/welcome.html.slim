@@ -2,7 +2,7 @@
 
   .banner-body
     - @sectors.each do |sector|
-      .banner-content style='background-image: url("#{sector.sector_photo(:big)}");'
+      .banner-content style='background-image: url("/bg_header.jpg");'
 
   .logo-information
     .col-md-10.slider_leftpart
@@ -17,7 +17,7 @@
         =@homes[0].description.html_safe unless @homes[0].nil?
 
         p
-          = link_to 'MORE INFO', '#', :class => "btn btn-default btn-lg"
+          = link_to 'MORE INFO', '/sectors/1', :class => "btn btn-default btn-lg"
 
     .col-md-2.text-left
 
