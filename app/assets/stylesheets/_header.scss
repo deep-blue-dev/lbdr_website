@@ -96,6 +96,20 @@ button.navbar-toggle:hover {
       height: 100vh;
     }
 
+    @media (min-width: $screen-md-min){
+
+      h2{
+        font-size: 53px;
+      }
+
+      h4{
+        font-size: 35px;
+      }
+
+      p{
+        font-size: 28px;
+      }
+    }
     
 
     .logo_lbdr{
@@ -109,18 +123,6 @@ button.navbar-toggle:hover {
       margin-bottom: 30px;
 
       @media (min-width: $screen-md-min){
-
-        h2{
-          font-size: 53px;
-        }
-
-        h4{
-          font-size: 35px;
-        }
-
-        p{
-          font-size: 28px;
-        }
 
         margin-top: -20px;
         img{
