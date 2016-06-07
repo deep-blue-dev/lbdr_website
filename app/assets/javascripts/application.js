@@ -26,12 +26,12 @@ $(function() {
     var banner = document.getElementsByClassName("logo-information");
 
     banner[0].addEventListener('touchstart', function(e){
-        var coords = {
-          clientX: e.changedTouches[0].pageX,
-          clientY: e.changedTouches[0].pageY
-        };
+      var coords = {
+        clientX: e.changedTouches[0].pageX,
+        clientY: e.changedTouches[0].pageY
+      };
 
-        $('.slick-list').simulate("mousedown", coords);
+      $('.slick-list').simulate("mousedown", coords);
 
     }, false);
 
@@ -55,12 +55,11 @@ $(function() {
       $('.slick-list').simulate("mouseup", coords);
     }, false)
 
-    $('.logo-information').mousemove(function(e){
-      console.log(e);
-    });
 
-
-    $('.banner-body').slick();  
+    $('.banner-body').slick({
+      autoplay: true,
+      autoplaySpeed: 5000
+    });  
 
 
     $('.logo-information').mousedown(function(e) {
@@ -69,8 +68,6 @@ $(function() {
           clientX: e.clientX,
           clientY: e.clientY
       };
-
-      console.log(coords, "mousedown");
 
       $('.slick-list').simulate("mousedown", coords);
 
@@ -82,8 +79,6 @@ $(function() {
           clientY: e.clientY
       };
       $('.slick-list').simulate("mouseup", coords);
-
-      console.log(coords, "mouseup");
     });
 
     $('.logo-information').mousemove(function(e){
@@ -95,8 +90,6 @@ $(function() {
 
       // this actually triggers the drag start event
       $('.slick-list').simulate("mousemove", coords);
-
-      console.log(coords, "mousemove");
     });
 
     $('#tabs').tab();
@@ -120,11 +113,22 @@ $(function() {
       triangle_align($(this));
     });
 
+    function align_menu(){
+      var menu_height = $('#menu-wrapper').height();
+      var window_height = $(".banner-body").height();
+
+      var m_top = ( window_height / 2 ) - (menu_height / 2);
+      $('#menu-wrapper').css( "top", (m_top + "px") );
+    }
+
     $(window).resize(function(){
       triangle_align($('.group-info li.active'));
+      align_menu();
     });
     
     triangle_align($('.group-info li.active'));
+
+    align_menu();
 
     var nav_bar = false;
     $('#nav-icon1').click(function(e){
@@ -140,8 +144,6 @@ $(function() {
         }else{
           nav_bar = true;
         }
-
-        console.log(nav_bar);
 
       }, 100);
 
@@ -163,7 +165,6 @@ $(function() {
         $('#nav-icon1').removeClass('open');
         nav_bar = false;
       }
-      console.log("clicked");
 
     });
 
