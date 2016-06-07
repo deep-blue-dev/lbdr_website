@@ -12,6 +12,6 @@ class PagesController < ApplicationController
   def welcome
     @sectors = Sector.all
 
-    @homes = Home.all
+    @homes = Home.order("id" => "desc").all
   end
 end
