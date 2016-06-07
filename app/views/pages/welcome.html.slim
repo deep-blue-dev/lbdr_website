@@ -61,9 +61,9 @@ section.section_area.with_padding
 
 
     .container.text-center
-      h3.boldtext =@homes[1].title.html_safe unless @homes[1].nil?
+      h3.boldtext =@content[0].title.html_safe unless @content[0].nil?
       p.text-muted
-        =@homes[1].description.html_safe unless @homes[1].nil?
+        =@content[0].description.html_safe unless @content[0].nil?
 
 .gallery_menu
   - @sectors.each do |sector|
@@ -80,5 +80,5 @@ section.section_area.with_padding
 
 
     .container.text-center
-      h3.boldtext =@homes[2].title.html_safe unless @homes[2].nil?
-      =@homes[2].description.html_safe unless @homes[2].nil?
+      h3.boldtext =@content[1].title.html_safe unless @content[1].nil?
+      =@content[1].description.html_safe unless @content[1].nil?

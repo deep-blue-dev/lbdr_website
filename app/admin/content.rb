@@ -1,6 +1,6 @@
 ActiveAdmin.register Content do
   permit_params :title, :description
-  menu parent: "Pages", priority: 3, label: "Content"
+  menu parent: "Home", priority: 3, label: "Content"
 
   filter :title
   filter :description
