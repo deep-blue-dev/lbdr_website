@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :banners
+  resources :contents
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :social_media

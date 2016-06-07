@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607023906) do
+ActiveRecord::Schema.define(version: 20160607204149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,15 @@ ActiveRecord::Schema.define(version: 20160607023906) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "banners", force: :cascade do |t|
+    t.integer  "sector_id"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["sector_id"], name: "index_banners_on_sector_id", using: :btree
+  end
+
   create_table "brands", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
@@ -65,6 +74,13 @@ ActiveRecord::Schema.define(version: 20160607023906) do
     t.datetime "logo_for_brand_updated_at"
     t.integer  "sector_id"
     t.index ["sector_id"], name: "index_brands_on_sector_id", using: :btree
+  end
+
+  create_table "contents", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "homes", force: :cascade do |t|
@@ -122,6 +138,7 @@ ActiveRecord::Schema.define(version: 20160607023906) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "banners", "sectors"
   add_foreign_key "brands", "sectors"
   add_foreign_key "social_media", "brands"
 end
