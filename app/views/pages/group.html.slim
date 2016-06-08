@@ -56,54 +56,59 @@
         i.fa.fa-video-camera.fa-2
         span Media
 
-.fadeInBlock
-  .container.section
-    .group-info
+/.fadeInBlock
+.container.section
+  .group-info
 
-      .triangle
+    .triangle
 
-      ul#tabs.nav data-tabs="pills"
-        li
-          a data-toggle="pill" href="#about" About
-        li.active
-          a data-toggle="pill" href="#model"  Model
-        li
-          a data-toggle="pill" href="#spirit"  Spirit
+    ul#tabs.nav data-tabs="pills"
+      li
+        a data-toggle="pill" href="#about" About
+      li.active
+        a data-toggle="pill" href="#model"  Model
+      li
+        a data-toggle="pill" href="#spirit"  Spirit
 
 
-      #my-tab-content.tab-content.col-md-8.col-md-offset-2
-        #about.tab-pane
-          p =@group.about.html_safe unless @group.nil?
-        #model.tab-pane.active
-          p =@group.model.html_safe unless @group.nil?
-        #spirit.tab-pane
-          p =@group.spirit.html_safe unless @group.nil?
+    #my-tab-content.tab-content.col-md-8.col-md-offset-2
+      #about.tab-pane
+        p =@group.about.html_safe unless @group.nil?
+      #model.tab-pane.active
+        p =@group.model.html_safe unless @group.nil?
+      #spirit.tab-pane
+        p =@group.spirit.html_safe unless @group.nil?
 
-.fadeInBlock.governance-section
+/.fadeInBlock
+.governance-section
   .container
-    h1 Governance
     .pills-center
       ul#tabs.nav data-tabs="pills"
-        li.active.col-xs-6
-          a data-toggle="pill" href="#executive_committee" id="executive-committee"  Executive Committee
-        li.col-xs-6
-          a data-toggle="pill" href="#board_of_directors"  Board of Directors
+        li.active
+          a data-toggle="pill" href="#executive_committee" id="executive-committee"  Executive Committee >>
+        li
+          a data-toggle="pill" href="#board_of_directors"  Board of Directors >>
 
 
       #my-tab-content.tab-content
         #executive_committee.tab-pane.active
-          p.col-md-8.col-md-offset-2.text-justify.governance-description =@group.executive_committee_description.html_safe unless @group.nil?
+          .governance-description.col-md-8.col-md-offset-2
+            =@group.executive_committee_description.html_safe unless @group.nil?
 
           - @executive_committee.each do |exec|
-            .col-md-3.col-sm-6.col-xs-6
-              = image_tag "#{exec.photo(:thumb)}"
+            .people.col-md-3.col-sm-6.col-xs-6
+              .group-image style=' background-image: url(="#{exec.photo(:thumb)}")'
+              /.group-image style=' background-image: url(/miami2.jpg)'
               h4 = "#{exec.first_name} #{exec.last_name}"
               p =exec.position
 
         #board_of_directors.tab-pane
-          p.col-md-8.col-md-offset-2.text-justify.governance-description =@group.board_of_directors_description.html_safe unless @group.nil?
+          .governance-description.col-md-8.col-md-offset-2
+            =@group.board_of_directors_description.html_safe unless @group.nil?
+          
           - @board_of_directors.each do |board|
-            .col-md-3.col-sm-6.col-xs-6
-              = image_tag "#{board.photo(:thumb)}"
+            .people.col-md-3.col-sm-6.col-xs-6
+              .group-image style=' background-image: url(="#{board.photo(:thumb)}")'
+              /.group-image style=' background-image: url(/miami2.jpg)'
               h4 ="#{board.first_name} #{board.last_name}"
               p =board.position
