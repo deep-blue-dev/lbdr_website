@@ -97,7 +97,7 @@
 
           - @executive_committee.each do |exec|
             .people.col-md-3.col-sm-6.col-xs-6
-              .group-image style=' background-image: url(="#{exec.photo(:thumb)}")'
+              .group-image style='background-image: url("#{exec.photo(:thumb)}");
               /.group-image style=' background-image: url(/miami2.jpg)'
               h4 = "#{exec.first_name} #{exec.last_name}"
               p =exec.position
@@ -108,7 +108,7 @@
           
           - @board_of_directors.each do |board|
             .people.col-md-3.col-sm-6.col-xs-6
-              .group-image style=' background-image: url(="#{board.photo(:thumb)}")'
+              .group-image style='background-image: url("#{board.photo(:thumb)}");
               /.group-image style=' background-image: url(/miami2.jpg)'
               h4 ="#{board.first_name} #{board.last_name}"
               p =board.position
