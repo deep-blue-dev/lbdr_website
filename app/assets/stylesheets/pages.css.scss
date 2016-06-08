@@ -51,8 +51,20 @@ img.fotorama__img {
 .group-info {
   position: relative;
   text-align: center;
-  font-size: 1.75em;
+  font-size: 16px;
   color: #6b6a6a;
+
+  @media (min-width: $screen-md-min){
+    font-size: 1.75em;
+  }
+    
+  h2{
+    font-size: 22px;
+    
+    @media (min-width: $screen-md-min){
+      font-size: 30px;  
+    }
+  }
 
   .triangle{
     background: url("/triangle.jpg");
@@ -61,26 +73,47 @@ img.fotorama__img {
     position: absolute;
     left: 245px;
     top: 0px;
+
+    display: none;
+
+    @media (min-width: $screen-md-min){
+      display: block;
+    }
   }
 
   
   ul.nav {
     display: inline-block;
-    height: 240px;
+    
+
+    @media (min-width: $screen-md-min){
+      height: 240px;
+    }
 
     li {
-      margin: 52px 0px;
-      float: left;
-      text-align: center;
-      width: 250px;
+
+      display: inline-block;
+
+      @media (min-width: $screen-md-min){
+        margin: 52px 0px;
+        width: 250px;
+        float: left;
+        text-align: center;
+      }
 
       // text-decoration: underline;
       a {
 
         color: #6b6a6a;
-        font-size: 35px;
-
+        font-size: 25px;
         text-transform: uppercase;
+
+        padding: 10px 6px;
+
+        @media (min-width: $screen-md-min){
+          padding: 10px 15px;
+          font-size: 35px;
+        }
 
         &:hover, &:focus{
           background: transparent;
@@ -90,10 +123,14 @@ img.fotorama__img {
       &.active{
         a{
             border-bottom: 0px;
-            font-size: 40px;
             font-weight: bold;
             color: #0096be;
             background: transparent;
+            font-size: 25px;
+
+            @media (min-width: $screen-md-min){
+              font-size: 40px;
+            }
         }
       }
 
@@ -116,11 +153,17 @@ img.fotorama__img {
           text-transform: uppercase;
           color: #555555;
           border-radius: 29px;
-          padding: 6px 43px;
           margin: 30px 0 0 0;
           font-weight: 300;
           letter-spacing: 2px;
+          padding: 6px 17px;
+          font-size: 20px;
+
+        @media (min-width: $screen-md-min){
+          padding: 6px 43px;
           font-size: 27px;
+
+        }
 
         &:hover , &:focus {
           text-decoration: none;
@@ -143,10 +186,6 @@ li.active a {
   border-bottom: 2px solid $black;
 }
 
-.section {
-  height: 400px;
-}
-
 .about-lbdr {
   padding-top: 80px;
   // background-color: $black;
@@ -158,7 +197,7 @@ li.active a {
 
 .governance-section {
   background-color: #ededed;
-  margin-top: 100px;
+  margin-top: 40px;
   clear: both;
 }
 
@@ -169,21 +208,28 @@ li.active a {
 .governance-description {
   clear:both;
   color: #929191;
-  font-size:19px;
-  padding: 0 60px;
+  font-size: 16px;
+
+  @media (min-width: $screen-md-min){
+    padding: 0 60px;
+    font-size:19px;
+  }
 
   h2{
     color: #129bc1;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 25px;
     margin: 40px 0 30px 0;
     letter-spacing: 1px;
+
+    @media (min-width: $screen-md-min){
+      font-size: 36px;
+    }
   }
 }
 
 .people{
-  clear: both;
   color: #929191;
 
   margin: 50px 0px;
