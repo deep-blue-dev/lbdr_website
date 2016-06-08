@@ -20,9 +20,11 @@
 
 
 $(function() {
+  var ready;
+  var interval;
 
-  $( document ).on('ready page:load', function() {
-    
+  ready = function() {
+
     var banner = document.getElementsByClassName("logo-information");
 
     try{
@@ -58,9 +60,9 @@ $(function() {
 
     }catch(e){}
 
+
+
     $('.banner-body').slick({
-      autoplay: true,
-      autoplaySpeed: 5000,
       onAfterChange: function(event, currentSlide) {
         
         var page = currentSlide + 1;
@@ -70,8 +72,19 @@ $(function() {
         $(".banner-description").removeClass("show");
         $(".banner-description").eq(currentSlide).addClass("show");
       }
-    });  
-    
+    });
+
+    try{
+      clearInterval( interval );
+    }catch(e){}
+
+    interval = setInterval(function(){
+
+      $('.banner-body').slickNext();
+
+    }, 5000);
+
+
     $(".banner-description").eq(0).addClass("show");
 
     $('.logo-information').mousedown(function(e) {
@@ -186,8 +199,10 @@ $(function() {
 
       $( '.banner-body' ).slickGoTo( parseInt(slideIndex) );
     });
+  };
 
-  });
+  $(document).ready(ready);
+  $( document ).on('page:load', ready);
 
   $(".navbar-brand").hide();
   $(window).scroll(function() {
