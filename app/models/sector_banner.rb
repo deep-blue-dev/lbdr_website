@@ -1,0 +1,2 @@
+class SectorBanner < ApplicationRecord
+end

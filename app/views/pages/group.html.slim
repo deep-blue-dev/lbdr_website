@@ -2,7 +2,7 @@
 
   .banner-body
     - @banners.each do |banner|
-      .banner-content style='background-image: url("#{banner.sector.sector_photo(:big)}");'
+      .banner-content style='background-image: url("#{banner.photo(:big)}");'
 
   .logo-information
     .col-md-10.slider_leftpart
@@ -11,50 +11,13 @@
 
       .col-md-9.text-left
 
-        .logo_lbdr =image_tag('lbdr.svg')
-
         - @banners.each do |banner|
 
           .banner-description.hide
             h2 =banner.title.html_safe unless banner.nil?
             p =banner.description.html_safe unless banner.nil?
-            p = link_to 'MORE INFO', '/sectors/' + banner.sector.id.to_s, :class => "btn btn-default btn-lg"
 
     .col-md-2.text-left
-
-  #menu-wrapper
-    ul.nav
-      li.cell
-        i.fa.fa-car.fa-2
-        span Automotive
-
-      li.cell
-        i.fa.fa-coffee.fa-2
-        span Real Estate
-
-      li.cell
-        i.fa.fa-paper-plane.fa-2
-        span Aviation
-
-      li.cell
-        i.fa.fa-star.fa-2
-        span Fasion And Accesories
-
-      li.cell
-        i.fa.fa-wifi.fa-2
-        span Technology
-
-      li.cell
-        i.fa.fa-anchor.fa-2
-        span Marine
-
-      li.cell
-        i.fa.fa-child.fa-2
-        span Entertaintment and Leisure
-
-      li.cell
-        i.fa.fa-video-camera.fa-2
-        span Media
 
 /.fadeInBlock
 .container.section

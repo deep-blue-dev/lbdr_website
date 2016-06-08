@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def group
     @sectors = Sector.all
 
-    @banners = Banner.order("id" => "desc").all
+    @banners = GroupBanner.order("id" => "desc").all
 
     @group = Group.first
 

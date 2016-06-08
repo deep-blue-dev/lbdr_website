@@ -1,0 +1,2 @@
+module SectorBannersHelper
+end

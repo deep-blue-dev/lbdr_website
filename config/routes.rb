@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sector_banners
+  resources :group_banners
   resources :banners
   resources :contents
   devise_for :admin_users, ActiveAdmin::Devise.config
