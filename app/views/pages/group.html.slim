@@ -67,16 +67,12 @@
           a data-toggle="pill" href="#about" About
         li.active
           a data-toggle="pill" href="#model"  Model
-        li
-          a data-toggle="pill" href="#spirit"  Spirit
 
       #my-tab-content.tab-content.col-md-8.col-md-offset-2
         #about.tab-pane
-          p We invest, develop, produce, manage, marketeer & retail the very best. LBDR is a collection of 33 superior global brands in diversified 8 industry sectors, business modeled on long-term vision, creativity and and excellence.
+          p #{@group.about.html_safe}
         #model.tab-pane.active
-          p LBDR Group Business Model is and will be anchored in a long-term vision that builds on the Heritage of our Brands and stimulates Creativity, Sustainability, Innovations and Excellence.
-        #spirit.tab-pane
-          p The LBDR Group brings together truly exceptional Brands. Each of them creates products that embody unique savoir-faire, a carefully preserved heritage and a dynamic engagement with modernity. These creations make our Brands ambassadors of a distinctively refined art de vivre.
+          p #{@group.model.html_safe}
 
 .fadeInBlock.governance-section
   .container
@@ -91,38 +87,17 @@
 
       #my-tab-content.tab-content
         #executive_committee.tab-pane.active
-          p.col-md-8.col-md-offset-2.text-justify.governance-description The Executive Committee, comprised of executive, operational and functional directors, defines strategic objectives on the basis of the orientations decided by the Board of Directors, coordinates their implementation, ensures that the organization adapts to changes in the business environment, and oversees both the definition and the accomplishment of the responsibilities and delegations of authority of Executive Management.
-          .col-md-3.col-sm-6.col-xs-6
-            img src="http://placehold.it/150x150"
-            h4 FirstName LastName
-            p Position on Board
-          .col-md-3.col-sm-6.col-xs-6
-            img src="http://placehold.it/150x150"
-            h4 FirstName LastName
-            p Position on Board
-          .col-md-3.col-sm-6.col-xs-6
-            img src="http://placehold.it/150x150"
-            h4 FirstName LastName
-            p Position on Board
-          .col-md-3.col-sm-6.col-xs-6
-            img src="http://placehold.it/150x150"
-            h4 FirstName LastName
-            p Position on Board
+          p.col-md-8.col-md-offset-2.text-justify.governance-description #{@group.executive_committee_description.html_safe}
+          - @executive_committee.each do |exec|
+            .col-md-3.col-sm-6.col-xs-6
+              = image_tag "#{exec.photo(:thumb)}"
+              h4 = "#{exec.first_name} #{exec.last_name}"
+              p =exec.position
+
         #board_of_directors.tab-pane
-          p.col-md-8.col-md-offset-2.text-justify.governance-description The priority objectives of the Board of Directors, the strategic body of LBDR, are to increase its principal missions are to adopt the major strategies of the company and the Group, monitor the implementation of those strategies, verify the fair and accurate presentation of information about the company and the Group, and protect its increase the value of the company and defend its social interest.corporate assets.
-          .col-md-3.col-sm-6.col-xs-6
-            img src="http://placehold.it/150x150"
-            h4 FirstName LastName
-            p Position on Board
-          .col-md-3.col-sm-6.col-xs-6
-            img src="http://placehold.it/150x150"
-            h4 FirstName LastName
-            p Position on Board
-          .col-md-3.col-sm-6.col-xs-6
-            img src="http://placehold.it/150x150"
-            h4 FirstName LastName
-            p Position on Board
-          .col-md-3.col-sm-6.col-xs-6
-            img src="http://placehold.it/150x150"
-            h4 FirstName LastName
-            p Position on Board
+          p.col-md-8.col-md-offset-2.text-justify.governance-description #{@group.board_of_directors_description.html_safe}
+          - @board_of_directors.each do |board|
+            .col-md-3.col-sm-6.col-xs-6
+              = image_tag "#{board.photo(:thumb)}"
+              h4 ="#{board.first_name} #{board.last_name}"
+              p =board.position
