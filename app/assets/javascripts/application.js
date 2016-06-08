@@ -74,16 +74,19 @@ $(function() {
       }
     });
 
-    try{
-      clearInterval( interval );
-    }catch(e){}
+    function startInterval(){
+      try{
+        clearInterval( interval );
+      }catch(e){}
 
-    interval = setInterval(function(){
+      interval = setInterval(function(){
 
-      $('.banner-body').slickNext();
+        $('.banner-body').slickNext();
 
-    }, 5000);
+      }, 5000);
+    }
 
+    startInterval();
 
     $(".banner-description").eq(0).addClass("show");
 
@@ -198,6 +201,8 @@ $(function() {
       var slideIndex = $(this).index();
 
       $( '.banner-body' ).slickGoTo( parseInt(slideIndex) );
+
+      startInterval();
     });
   };
 
