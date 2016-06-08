@@ -67,12 +67,17 @@
           a data-toggle="pill" href="#about" About
         li.active
           a data-toggle="pill" href="#model"  Model
+        li
+          a data-toggle="pill" href="#spirit"  Spirit
+
 
       #my-tab-content.tab-content.col-md-8.col-md-offset-2
         #about.tab-pane
           p #{@group.about.html_safe}
         #model.tab-pane.active
           p #{@group.model.html_safe}
+        #spirit.tab-pane
+          p #{@group.spirit.html_safe}
 
 .fadeInBlock.governance-section
   .container
