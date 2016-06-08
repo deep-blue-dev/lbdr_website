@@ -27,6 +27,18 @@ $(function() {
 
     var banner = document.getElementsByClassName("logo-information");
 
+    function startInterval(){
+      try{
+        clearInterval( interval );
+      }catch(e){}
+
+      interval = setInterval(function(){
+
+        $('.banner-body').slickNext();
+
+      }, 5000);
+    }
+
     try{
       banner[0].addEventListener('touchstart', function(e){
         var coords = {
@@ -35,6 +47,10 @@ $(function() {
         };
 
         $('.slick-list').simulate("mousedown", coords);
+
+        try{
+          clearInterval( interval );
+        }catch(e){}
 
       }, false);
 
@@ -56,6 +72,8 @@ $(function() {
         };
 
         $('.slick-list').simulate("mouseup", coords);
+
+        startInterval();
       }, false);
 
     }catch(e){}
@@ -74,18 +92,6 @@ $(function() {
       }
     });
 
-    function startInterval(){
-      try{
-        clearInterval( interval );
-      }catch(e){}
-
-      interval = setInterval(function(){
-
-        $('.banner-body').slickNext();
-
-      }, 5000);
-    }
-
     startInterval();
 
     $(".banner-description").eq(0).addClass("show");
@@ -99,6 +105,10 @@ $(function() {
 
       $('.slick-list').simulate("mousedown", coords);
 
+      try{
+        clearInterval( interval );
+      }catch(e){}
+
     });
 
     $('.logo-information').mouseup(function(e) {
@@ -107,6 +117,8 @@ $(function() {
           clientY: e.clientY
       };
       $('.slick-list').simulate("mouseup", coords);
+
+      startInterval();
     });
 
     $('.logo-information').mousemove(function(e){
