@@ -10,10 +10,15 @@ class Group < ApplicationRecord
   end
 
   def self.executive_committee
+
+    return false if first.nil?
+
     first.executives.where(position: 'Executive Committee')
   end
 
   def self.board_of_directors
+    return false if first.nil?
+    
     first.executives.where(position: 'Board of Directors')
   end
 

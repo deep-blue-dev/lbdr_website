@@ -6,9 +6,11 @@ class PagesController < ApplicationController
 
     @group = Group.first
 
-    @executive_committee = Group.executive_committee
+    @executive_committee = []
+    @board_of_directors = []
+    @executive_committee = Group.executive_committee unless Group.nil?
 
-    @board_of_directors = Group.board_of_directors
+    @board_of_directors = Group.board_of_directors unless Group.nil?
 
   end
 
