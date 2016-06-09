@@ -1,5 +1,5 @@
 ActiveAdmin.register SectorBanner do
-  permit_params :title, :description
+  permit_params :title, :description, :photo
   menu parent: "Sectors", priority: 2, label: "Banner"
 
   filter :title
@@ -24,6 +24,7 @@ ActiveAdmin.register SectorBanner do
     f.inputs 'Banner' do
       f.input :title
       f.input :description, as: :html_editor
+      f.input :photo, :as => :file
     end
     f.button 'Commit'
   end

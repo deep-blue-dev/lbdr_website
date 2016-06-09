@@ -1,3 +1,66 @@
+.banner
+
+  .banner-body
+    - @banners.each do |banner|
+      .banner-content style='background-image: url("#{banner.photo(:big)}");'
+
+  .logo-information
+    .col-md-10.slider_leftpart
+
+      .col-md-3.text-left
+
+      .col-md-9.text-left
+
+        .logo_lbdr =image_tag('lbdr.svg')
+
+        - @banners.each do |banner|
+
+          .banner-description.hide
+            h2 =banner.title.html_safe unless banner.nil?
+            p =banner.description.html_safe unless banner.nil?
+
+    .col-md-2.text-left
+
+
 .container-fluid.sectors
   h1 We have companies in 8 different sectors
-  = render 'sectors_partial'
+  
+  .container
+
+    .col-md-12.visible-md-block.visible-lg-block
+      -@sectors.each_with_index do |sector, i|
+        
+        - if((i) % 2 == 0)
+          =link_to sector do
+              .row
+                .col-md-3.col-ms-3
+                  .sector-image
+                    .styled-div style='background-image: url("#{sector.sector_photo(:thumb)}");'
+                      h3.sector-name = sector.name
+                .col-md-9.col-ms-9
+                  p =sanitize(sector.description, :tags=>[]).truncate(240, :separator => " ").html_safe
+          end
+
+        - else
+          =link_to sector do
+              .row
+                .col-md-9.col-ms-9
+                  p =sanitize(sector.description, :tags=>[]).truncate(240, :separator => " ").html_safe
+                .col-md-3.col-ms-3
+                  .sector-image
+                    .styled-div style='background-image: url("#{sector.sector_photo(:thumb)}");'
+                      h3.sector-name =sector.name
+          end
+
+    .col-md-12.visible-sm-block.visible-xs-block
+      -@sectors.each_with_index do |sector, i|
+        
+        =link_to sector do
+            .row
+              .col-md-3.col-ms-3
+                .sector-image
+                  .styled-div style='background-image: url("#{sector.sector_photo(:thumb)}");'
+                    h3.sector-name = sector.name
+              .col-md-9.col-ms-9
+                p =sanitize(sector.description, :tags=>[]).truncate(240, :separator => " ").html_safe
+        end

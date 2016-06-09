@@ -6,6 +6,8 @@ class SectorsController < ApplicationController
   # GET /sectors.json
   def index
     @sectors = Sector.all
+
+    @banners = SectorBanner.order("id" => "desc").all
   end
 
   # GET /sectors/1

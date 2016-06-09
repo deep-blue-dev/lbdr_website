@@ -1,0 +1,9 @@
+=link_to sector do
+  .row
+    .col-md-3.col-ms-3
+      .sector-image
+        .styled-div style='background-image: url("#{sector.sector_photo(:thumb)}");'
+          h3.sector-name = sector.name
+    .col-md-9.col-ms-9
+      p =( truncate sanitize(sector.description), length: 160 ) unless sector.description.nil?
+end

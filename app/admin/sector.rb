@@ -1,5 +1,18 @@
 ActiveAdmin.register Sector do
   permit_params :name, :description, :icon_image,  :sector_photo, :_wysihtml5_mode
+  menu parent: "Sectors", priority: 2, label: "Sector"
+
+
+  index do
+    selectable_column
+    column :id
+    column :brand
+    column :name
+    actions
+    # column '' do |post|
+    #   link_to 'Edit', admin_post_path(post) if authorized? :update, post
+    # end
+  end
 
   filter :name
   filter :brands
