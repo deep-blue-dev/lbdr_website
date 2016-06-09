@@ -1,9 +1,14 @@
-= image_tag @sector.sector_photo.url(:big), class:'sector-photo-big'
+.banner-sector
+  .banner-sector-body
+    .banner-sector-content style='background-image: url("#{@sector.sector_photo.url(:big)}");'
+      h2 = @sector.name
+
+      .arrow
+        .arrow-in
 
 .container-fluid
   p#notice = notice
-.fadeInBlock.text-center
-  h1 = @sector.name
+
 .fadeInBlock.container.description.col-md-8.col-md-offset-2
   = @sector.description.html_safe
 

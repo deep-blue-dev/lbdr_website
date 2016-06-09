@@ -10,8 +10,12 @@ img.sector-photo-big {
 }
 
 .description {
-  text-align: justify;
-  padding: 50px 10px;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #929191;
+  font-size: 19px;
+  font-weight: 300;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .list-brands-by-sector {
@@ -87,6 +91,92 @@ li.active a {
     p{
       margin: 20px 0 0 0;
       font-weight: 300;
+    }
+  }
+}
+
+.banner-sector{
+
+  position:relative;
+  width: 100%;
+  overflow:hidden;
+
+  .banner-sector-body{
+    width: 100%;
+    min-height:610px;
+    overflow:hidden;
+
+    .banner-sector-content{
+      width: 100%;
+      background-color: #181015; 
+      background-size: cover;
+      text-align: center;
+      color:white;
+      font-family:"Open sans", Helvetica, Arial;
+      font-weight:300;
+      height:100vh;
+      min-height:610px;
+
+      h2{
+        margin-top:35vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        width:80%;
+        border: 2px solid white;
+        display:inline-block;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 40px;
+        padding:6vh 0 ;
+
+        @media (min-width: $screen-md-min){
+          width:40%;
+        }
+      }
+
+      .arrow {
+        position: absolute;
+        z-index: 200;
+        text-align: center;
+        top: 90%;
+        width: 100%;
+        animation: arrow_play 2s infinite ease;
+        -webkit-animation: arrow_play 2s infinite ease;
+        -moz-animation: arrow_play 2s infinite ease;
+        -o-animation: arrow_play 2s infinite ease;
+
+      }
+
+      .arrow-in{
+        background:url("/arrow.png");
+        width:31px;
+        height:17px;
+        display:inline-block;    
+      }
+      
+      @keyframes arrow_play {
+         20% { top:    85%; }
+           40% { top: 90%; }
+           60% { top: 85%; }
+           80% { top: 90%; }
+      }
+      @-webkit-keyframes arrow_play {
+         20% { top:    85%; }
+           40% { top: 90%; }
+           60% { top: 85%; }
+           80% { top: 90%; }
+      }
+      @-moz-keyframes arrow_play {
+         20% { top:    85%; }
+           40% { top: 90%; }
+           60% { top: 85%; }
+           80% { top: 90%; }
+      }
+      @-o-keyframes arrow_play {
+         20% { top:    85%; }
+           40% { top: 90%; }
+           60% { top: 85%; }
+           80% { top: 90%; }
+      }
     }
   }
 }
