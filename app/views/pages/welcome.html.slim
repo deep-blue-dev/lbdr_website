@@ -65,15 +65,16 @@ section.section_area.with_padding
       p.text-muted
         =@content[0].description.html_safe unless @content[0].nil?
 
-.gallery_menu
-  - @sectors.each do |sector|
-    .col-md-3.col-sm-6.no-padding
+.col-md-12
+  .gallery_menu.row
+    - @sectors.each do |sector|
+      .col-md-3.col-sm-6.sector_thumb.no-padding
 
-      = link_to "#{sector_path(sector)}" do
-        = image_tag "#{sector.sector_photo.url(:original)}", :class => "img-responsive", :alt => sector.name
-        .carousel-caption.mylink.twoline
-          h3 =sector.name
-      end
+        = link_to "#{sector_path(sector)}" do
+          = image_tag "#{sector.sector_photo.url(:original)}", :class => "img-responsive", :alt => sector.name
+          .carousel-caption.mylink.twoline
+            h3 =sector.name
+        end
 
 
 section.section_area.with_padding
