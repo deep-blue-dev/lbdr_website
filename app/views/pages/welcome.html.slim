@@ -67,7 +67,7 @@ section.section_area.with_padding
 
 .col-md-12
   .gallery_menu.row
-    - @sectors.each do |sector|
+    - @sectors.each_with_index do |sector, i|
       .col-md-3.col-sm-6.sector_thumb.no-padding
 
         = link_to "#{sector_path(sector)}" do
@@ -76,6 +76,9 @@ section.section_area.with_padding
             h3 =sector.name
         end
 
+
+      - if((i + 1) % 4 == 0)
+        .clearfix.visible-md-block
 
 section.section_area.with_padding
 
