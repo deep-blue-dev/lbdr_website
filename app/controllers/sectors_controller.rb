@@ -8,6 +8,8 @@ class SectorsController < ApplicationController
     @sectors = Sector.all
 
     @banners = SectorBanner.order("id" => "desc").all
+
+    @new_investment = NewInvestment.first
   end
 
   # GET /sectors/1

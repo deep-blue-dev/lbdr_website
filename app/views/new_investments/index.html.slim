@@ -1,0 +1,21 @@
+.banner-sector
+  .banner-sector-body
+    .banner-sector-content style='background-image: url("#{@new_investment.photo.url(:big)}");'
+      h2 = @new_investment.title
+
+      .arrow
+        .arrow-in
+
+.container-fluid
+  p#notice = notice
+
+.fadeInBlock.container.description.col-md-8.col-md-offset-2
+  = @new_investment.description.html_safe
+
+.fadeInBlock.container.col-md-8.col-md-offset-2.list-brands-by-sector
+  - Brand.all.where(new_investment_id: [params[:id]]).each do |var|
+    .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+.container-fluid
+- if current_user.try(:admin?)
+  = link_to 'Edit', edit_sector_path(@new_investment), class: 'btn btn-danger'
+  = link_to 'Back', sectors_path, class: 'btn btn-default'

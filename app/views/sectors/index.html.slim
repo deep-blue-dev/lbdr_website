@@ -52,6 +52,16 @@
                       h3.sector-name =sector.name
           end
 
+      =link_to new_investment_page_path do
+          .row
+            .col-md-3.col-ms-3
+              .sector-image
+                .styled-div style='background-image: url("#{@new_investment.photo(:thumb)}");'
+                  h3.sector-name = @new_investment.title
+            .col-md-9.col-ms-9
+              p =sanitize(@new_investment.description, :tags=>[]).truncate(240, :separator => " ").html_safe
+      end
+
     .col-md-12.visible-sm-block.visible-xs-block
       -@sectors.each_with_index do |sector, i|
         
@@ -64,3 +74,13 @@
               .col-md-9.col-ms-9
                 p =sanitize(sector.description, :tags=>[]).truncate(240, :separator => " ").html_safe
         end
+
+      =link_to new_investment_page_path do
+          .row
+            .col-md-3.col-ms-3
+              .sector-image
+                .styled-div style='background-image: url("#{@new_investment.photo(:thumb)}");'
+                  h3.sector-name = @new_investment.title
+            .col-md-9.col-ms-9
+              p =sanitize(@new_investment.description, :tags=>[]).truncate(240, :separator => " ").html_safe
+      end
