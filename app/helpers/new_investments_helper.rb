@@ -1,0 +1,2 @@
+module NewInvestmentsHelper
+end

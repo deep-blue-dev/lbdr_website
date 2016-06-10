@@ -1,3 +1,3 @@
 ActiveAdmin.register SocialMedium do
-	menu parent: "Brands", priority: 1
+	menu parent: "Home", priority: 1
 end

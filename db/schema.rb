@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609193251) do
+ActiveRecord::Schema.define(version: 20160610184709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 20160609193251) do
     t.integer  "logo_for_brand_file_size"
     t.datetime "logo_for_brand_updated_at"
     t.integer  "sector_id"
+    t.integer  "new_investment_id"
+    t.index ["new_investment_id"], name: "index_brands_on_new_investment_id", using: :btree
     t.index ["sector_id"], name: "index_brands_on_sector_id", using: :btree
   end
 
@@ -136,6 +138,17 @@ ActiveRecord::Schema.define(version: 20160609193251) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "new_investments", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
@@ -196,6 +209,7 @@ ActiveRecord::Schema.define(version: 20160609193251) do
   end
 
   add_foreign_key "banners", "sectors"
+  add_foreign_key "brands", "new_investments"
   add_foreign_key "brands", "sectors"
   add_foreign_key "social_media", "brands"
 end

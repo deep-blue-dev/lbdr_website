@@ -1,5 +1,6 @@
 class Brand < ApplicationRecord
   belongs_to :sector
+  belongs_to :new_investment
 
 # Brand Photo File Uploads
   has_attached_file :brand_photo,
