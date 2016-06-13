@@ -255,3 +255,49 @@ li.active a {
 
 
 // Contact Page
+
+
+.arrow {
+  position: absolute;
+  z-index: 200;
+  text-align: center;
+  top: 90%;
+  width: 100%;
+  animation: arrow_play 2s infinite ease;
+  -webkit-animation: arrow_play 2s infinite ease;
+  -moz-animation: arrow_play 2s infinite ease;
+  -o-animation: arrow_play 2s infinite ease;
+
+}
+
+.arrow-in{
+  background:url("/arrow.png");
+  width:31px;
+  height:17px;
+  display:inline-block;    
+}
+
+@keyframes arrow_play {
+   20% { top:    85%; }
+     40% { top: 90%; }
+     60% { top: 85%; }
+     80% { top: 90%; }
+}
+@-webkit-keyframes arrow_play {
+   20% { top:    85%; }
+     40% { top: 90%; }
+     60% { top: 85%; }
+     80% { top: 90%; }
+}
+@-moz-keyframes arrow_play {
+   20% { top:    85%; }
+     40% { top: 90%; }
+     60% { top: 85%; }
+     80% { top: 90%; }
+}
+@-o-keyframes arrow_play {
+   20% { top:    85%; }
+     40% { top: 90%; }
+     60% { top: 85%; }
+     80% { top: 90%; }
+}

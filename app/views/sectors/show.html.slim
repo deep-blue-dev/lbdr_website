@@ -9,10 +9,10 @@
 .container-fluid
   p#notice = notice
 
-.fadeInBlock.container.description.col-md-8.col-md-offset-2
+.container.description.col-md-8.col-md-offset-2
   = @sector.description.html_safe
 
-.fadeInBlock.container.col-md-8.col-md-offset-2.list-brands-by-sector
+.container.col-md-8.col-md-offset-2.list-brands-by-sector
   - Brand.all.where(sector_id: [params[:id]]).each do |var|
     .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
 .container-fluid
