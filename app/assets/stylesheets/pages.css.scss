@@ -143,6 +143,38 @@ img.fotorama__img {
   text-align: center;
   font-size: 1.75em;
 
+  .tab-pane{
+    &.active{
+      
+      .governance-description{
+        
+        margin-left: 0%;
+
+        animation: text_left_come 1s ease;
+        -webkit-animation: text_left_come 1s ease;
+        -moz-animation: text_left_come 1s ease;
+        -o-animation: text_left_come 1s ease;
+      }
+    }
+
+    @keyframes text_left_come {
+       0% { margin-left: -30%; }
+       100% { margin-left: 0%; }
+    }
+    @-webkit-keyframes text_left_come {
+       0% { margin-left: -30%; }
+       100% { margin-left: 0%; }
+    }
+    @-moz-keyframes text_left_come {
+       0% { margin-left: -30%; }
+       100% { margin-left: 0%; }
+    }
+    @-o-keyframes text_left_come {
+       0% { margin-left: -30%; }
+       100% { margin-left: 0%; }
+    }
+  }
+
   ul.nav {
     display: inline-block;
     li {
@@ -163,7 +195,6 @@ img.fotorama__img {
         @media (min-width: $screen-md-min){
           padding: 6px 71px 6px 47px;
           font-size: 27px;
-
         }
 
         &:hover , &:focus {
@@ -295,6 +326,8 @@ li.active a {
   clear:both;
   color: #929191;
   font-size: 16px;
+  width: 100%;
+  display: inline-block;
 
   @media (min-width: $screen-md-min){
     padding: 0 60px;
