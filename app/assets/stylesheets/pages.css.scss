@@ -156,17 +156,103 @@ img.fotorama__img {
           margin: 30px 0 0 0;
           font-weight: 300;
           letter-spacing: 2px;
-          padding: 6px 17px;
-          font-size: 20px;
+          padding: 6px 33px 6px 21px;
+          font-size: 17px;
+          position: relative;
 
         @media (min-width: $screen-md-min){
-          padding: 6px 43px;
+          padding: 6px 71px 6px 47px;
           font-size: 27px;
 
         }
 
         &:hover , &:focus {
           text-decoration: none;
+
+          .arrow_board {
+            animation: arrow_go_mobile 2s infinite ease;
+            -webkit-animation: arrow_go_mobile 2s infinite ease;
+            -moz-animation: arrow_go_mobile 2s infinite ease;
+            -o-animation: arrow_go_mobile 2s infinite ease;
+          }
+
+          @media (min-width: $screen-md-min){
+            .arrow_board {
+              animation: arrow_go 2s infinite ease;
+              -webkit-animation: arrow_go 2s infinite ease;
+              -moz-animation: arrow_go 2s infinite ease;
+              -o-animation: arrow_go 2s infinite ease;
+            }
+          }
+        }
+
+
+        .arrow_board {
+          position: absolute;
+          z-index: 200;
+          text-align: center;
+          top: 5px;
+          right: 10px;
+        }
+
+        @media (min-width: $screen-md-min){
+          .arrow_board {
+            position: absolute;
+            z-index: 200;
+            text-align: center;
+            top: 5px;
+            right: 30px;
+          }
+        }
+
+        @keyframes arrow_go {
+           20% { right: 15px; }
+           40% { right: 30px; }
+           60% { right: 15px; }
+           80% { right: 30px; }
+        }
+        @-webkit-keyframes arrow_go {
+           20% { right: 15px; }
+           40% { right: 30px; }
+           60% { right: 15px; }
+           80% { right: 30px; }
+        }
+        @-moz-keyframes arrow_go {
+           20% { right: 15px; }
+           40% { right: 30px; }
+           60% { right: 15px; }
+           80% { right: 30px; }
+        }
+        @-o-keyframes arrow_go {
+           20% { right: 15px; }
+           40% { right: 30px; }
+           60% { right: 15px; }
+           80% { right: 30px; }
+        }
+
+        @keyframes arrow_go_mobile {
+           20% { right: 2px; }
+           40% { right: 10px; }
+           60% { right: 2px; }
+           80% { right: 10px; }
+        }
+        @-webkit-keyframes arrow_go_mobile {
+           20% { right: 2px; }
+           40% { right: 10px; }
+           60% { right: 2px; }
+           80% { right: 10px; }
+        }
+        @-moz-keyframes arrow_go_mobile {
+           20% { right: 2px; }
+           40% { right: 10px; }
+           60% { right: 2px; }
+           80% { right: 10px; }
+        }
+        @-o-keyframes arrow_go_mobile {
+           20% { right: 2px; }
+           40% { right: 10px; }
+           60% { right: 2px; }
+           80% { right: 10px; }
         }
       }
 
@@ -278,26 +364,26 @@ li.active a {
 }
 
 @keyframes arrow_play {
-   20% { top:    85%; }
-     40% { top: 90%; }
-     60% { top: 85%; }
-     80% { top: 90%; }
+   20% { top: 85%; }
+   40% { top: 90%; }
+   60% { top: 85%; }
+   80% { top: 90%; }
 }
 @-webkit-keyframes arrow_play {
-   20% { top:    85%; }
-     40% { top: 90%; }
-     60% { top: 85%; }
-     80% { top: 90%; }
+   20% { top: 85%; }
+   40% { top: 90%; }
+   60% { top: 85%; }
+   80% { top: 90%; }
 }
 @-moz-keyframes arrow_play {
-   20% { top:    85%; }
-     40% { top: 90%; }
-     60% { top: 85%; }
-     80% { top: 90%; }
+   20% { top: 85%; }
+   40% { top: 90%; }
+   60% { top: 85%; }
+   80% { top: 90%; }
 }
 @-o-keyframes arrow_play {
-   20% { top:    85%; }
-     40% { top: 90%; }
-     60% { top: 85%; }
-     80% { top: 90%; }
+   20% { top: 85%; }
+   40% { top: 90%; }
+   60% { top: 85%; }
+   80% { top: 90%; }
 }

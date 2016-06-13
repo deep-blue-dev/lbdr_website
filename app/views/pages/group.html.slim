@@ -24,7 +24,6 @@
   .arrow
     .arrow-in
 
-/.fadeInBlock
 .container.section
   .group-info
 
@@ -52,13 +51,17 @@
     .pills-center
       ul#tabs.nav data-tabs="pills"
         li.active
-          a data-toggle="pill" href="#executive_committee" id="executive-committee"  Executive Committee >>
+          a data-toggle="pill" href="#executive_committee" id="executive-committee"  
+            span Executive Committee
+            span.arrow_board >>
         li
-          a data-toggle="pill" href="#board_of_directors"  Board of Directors >>
+          a data-toggle="pill" href="#board_of_directors"  
+            span Board of Directors 
+            span.arrow_board >>
 
 
       #my-tab-content.tab-content
-        #executive_committee.tab-pane.active
+        #executive_committee.tab-pane.fade.in.active
           .governance-description.col-md-8.col-md-offset-2
             =@group.executive_committee_description.html_safe unless @group.nil?
 
@@ -67,11 +70,10 @@
               - @executive_committee.each do |exec|
                 .people.col-md-3
                   .group-image style='background-image: url("#{exec.photo(:thumb)}")'
-                  /.group-image style=' background-image: url(/miami2.jpg)'
                   h4 = "#{exec.first_name} #{exec.last_name}"
                   p =exec.position
 
-        #board_of_directors.tab-pane
+        #board_of_directors.tab-pane.fade
           .governance-description.col-md-8.col-md-offset-2
             =@group.board_of_directors_description.html_safe unless @group.nil?
           
@@ -80,6 +82,5 @@
               - @board_of_directors.each do |board|
                 .people.col-md-3
                   .group-image style='background-image: url("#{board.photo(:thumb)}")'
-                  /.group-image style=' background-image: url(/miami2.jpg)'
                   h4 ="#{board.first_name} #{board.last_name}"
                   p =board.position
