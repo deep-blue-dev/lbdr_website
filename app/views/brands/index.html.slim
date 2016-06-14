@@ -1,33 +1,50 @@
 .container-fluid.body-padding
   h1 Brands by Sector
 hr
-  .container
-    ul.list-unstyled.brand-tabs.col-md-3
-      li.active
-        h4
-          a data-toggle="pill" href="#marine"  Marine
-      li
-        h4
-          a data-toggle="pill" href="#automotive"  Automotive
-      li
-        h4
-          a data-toggle="pill" href="#aviation"  Aviation
-      li
-        h4
-          a data-toggle="pill" href="#media"  Media
-      li
-        h4
-          a data-toggle="pill" href="#fashion"  Fashion & Accessories
-      li
-        h4
-          a data-toggle="pill" href="#technology"  Technology
-      li
-        h4
-          a data-toggle="pill" href="#realestate"  Real Estate
-      li
-        h4
-          a data-toggle="pill" href="#entertainment"  Entertainment & Leisure
+  .brand-content.md-col-12
+    ul.list-unstyled.brand-tabs
+      li.col-8
+        a data-toggle="pill" href="#automotive"  
+          i.fa.fa-car.fa-2
+          span Automotive
+      
+      li.col-8
+        a data-toggle="pill" href="#realestate"  
+          i.fa.fa-coffee.fa-2
+          span Real Estate
 
+      li.col-8
+        a data-toggle="pill" href="#aviation"  
+          i.fa.fa-paper-plane.fa-2
+          span Aviation
+
+      li.col-8
+        a data-toggle="pill" href="#fashion"  
+          i.fa.fa-star.fa-2
+          span Fashion & Accessories
+
+      li.col-8
+        a data-toggle="pill" href="#technology"  
+          i.fa.fa-wifi.fa-2
+          span Technology
+
+      li.col-8.active
+        a data-toggle="pill" href="#marine"  
+          i.fa.fa-anchor.fa-2
+          span Marine
+      
+      li.col-8
+        a data-toggle="pill" href="#entertainment"  
+          i.fa.fa-child.fa-2
+          span Entertainment & Leisure
+      
+      li.col-8
+        a data-toggle="pill" href="#media"  
+          i.fa.fa-video-camera.fa-2
+          span Media
+      
+
+  .container
     .tab-content.col-md-9
       #marine.tab-pane.active
         .row
@@ -54,3 +71,6 @@ hr
       #entertainment.tab-pane
         - Brand.all.where(sector_id: 7).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+br
+br
+br
