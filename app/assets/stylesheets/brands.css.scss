@@ -116,3 +116,18 @@ img.brand-logo-thumb {
   display: flex;
   align-self: center;
 }
+
+.container-fluid{
+  h1{
+    color: #129bc1;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 25px;
+
+    @media (min-width: $screen-md-min){
+      font-size: 40px;
+    }
+
+  }
+}

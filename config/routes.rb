@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :brand_banners
   resources :new_investments
   resources :sector_banners
   resources :group_banners

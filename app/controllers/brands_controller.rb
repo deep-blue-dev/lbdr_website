@@ -6,6 +6,9 @@ class BrandsController < ApplicationController
   # GET /brands.json
   def index
     @brands = Brand.all
+
+    @banners = BrandBanner.order("id" => "desc").all
+    
     @sector = Sector.find_by(params[:id])
   end
 

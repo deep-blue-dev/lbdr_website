@@ -1,3 +1,30 @@
+.banner
+
+  .banner-body
+    - @banners.each do |banner|
+      .banner-content style='background-image: url("#{banner.photo(:big)}");'
+
+  .logo-information
+    .col-md-10.slider_leftpart
+
+      .col-md-3.text-left
+
+      .col-md-9.text-left
+
+        .logo_lbdr =image_tag('lbdr.svg')
+
+        - @banners.each do |banner|
+
+          .banner-description.hide
+            h2 =banner.title.html_safe unless banner.nil?
+            p =banner.description.html_safe unless banner.nil?
+
+    .col-md-2.text-left
+
+  .arrow
+    .arrow-click
+      .arrow-in
+
 .container-fluid.body-padding
   h1 Brands by Sector
 hr

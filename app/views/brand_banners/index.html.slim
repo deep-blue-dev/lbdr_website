@@ -1,0 +1,23 @@
+h1 Listing brand_banners
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th
+      th
+      th
+
+  tbody
+    - @brand_banners.each do |brand_banner|
+      tr
+        td = brand_banner.title
+        td = brand_banner.description
+        td = link_to 'Show', brand_banner
+        td = link_to 'Edit', edit_brand_banner_path(brand_banner)
+        td = link_to 'Destroy', brand_banner, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Brand banner', new_brand_banner_path

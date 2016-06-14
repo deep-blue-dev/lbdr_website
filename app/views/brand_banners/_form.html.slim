@@ -1,0 +1,15 @@
+= form_for @brand_banner do |f|
+  - if @brand_banner.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@brand_banner.errors.count, "error")} prohibited this brand_banner from being saved:"
+      ul
+        - @brand_banner.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions = f.submit
