@@ -3,7 +3,7 @@
 hr
   .brand-content.md-col-12
     ul.list-unstyled.brand-tabs
-      li.col-8
+      li.col-8.active
         a data-toggle="pill" href="#automotive"  
           i.fa.fa-car.fa-2
           span Automotive
@@ -28,7 +28,7 @@ hr
           i.fa.fa-wifi.fa-2
           span Technology
 
-      li.col-8.active
+      li.col-8
         a data-toggle="pill" href="#marine"  
           i.fa.fa-anchor.fa-2
           span Marine
@@ -45,31 +45,30 @@ hr
       
 
   .container
-    .tab-content.col-md-9
-      #marine.tab-pane.active
-        .row
-          - Brand.all.where(sector_id: 3).each do |var|
-            .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-      #automotive.tab-pane
+    .tab-content.col-md-12
+      #marine.tab-pane
+        - Brand.all.where(sector_id: 1).each do |var|
+          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+      #automotive.tab-pane.active
         - Brand.all.where(sector_id: 5).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #aviation.tab-pane
-        - Brand.all.where(sector_id: 6).each do |var|
+        - Brand.all.where(sector_id: 2).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #media.tab-pane
-        - Brand.all.where(sector_id: 9).each do |var|
+        - Brand.all.where(sector_id: 7).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #fashion.tab-pane
-        - Brand.all.where(sector_id: 8).each do |var|
+        - Brand.all.where(sector_id: 6).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #technology.tab-pane
-        - Brand.all.where(sector_id: 10).each do |var|
+        - Brand.all.where(sector_id: 8).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #realestate.tab-pane
-        - Brand.all.where(sector_id: 4).each do |var|
+        - Brand.all.where(sector_id: 3).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
       #entertainment.tab-pane
-        - Brand.all.where(sector_id: 7).each do |var|
+        - Brand.all.where(sector_id: 4).each do |var|
           .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
 br
 br
