@@ -389,6 +389,12 @@ li.active a {
 
 }
 
+.arrow-click{
+  display: inline-block;
+  cursor: pointer;
+  padding: 40px;
+}
+
 .arrow-in{
   background:url("/arrow.png");
   width:31px;

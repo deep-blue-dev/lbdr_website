@@ -27,6 +27,16 @@ $(function() {
 
     var banner = document.getElementsByClassName("logo-information");
 
+    $(".arrow-click").click(function(e){
+
+      $('html, body').stop().animate({
+          'scrollTop': $( window ).height()
+      }, 900, 'swing', function () {
+          //window.location.hash = target;
+      });
+
+    });
+
     function startInterval(){
       try{
         clearInterval( interval );
