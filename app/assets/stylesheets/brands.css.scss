@@ -106,22 +106,24 @@ img.brand-logo-thumb {
       }
     }
   }
-}
 
-.slick-prev, .slick-next{
-  &:before{
-    font-size: 30px;
-    color: black;
+  .slick-prev, .slick-next{
+    &:before{
+      font-size: 30px;
+      color: black;
+    }
+  }
+
+  .slick-prev{
+    left: 7px;
+  }
+
+  .slick-next{
+    right: 18px;
   }
 }
 
-.slick-prev{
-  left: 7px;
-}
 
-.slick-next{
-  right: 18px;
-}
 
 
 .brand-show {
