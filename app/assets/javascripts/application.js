@@ -25,6 +25,28 @@ $(function() {
 
   ready = function() {
 
+    $('#brand_courssel').slick({
+      centerMode: true,
+      slidesToShow: 3,
+      arrows: false,
+      onAfterChange: function(event, currentSlide) {
+        
+        var page = currentSlide + 1;
+
+        console.log(page);
+      }
+    });
+
+    $(".brand-tabs .col-8").click(function(){
+
+      var index = $(this).index() -4;
+
+      console.log(index);
+
+      $( '#brand_courssel' ).slickGoTo( index );  
+    });
+    
+
     var banner = document.getElementsByClassName("logo-information");
 
     $(".arrow-click").click(function(e){
