@@ -1,5 +1,12 @@
-= image_tag @brand.brand_photo.url(:big), :class=> 'brand-photo-big'
-h1.brand-name-overlay = @brand.name
+.banner-sector
+  .banner-sector-body
+    .banner-sector-content style='background-image: url("#{@brand.brand_photo.url(:big)}");'
+      h2 = @brand.name
+
+      .arrow
+        .arrow-click
+          .arrow-in
+
 .brand-photo-overlay
 
 .fadeInBlock.container-fluid
