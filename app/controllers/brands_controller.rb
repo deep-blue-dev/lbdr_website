@@ -10,6 +10,8 @@ class BrandsController < ApplicationController
     @banners = BrandBanner.order("id" => "desc").all
     
     @sector = Sector.find_by(params[:id])
+
+    @sectors = Sector.all();
   end
 
 

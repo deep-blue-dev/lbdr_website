@@ -29,13 +29,41 @@ $(function() {
       centerMode: true,
       slidesToShow: 3,
       arrows: false,
+      centerPadding: '0px',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 1
+          }
+        }
+      ],
       onAfterChange: function(event, currentSlide) {
         
-        var page = currentSlide + 1;
+        var page = currentSlide;
+
+        $(".tab-pane").css("display", "none");
+        $(".tab-pane").eq(page).css("display", "block");
 
         console.log(page);
       }
     });
+
+    $(".tab-pane").eq(0).css("display", "block");
+
+    console.log($(".brand-tab").eq(0));
 
     $(".brand-tabs .col-8").click(function(){
 

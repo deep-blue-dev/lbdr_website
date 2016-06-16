@@ -21,80 +21,18 @@
 
     .col-md-2.text-left
 
-  /.arrow
-    /.arrow-click
-      /.arrow-in
-
-/.container-fluid.body-padding
-  /h1 Brands by Sector
-
 .list-unstyled.brand-tabs#brand_courssel
-  .col-8.active
-    a data-toggle="pill" href="#automotive"  
-      i.fa.fa-car.fa-2
-      span Automotive
-  
-  .col-8
-    a data-toggle="pill" href="#realestate"  
-      i.fa.fa-coffee.fa-2
-      span Real Estate
-
-  .col-8
-    a data-toggle="pill" href="#aviation"  
-      i.fa.fa-paper-plane.fa-2
-      span Aviation
-
-  .col-8
-    a data-toggle="pill" href="#fashion"  
-      i.fa.fa-star.fa-2
-      span Fashion & Accessories
-
-  .col-8
-    a data-toggle="pill" href="#technology"  
-      i.fa.fa-wifi.fa-2
-      span Technology
-
-  .col-8
-    a data-toggle="pill" href="#marine"  
-      i.fa.fa-anchor.fa-2
-      span Marine
-  
-  .col-8
-    a data-toggle="pill" href="#entertainment"  
-      i.fa.fa-child.fa-2
-      span Entertainment & Leisure
-  
-  .col-8
-    a data-toggle="pill" href="#media"  
-      i.fa.fa-video-camera.fa-2
-      span Media
+  - @sectors.each do |sector|
+    .col-8
+      a data-toggle="pill" href="#temp_#{sector.id}" style='background-image: url("#{sector.sector_photo(:big)}");'
+        span =sector.name
   
 .container
   .tab-content.col-md-12
-    #marine.tab-pane
-      - Brand.all.where(sector_id: 1).each do |var|
-        .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #automotive.tab-pane.active
-      - Brand.all.where(sector_id: 5).each do |var|
-        .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #aviation.tab-pane
-      - Brand.all.where(sector_id: 2).each do |var|
-        .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #media.tab-pane
-      - Brand.all.where(sector_id: 7).each do |var|
-        .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #fashion.tab-pane
-      - Brand.all.where(sector_id: 6).each do |var|
-        .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #technology.tab-pane
-      - Brand.all.where(sector_id: 8).each do |var|
-        .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #realestate.tab-pane
-      - Brand.all.where(sector_id: 3).each do |var|
-        .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
-    #entertainment.tab-pane
-      - Brand.all.where(sector_id: 4).each do |var|
-        .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
+    - @sectors.each do |sector|
+      div id="#temp_#{sector.id}" class="tab-pane brand-tab"
+        - Brand.all.where(sector_id: sector.id).each do |var|
+          .col-md-4 = link_to image_tag(var.logo_for_brand.url(:thumb), class:'brand-logo-thumb'), brand_path(var)
   br
   br
   br
