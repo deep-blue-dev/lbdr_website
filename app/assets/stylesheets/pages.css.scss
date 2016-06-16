@@ -373,9 +373,6 @@ li.active a {
 
 
 
-// Contact Page
-
-
 .arrow {
   position: absolute;
   z-index: 200;
@@ -425,4 +422,68 @@ li.active a {
    40% { top: 90%; }
    60% { top: 85%; }
    80% { top: 90%; }
+}
+
+// contact Page
+.contact_back{
+  background:url('http://33.media.tumblr.com/c42ce0cd442f64d02a5404dcf261e7ec/tumblr_nbz2v2Zffi1tjsogwo1_250.gif'); 
+  height:100vh; 
+  width: 100%;
+  min-height: 620px;
+  
+  h1{
+    color: white;
+    font-weight: bold;
+  }
+
+  form{
+    padding-top: 30px;
+    text-align: center;
+
+
+    input, textarea{
+      border-radius: 50px;
+      line-height: 60px;
+      font-size: 18px;
+      font-weight: 100;
+      color: #000 !important;
+      text-align: center;
+      height: 60px;
+      overflow: hidden;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding: 0px;
+      border: solid 1px grey;
+      margin-top: 12px;
+      width: 320px;
+      display:inline-block;
+    }
+
+    input[type="text"]{
+
+    }
+
+    input[type="email"]{
+
+    }
+
+    input[type="submit"]{
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size:20px;
+      color: white !important; 
+
+      &:hover{
+        color: #000 !important;
+      }
+    }
+
+    textarea{
+
+    }
+
+
+    .inline-error{
+      color: red;
+    }
+  }
 }

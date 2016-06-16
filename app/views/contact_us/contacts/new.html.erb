@@ -1,75 +1,77 @@
-
-<div class="container contact-form">
-  <div class="col-md-8 col-md-offset-2">
-    <h1><%= t('.contact_us') %></h1>
-      <%= form_for @contact, :url => contacts_path, :html => {:class => 'formtastic'} do |f| %>
-        <% if ContactUs.require_name %>
-          <div class='string required' id='contact_us_contact_name_input'>
-            <%= f.label :name, (t('.name') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
-            <%= f.text_field :name, :class => 'form-control' %>
-            <% if f.object.errors[:name].present? %>
-              <p class='inline-error'><%= f.object.errors[:name].join(' and ') %></p>
+<div class="contact_back">
+  <div class="container contact-form">
+    <div class="col-md-8 col-md-offset-2">
+      <h1><%= t('.contact_us') %></h1>
+        <%= form_for @contact, :url => contacts_path, :html => {:class => 'formtastic'} do |f| %>
+          <% if ContactUs.require_name %>
+            <div class='string required' id='contact_us_contact_name_input'>
+              
+              <%= f.text_field :name, :class => 'form-control', :placeholder => t('.name') + '*' %>
+              <% if f.object.errors[:name].present? %>
+                <p class='inline-error'><%= f.object.errors[:name].join(' and ') %></p>
+              <% end %>
+            </div>
+          <% end %>
+          <div class='string required' id='contact_us_contact_email_input'>
+            
+            <%= f.text_field :email, :class => 'form-control', :placeholder => t('.email') + '*' %>
+            <% if f.object.errors[:email].present? %>
+              <p class='inline-error'><%= f.object.errors[:email].join(' and ') %></p>
             <% end %>
           </div>
-        <% end %>
-        <div class='string required' id='contact_us_contact_email_input'>
-          <%= f.label :email, (t('.email') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
-          <%= f.text_field :email, :class => 'form-control' %>
-          <% if f.object.errors[:email].present? %>
-            <p class='inline-error'><%= f.object.errors[:email].join(' and ') %></p>
+          <% if ContactUs.require_subject %>
+            <div class='string required' id='contact_us_contact_subject_input'>
+              <%= f.label :subject, (t('.subject') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+              <%= f.text_field :subject %>
+              <% if f.object.errors[:subject].present? %>
+                <p class='inline-error'><%= f.object.errors[:subject].join(' and ') %></p>
+              <% end %>
+            </div>
           <% end %>
-        </div>
-        <% if ContactUs.require_subject %>
-          <div class='string required' id='contact_us_contact_subject_input'>
-            <%= f.label :subject, (t('.subject') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
-            <%= f.text_field :subject %>
-            <% if f.object.errors[:subject].present? %>
-              <p class='inline-error'><%= f.object.errors[:subject].join(' and ') %></p>
+          <div class='text required' id='contact_us_contact_message_input'>
+            <%= f.text_area :message, :class => 'form-control', :placeholder => t('.message') + '*' %>
+            <% if f.object.errors[:message].present? %>
+              <p class='inline-error'><%= f.object.errors[:message].join(' and ') %></p>
             <% end %>
           </div>
+          <div class='commit'>
+            <%= f.submit :submit, :class => 'submit create btn btn-default', :title => t('.submit') %>
+          </div>
         <% end %>
-        <div class='text required' id='contact_us_contact_message_input'>
-          <%= f.label :message, (t('.message') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
-          <%= f.text_area :message, :class => 'form-control' %>
-          <% if f.object.errors[:message].present? %>
-            <p class='inline-error'><%= f.object.errors[:message].join(' and ') %></p>
-          <% end %>
-        </div>
-        <div class='commit'>
-          <%= f.submit :submit, :class => 'submit create btn btn-default', :title => t('.submit') %>
-        </div>
-      <% end %>
-    </div>
+      </div>
+  </div>
 </div>
 
+<!--
 <div class="container text-center contact-countries">
-    <hr>
-    <div class="col-md-3">
-      <h4>USA</h4>
-      <p>
-        12345 Main St.
-        Miami, FL 33190
-      </p>
-    </div>
-    <div class="col-md-3">
-      <h4>Latin America</h4>
-      <p>
-        12345 Main St.
-        Miami, FL 33190
-      </p>
-    </div>
-    <div class="col-md-3">
-      <h4>Europe</h4>
-      <p>
-        12345 Main St.
-        Miami, FL 33190
-      </p>
-    </div>
-    <div class="col-md-3">
-      <h4>Middle East</h4>
-      <p>
-        12345 Main St.
-        Miami, FL 33190
-      </p>
-    </div>
+  <hr>
+  <div class="col-md-3">
+    <h4>USA</h4>
+    <p>
+      12345 Main St.
+      Miami, FL 33190
+    </p>
   </div>
+  <div class="col-md-3">
+    <h4>Latin America</h4>
+    <p>
+      12345 Main St.
+      Miami, FL 33190
+    </p>
+  </div>
+  <div class="col-md-3">
+    <h4>Europe</h4>
+    <p>
+      12345 Main St.
+      Miami, FL 33190
+    </p>
+  </div>
+  <div class="col-md-3">
+    <h4>Middle East</h4>
+    <p>
+      12345 Main St.
+      Miami, FL 33190
+    </p>
+  </div>
+</div>
+-->
