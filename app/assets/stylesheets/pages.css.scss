@@ -443,19 +443,31 @@ li.active a {
 
     input, textarea{
       border-radius: 50px;
-      line-height: 60px;
-      font-size: 18px;
+      
       font-weight: 100;
       color: #000 !important;
       text-align: center;
-      height: 60px;
+      
       overflow: hidden;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       padding: 0px;
       border: solid 1px grey;
       margin-top: 12px;
-      width: 320px;
+      
       display:inline-block;
+
+      width:200px;
+      font-size: 15px;
+
+      line-height: 50px;
+      height: 50px;
+
+      @media (min-width: $screen-md-min){
+        width: 320px;
+        font-size: 18px;
+        line-height: 60px;
+        height: 60px;
+      }
     }
 
     input[type="text"]{
@@ -469,8 +481,12 @@ li.active a {
     input[type="submit"]{
       text-transform: uppercase;
       font-weight: bold;
-      font-size:20px;
+      font-size: 17px;
       color: white !important; 
+
+      @media (min-width: $screen-md-min){
+        font-size:20px;
+      }
 
       &:hover{
         color: #000 !important;
@@ -485,5 +501,13 @@ li.active a {
     .inline-error{
       color: red;
     }
+  }
+}
+
+.contact-form{
+  padding: 90px 0 100px 0 !important;
+
+  @media (min-width: $screen-md-min){
+    padding: 150px 0 100px 0 !important;
   }
 }

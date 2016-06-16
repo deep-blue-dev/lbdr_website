@@ -36,3 +36,10 @@ img.pull-left { margin-right: 10px; }
     color: #252525 !important;  
   }
 }
+
+.flag_icon_area{
+    width: inherit;
+  @media (min-width: $screen-md-min){
+    width: inherit;
+  }
+}
