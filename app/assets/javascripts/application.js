@@ -270,7 +270,7 @@ $(function() {
 
     $("#menu-wrapper ul li").click(function(e){
       e.preventDefault();
-      var slideIndex = $(this).index();
+      var slideIndex = $(this).index() + 1;
 
       $( '.banner-body' ).slickGoTo( parseInt(slideIndex) );
 
