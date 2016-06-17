@@ -11,12 +11,11 @@
     .investor_text{
         padding-top: 10px;
         height:inherit;
-        background-color: #ededed;
 
         @media (min-width: $screen-md-min){
             height:100vh;
         }
-        
+
         h2{
             color: #129bc1;
             text-transform: uppercase;
