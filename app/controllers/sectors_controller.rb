@@ -5,7 +5,7 @@ class SectorsController < ApplicationController
   # GET /sectors
   # GET /sectors.json
   def index
-    @sectors = Sector.all
+    @sectors = Sector.order("order" => "asc").all
 
     @banners = SectorBanner.order("id" => "desc").all
 

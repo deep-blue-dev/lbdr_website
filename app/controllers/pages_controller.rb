@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def group
-    @sectors = Sector.all
+    @sectors = Sector.order("order" => "asc").all
 
     @banners = GroupBanner.order("id" => "desc").all
 

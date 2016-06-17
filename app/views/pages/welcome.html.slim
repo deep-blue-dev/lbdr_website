@@ -2,7 +2,12 @@
 
   .banner-body
     - @banners.each do |banner|
-      .banner-content style='background-image: url("#{banner.sector.sector_photo(:big)}");'
+
+      - unless banner.sector.nil?
+        .banner-content style='background-image: url("#{banner.sector.sector_photo(:big)}");'
+      - else
+        .banner-content style='background-image: url("#{banner.photo(:big)}");'
+
 
   .logo-information
     .col-md-10.slider_leftpart
@@ -18,7 +23,8 @@
           .banner-description.hide
             h2 =banner.title.html_safe unless banner.nil?
             p =banner.description.html_safe unless banner.nil?
-            p = link_to 'MORE INFO', '/sectors/' + banner.sector.id.to_s, :class => "btn btn-default btn-lg"
+            - unless banner.sector.nil?
+              p = link_to 'MORE INFO', '/sectors/' + banner.sector.id.to_s, :class => "btn btn-default btn-lg"
 
     .col-md-2.text-left
 

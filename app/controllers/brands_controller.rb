@@ -11,7 +11,7 @@ class BrandsController < ApplicationController
     
     @sector = Sector.find_by(params[:id])
 
-    @sectors = Sector.all();
+    @sectors = Sector.order("order" => "asc").all
   end
 
 
