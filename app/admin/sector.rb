@@ -1,11 +1,12 @@
 ActiveAdmin.register Sector do
-  permit_params :name, :description, :icon_image,  :sector_photo, :_wysihtml5_mode
+  permit_params :name, :description, :icon_image,  :sector_photo, :_wysihtml5_mode, :order
   menu parent: "Sectors", priority: 2, label: "Sector"
 
 
   index do
     selectable_column
     column :id
+    column :order
     column :brand
     column :name
     actions
@@ -20,6 +21,7 @@ ActiveAdmin.register Sector do
 
   form do |f|
     f.inputs 'Sector' do
+      f.input :order
       f.input :name
       f.input :icon_image
       f.input :description, as: :html_editor

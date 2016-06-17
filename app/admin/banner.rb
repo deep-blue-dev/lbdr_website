@@ -1,5 +1,5 @@
 ActiveAdmin.register Banner do
-  permit_params :sector_id, :title, :description
+  permit_params :sector_id, :title, :description, :order, :photo
   menu parent: "Home", priority: 2, label: "Banner"
 
   filter :sector
@@ -9,6 +9,7 @@ ActiveAdmin.register Banner do
   index do
     selectable_column
     column :id
+    column :order
     column :sector
     column :title
     column :description
@@ -24,9 +25,11 @@ ActiveAdmin.register Banner do
 
   form do |f|
     f.inputs 'Banner' do
+      f.input :order
       f.input :sector
       f.input :title
       f.input :description, as: :html_editor
+      f.input :photo, :as => :file
     end
     f.button 'Commit'
   end
