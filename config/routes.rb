@@ -19,9 +19,11 @@ Rails.application.routes.draw do
 
   get 'pages/group' => 'pages#group', :path => 'group'
 
-  get 'pages/contact' => 'pages#contact', :path => 'contact'
+  get 'pages/contact' => 'pages#contact', :path => 'contact-us'
 
   get 'new_investment_page' => 'new_investments#index', :path => 'new-investment'
+
+  get 'investors_page' => 'investors#index', :path => 'investors'
 
   # get 'pages/investor'
 
