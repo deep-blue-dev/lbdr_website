@@ -3,11 +3,98 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .investors{
-  .investor_text{
-    ul{
-      li{
+    font-family: "Helvetica Neue",helvetica,sans-serif;
+    padding:0px;
+    margin:0px;
+    color: #929191;
+
+    .investor_text{
+        padding-top: 10px;
+        height:inherit;
+        background-color: #ededed;
+
+        @media (min-width: $screen-md-min){
+            height:100vh;
+        }
         
-      }
+        h2{
+            color: #129bc1;
+            text-transform: uppercase;
+        }
     }
-  }
+
+    .investor-image{
+        background-image:url('/miami2.jpg');
+        width:100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 300px;
+        
+        @media (min-width: $screen-md-min){
+            height:100vh;
+        }
+    }
+
+
+    .panel-default{
+        border: 0px;
+    }
+    .panel .panel-default{
+        border-radius: 0px !important;
+    }
+    .panel-heading{
+        padding: 15px 45px 15px 15px;
+
+        cursor: pointer;
+        font-size: 0.85em;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+        position: relative;
+        -webkit-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+
+        background: #e9eff5;
+        color: #606060;
+        border: 1px solid #d8dfe5;
+
+        border-radius: 0px;
+
+         &:after {
+            content: "";
+            display: block;
+            background: url(/icon-s28.png);
+            width: 10px;
+            height: 18px;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            -webkit-transition: all .2s ease-out;
+            transition: all .2s ease-out;
+            
+            -webkit-background-size: 10px auto;
+            background-size: 10px auto;
+
+
+            -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        &.collapsed:after {
+
+            -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        
+
+        &.collapsed{
+            
+
+            background: #129bc1;
+            color: #fff;
+            border: 1px solid #5590cf;
+        }
+    }
 }

@@ -1,12 +1,19 @@
-.investors.row
-  .col-md-12
-    .col-md-6
-      
-    .col-md-6.investor_text
-      div class="panel-group" id="accordion"
-        - @investors.each do |investor|
-          .panel.panel-default
-            .panel-heading
-              div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse#{investor.id}" =(investor.firstname + " " + investor.lastname)
-            .invest_content id="collapse#{investor.id}" class="panel-collapse collapse" 
-              .panel-body =investor.description.html_safe
+.investors
+  .col-md-6
+    .row
+      .investor-image
+
+  .col-md-6.investor_text
+
+    h2 BOARD OF DIRECTORS
+
+    p Doğuş Group is under professional management with emphasis and priority on corporate governance principles. The Group maintains equal distance to all shareholders and adheres to ethical standards in all areas of operation.
+
+    div class="panel-group" id="accordion"
+      - @investors.each do |investor|
+        .panel.panel-default
+          div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse#{investor.id}" =(investor.firstname + " " + investor.lastname)
+          .invest_content id="collapse#{investor.id}" class="panel-collapse collapse" 
+            .panel-body =investor.description.html_safe
+
+<div style="clear:both"></div>  

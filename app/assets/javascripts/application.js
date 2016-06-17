@@ -61,7 +61,7 @@ $(function() {
       }
     });
 
-    $(".tab-pane").eq(0).css("display", "block");
+    $("#brand_courssel .tab-pane").eq(0).css("display", "block");
 
     console.log($(".brand-tab").eq(0));
 
@@ -192,7 +192,7 @@ $(function() {
       $('.slick-list').simulate("mousemove", coords);
     });
 
-    $('#tabs').tab();
+    //$('#tabs').tab();
 
     function triangle_align(active){
 
