@@ -1,11 +1,14 @@
 .container.body-padding
-  h1.blog-header LBDR News & Updates
+  .container.news.col-md-8.col-md-offset-2
+    h1 News.
 
-  .container.col-md-8.col-md-offset-2
-    .post-wrapper
+    ul
       - @posts.each do |post|
-        h1.text-left= post.title
-        h4 = post.created_at.strftime('%B %e, %Y')
-        h4 = post.author
-        p = truncate(post.content, length: 350, separator: ' ')
-        = link_to 'Read More', post , class: 'btn btn-default'
+        li
+          h2 =post.title
+          h3 =post.author
+          h4 =post.created_at.strftime('%B %e, %Y')
+          p = truncate(strip_tags(post.content), length: 350, separator: ' ')
+          = link_to 'Read More', post , class: 'btn btn-default'
+
+    = will_paginate @posts
