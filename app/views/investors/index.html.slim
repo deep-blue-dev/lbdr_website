@@ -2,7 +2,7 @@
   .col-md-5
     .row
       - unless @investor_content.nil?
-        .investor-image  style='background-image: url("#{investor_content.photo(:big)}");'
+        .investor-image  style='background-image: url("#{@investor_content.photo(:big)}");'
 
   .col-md-7.investor_text
 
