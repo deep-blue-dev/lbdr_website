@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :investor_contents
+  resources :post_banners
   resources :investors
   resources :brand_banners
   resources :new_investments

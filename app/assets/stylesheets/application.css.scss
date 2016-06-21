@@ -165,10 +165,8 @@ h1 {
   }
 
   .pagination{
-    .previous_page{
-      display: none;
-    }
-    .next_page{
+    
+    .next, .last, .prev, .first{
       display: none;
     }
 

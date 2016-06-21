@@ -1,13 +1,14 @@
 .investors
   .col-md-5
     .row
-      .investor-image
+      - unless @investor_content.nil?
+        .investor-image  style='background-image: url("#{investor_content.photo(:big)}");'
 
   .col-md-7.investor_text
 
-    h2 BOARD OF DIRECTORS
+    h2 =@investor_content.title unless @investor_content.nil?
 
-    p Doğuş Group is under professional management with emphasis and priority on corporate governance principles. The Group maintains equal distance to all shareholders and adheres to ethical standards in all areas of operation.
+    p =@investor_content.description unless @investor_content.nil?
 
     div class="panel-group" id="accordion"
       - @investors.each do |investor|

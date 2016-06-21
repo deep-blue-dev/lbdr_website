@@ -1,0 +1,2 @@
+module PostBannersHelper
+end

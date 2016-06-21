@@ -1,3 +1,25 @@
+.banner.brand-banner
+
+  .banner-body
+    - @banners.each do |banner|
+      .banner-content style='background-image: url("#{banner.photo(:big)}");'
+
+  .logo-information
+    .col-md-10.slider_leftpart
+
+      .col-md-3.text-left
+
+      .col-md-9.text-left
+
+        - @banners.each do |banner|
+
+          .banner-description.hide
+            h2 =banner.title.html_safe unless banner.nil?
+            p =banner.description.html_safe unless banner.nil?
+
+    .col-md-2.text-left
+
+
 .container.body-padding
   .container.news.col-md-8.col-md-offset-2
     h1 News.
@@ -11,4 +33,4 @@
           p = truncate(strip_tags(post.content), length: 350, separator: ' ')
           = link_to 'Read More', post , class: 'btn btn-default'
 
-    = will_paginate @posts
+    = paginate @posts

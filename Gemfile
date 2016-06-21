@@ -30,7 +30,6 @@ gem 'devise',      '> 4.x'
 gem 'rspec-rails', '>= 3.5.0.beta1'
 gem 'ransack',    github: 'activerecord-hackery/ransack'
 gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
-gem 'will_paginate', '~> 3.1.0'
 gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'draper',     github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
 # To fix a Draper deprecation error

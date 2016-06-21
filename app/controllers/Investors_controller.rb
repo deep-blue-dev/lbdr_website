@@ -2,6 +2,8 @@ class InvestorsController < ApplicationController
   
   def index
     @investors = Investor.all
+
+    @investor_content = InvestorContent.first
   end
 
   private
