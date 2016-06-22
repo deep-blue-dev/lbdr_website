@@ -6,9 +6,20 @@
 
   .col-md-7.investor_text
 
+    .investor_link
+      =link_to pages_group_path do 
+        span GROUP
+      
+
+      = " \/ "
+
+      =link_to "" do 
+        span BOARD OF DIRECTORS
+    
+
     h2 =@investor_content.title unless @investor_content.nil?
 
-    p =@investor_content.description unless @investor_content.nil?
+    .subtitle =@investor_content.description unless @investor_content.nil?
 
     div class="panel-group" id="accordion"
       - @investors.each do |investor|
