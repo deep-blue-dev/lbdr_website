@@ -30,3 +30,15 @@ h2 {
 .blog-header {
   padding: 50px 0;
 }
+
+.news{
+  .collapsing+a:before { 
+    content:'Read Less';
+  }
+  .in.collapse+a:before { 
+      content:'Read Less';
+  }
+  .collapse+a:before { 
+      content:'Read More'; 
+  }
+}

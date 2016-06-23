@@ -25,12 +25,14 @@
     h1 News.
 
     ul
-      - @posts.each do |post|
+      - @posts.each_with_index do |post, i|
         li
           h2 =post.title
           h3 =post.author
           h4 =post.created_at.strftime('%B %e, %Y')
-          p = truncate(strip_tags(post.content), length: 350, separator: ' ')
-          = link_to 'Read More', post , class: 'btn btn-default'
+          p = sanitize(post.content).html_safe[0, 397]
+          div id="viewdetails#{i}" class="collapse" 
+            p =post.content.html_safe[397, 4000]
+          = link_to '', "javascript:void(0);" , class: 'btn btn-default', 'data-toggle': 'collapse', 'data-target': '#viewdetails' + i.to_s
 
     = paginate @posts
