@@ -21,10 +21,8 @@
         - @banners.each do |banner|
 
           .banner-description.hide
-            h2 =banner.title.html_safe unless banner.nil?
-            p =banner.description.html_safe unless banner.nil?
-            - unless banner.sector.nil?
-              p = link_to 'MORE INFO', '/sectors/' + banner.sector.id.to_s, :class => "btn btn-default btn-lg"
+            h2 =@banners[0].title.html_safe unless @banners[0].nil?
+            p =@banners[0].description.html_safe unless @banners[0].nil?
 
     .col-md-2.text-left
 
@@ -35,36 +33,40 @@
   #menu-wrapper
     ul.nav
       li.cell
+        i.fa.fa-home.fa-2
+        span Home
+
+      li.cell
         i.fa.fa-anchor.fa-2
-        span Marine
+        span link-to="#{'/sectors/' + @banners[1].sector.id.to_s}" Marine
 
       li.cell
         i.fa.fa-car.fa-2
-        span Automotive
+        span link-to="#{'/sectors/' + @banners[2].sector.id.to_s}" Automotive
 
       li.cell
         i.fa.fa-paper-plane.fa-2
-        span Aviation
+        span link-to="#{'/sectors/' + @banners[3].sector.id.to_s}" Aviation
 
       li.cell
         i.fa.fa-coffee.fa-2
-        span Real Estate
+        span link-to="#{'/sectors/' + @banners[4].sector.id.to_s}" Real Estate
 
       li.cell
         i.fa.fa-child.fa-2
-        span Entertaintment and Leisure
+        span link-to="#{'/sectors/' + @banners[5].sector.id.to_s}" Entertaintment and Leisure
 
       li.cell
         i.fa.fa-star.fa-2
-        span Fasion And Accesories
+        span link-to="#{'/sectors/' + @banners[6].sector.id.to_s}" Fasion And Accesories
 
       li.cell
         i.fa.fa-video-camera.fa-2
-        span Media
+        span link-to="#{'/sectors/' + @banners[7].sector.id.to_s}" Media
 
       li.cell
         i.fa.fa-wifi.fa-2
-        span Technology
+        span link-to="#{'/sectors/' + @banners[8].sector.id.to_s}" Technology
       
 
 section.section_area.with_padding

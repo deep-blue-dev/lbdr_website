@@ -270,12 +270,22 @@ $(function() {
 
     $("#menu-wrapper ul li").click(function(e){
       e.preventDefault();
-      var slideIndex = $(this).index() + 1;
+      var slideIndex = $(this).index();
 
       $( '.banner-body' ).slickGoTo( parseInt(slideIndex) );
 
       startInterval();
     });
+
+    $("#menu-wrapper ul li").dblclick(function(e){
+
+      var temp = $(this).find("span").attr("link-to");
+
+      window.location.href = temp;
+
+      console.log(temp);
+    });
+    
   };
 
   $(document).ready(ready);
